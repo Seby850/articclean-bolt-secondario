@@ -1,70 +1,61 @@
 import React from 'react';
-import { Factory, CheckCircle, ArrowRight, Shield, Users, Wrench, AlertTriangle } from 'lucide-react';
+import { Building2, CheckCircle, ArrowRight, Users, Clock, Shield, Sparkles } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-const PulizieIndustriali = () => {
+const PulizieUffici = () => {
   const features = [
-    "Pulizia capannoni e magazzini",
-    "Aspirazione industriale specializzata",
-    "Trattamenti pavimenti industriali",
-    "Pulizia macchinari e impianti",
-    "Rimozione polveri e residui di lavorazione",
-    "Sanificazione aree produttive",
-    "Pulizia sistemi di ventilazione",
-    "Gestione rifiuti industriali"
+    "Pulizia quotidiana postazioni di lavoro",
+    "Sanificazione bagni e aree comuni",
+    "Pulizia vetri interni ed esterni",
+    "Gestione rifiuti e raccolta differenziata",
+    "Aspirazione tappeti e moquette",
+    "Pulizia e disinfezione superfici",
+    "Pulizia sale riunioni e aree break",
+    "Manutenzione aree reception e ingresso"
   ];
 
   const benefits = [
     {
-      icon: Shield,
-      title: "Conformità Normative",
-      description: "Rispetto rigoroso di tutte le normative di sicurezza e igiene industriale"
-    },
-    {
       icon: Users,
-      title: "Ambienti di Lavoro Sicuri",
-      description: "Riduzione dei rischi per i lavoratori attraverso pulizie specializzate"
+      title: "Ambiente di Lavoro Professionale",
+      description: "Uffici sempre puliti e ordinati che trasmettono professionalità a clienti e partner"
     },
     {
-      icon: Wrench,
-      title: "Efficienza Impianti",
-      description: "Manutenzione che preserva e migliora le prestazioni dei macchinari"
+      icon: Clock,
+      title: "Maggiore Produttività",
+      description: "Dipendenti più motivati e concentrati in un ambiente pulito e salubre"
     },
     {
-      icon: AlertTriangle,
-      title: "Prevenzione Incidenti",
-      description: "Ambienti puliti riducono significativamente i rischi di incidenti"
+      icon: Shield,
+      title: "Riduzione Assenze per Malattia",
+      description: "Ambienti sanificati riducono la diffusione di virus e batteri"
+    },
+    {
+      icon: Sparkles,
+      title: "Immagine Aziendale Impeccabile",
+      description: "Prima impressione sempre positiva per visitatori e potenziali clienti"
     }
   ];
 
-  const industrialTypes = [
+  const serviceTypes = [
     {
-      title: "Piccole Industrie",
-      description: "1.000-5.000 mq",
-      features: ["Pulizia settimanale", "Gestione rifiuti", "Trattamento pavimenti"],
-      sectors: ["Artigianato", "Piccole manifatture", "Laboratori"]
+      title: "Uffici Piccoli",
+      description: "1-10 postazioni",
+      features: ["Pulizia giornaliera", "Gestione rifiuti", "Sanificazione bagni"],
+      price: "Da €300/mese"
     },
     {
-      title: "Medie Industrie", 
-      description: "5.000-20.000 mq",
-      features: ["Pulizia programmata", "Macchinari specializzati", "Squadre dedicate"],
-      sectors: ["Automotive", "Alimentare", "Chimico"]
+      title: "Uffici Medi",
+      description: "10-50 postazioni", 
+      features: ["Pulizia personalizzata", "Sale riunioni", "Aree comuni", "Supporto eventi"],
+      price: "Da €800/mese"
     },
     {
-      title: "Grandi Complessi",
-      description: "20.000+ mq",
-      features: ["Servizio H24", "Supervisione in loco", "Protocolli personalizzati"],
-      sectors: ["Siderurgico", "Petrolchimico", "Farmaceutico"]
+      title: "Uffici Grandi",
+      description: "50+ postazioni",
+      features: ["Servizio dedicato", "Supervisore in loco", "Pulizie H24", "Manutenzione completa"],
+      price: "Preventivo personalizzato"
     }
-  ];
-
-  const equipment = [
-    "Aspiratori industriali ad alta potenza",
-    "Lavasciuga per grandi superfici", 
-    "Idropulitrici professionali",
-    "Sistemi di nebulizzazione",
-    "Attrezzature per lavoro in altezza",
-    "Macchinari per trattamento pavimenti"
   ];
 
   return (
@@ -75,16 +66,16 @@ const PulizieIndustriali = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <div className="flex items-center space-x-3 mb-6">
-                <Factory className="w-8 h-8 text-sky-500" />
+                <Building2 className="w-8 h-8 text-sky-500" />
                 <span className="text-sky-600 font-semibold">Servizio Specializzato</span>
               </div>
               <h1 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
-                Pulizie <span className="text-sky-500">Industriali</span>
+                Pulizie <span className="text-sky-500">Uffici</span>
               </h1>
               <p className="text-xl text-slate-600 leading-relaxed mb-8">
-                Interventi specializzati per capannoni, magazzini e ambienti industriali. 
-                Attrezzature professionali e personale formato per gestire ogni tipo di 
-                ambiente produttivo in totale sicurezza.
+                Servizi completi di pulizia per uffici e spazi lavorativi. 
+                Manteniamo i tuoi ambienti sempre professionali con personale qualificato 
+                e prodotti certificati.
               </p>
               <Link
                 to="/richiedi-preventivo"
@@ -96,8 +87,8 @@ const PulizieIndustriali = () => {
             </div>
             <div>
               <img 
-                src="https://i.imgur.com/ja4pwgZ.png"
-                alt="Pulizia industriale professionale"
+                src="https://i.imgur.com/RAZaa1z.jpeg"
+                alt="Pulizia uffici professionale"
                 className="w-full h-96 object-cover rounded-xl shadow-lg"
               />
             </div>
@@ -110,11 +101,10 @@ const PulizieIndustriali = () => {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-6">
-              Servizi Industriali Specializzati
+              Cosa Include il Nostro Servizio
             </h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-              Interventi mirati per ogni tipo di ambiente industriale con attrezzature 
-              e tecniche specifiche per il settore.
+              Un servizio completo e professionale che copre ogni aspetto della pulizia dei tuoi uffici.
             </p>
           </div>
 
@@ -137,10 +127,10 @@ const PulizieIndustriali = () => {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-6">
-              Benefici per la Tua Industria
+              Benefici per la Tua Azienda
             </h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-              Pulizie industriali professionali garantiscono sicurezza, efficienza e conformità normativa.
+              Investire nella pulizia professionale degli uffici porta vantaggi concreti e misurabili.
             </p>
           </div>
 
@@ -165,49 +155,48 @@ const PulizieIndustriali = () => {
         </div>
       </section>
 
-      {/* Industrial Types */}
+      {/* Service Types */}
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-6">
-              Soluzioni per Ogni Settore Industriale
+              Soluzioni per Ogni Dimensione
             </h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-              Dall'artigianato alle grandi industrie, abbiamo l'esperienza e le competenze 
-              per ogni tipo di ambiente produttivo.
+              Dai piccoli studi professionali alle grandi aziende, abbiamo la soluzione giusta per te.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {industrialTypes.map((type, index) => (
+            {serviceTypes.map((type, index) => (
               <div 
                 key={index}
-                className="bg-slate-50 rounded-xl p-8 hover:bg-white hover:shadow-lg transition-all duration-300"
+                className={`bg-slate-50 rounded-xl p-8 hover:bg-white hover:shadow-lg transition-all duration-300 ${
+                  index === 1 ? 'ring-2 ring-sky-200 bg-sky-50' : ''
+                }`}
               >
+                {index === 1 && (
+                  <div className="text-center mb-4">
+                    <span className="bg-sky-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                      Più Richiesto
+                    </span>
+                  </div>
+                )}
+                
                 <h3 className="text-xl font-bold text-slate-900 mb-2">{type.title}</h3>
                 <p className="text-slate-600 mb-4">{type.description}</p>
                 
-                <div className="mb-6">
-                  <h4 className="font-semibold text-slate-900 mb-2">Servizi Inclusi:</h4>
-                  <ul className="space-y-1">
-                    {type.features.map((feature, i) => (
-                      <li key={i} className="flex items-center space-x-2">
-                        <CheckCircle className="w-4 h-4 text-sky-500" />
-                        <span className="text-slate-600 text-sm">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                <ul className="space-y-2 mb-6">
+                  {type.features.map((feature, i) => (
+                    <li key={i} className="flex items-center space-x-2">
+                      <CheckCircle className="w-4 h-4 text-sky-500" />
+                      <span className="text-slate-600 text-sm">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
                 
                 <div className="border-t border-slate-200 pt-4">
-                  <h4 className="font-semibold text-slate-900 mb-2">Settori:</h4>
-                  <div className="flex flex-wrap gap-1">
-                    {type.sectors.map((sector, i) => (
-                      <span key={i} className="bg-sky-100 text-sky-700 px-2 py-1 rounded text-xs">
-                        {sector}
-                      </span>
-                    ))}
-                  </div>
+                  <p className="text-sky-600 font-bold text-lg">{type.price}</p>
                 </div>
               </div>
             ))}
@@ -215,53 +204,56 @@ const PulizieIndustriali = () => {
         </div>
       </section>
 
-      {/* Equipment Section */}
+      {/* Process */}
       <section className="py-20 bg-slate-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-6">
-              Attrezzature Professionali
+              Il Nostro Processo di Lavoro
             </h2>
             <p className="text-lg text-slate-600">
-              Utilizziamo solo macchinari industriali di ultima generazione per garantire 
-              risultati superiori e massima efficienza.
+              Un approccio sistematico per garantire risultati costanti e di qualità.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6">
-            {equipment.map((item, index) => (
-              <div 
-                key={index}
-                className="flex items-center space-x-4 p-4 bg-white rounded-lg shadow-sm"
-              >
-                <Wrench className="w-6 h-6 text-sky-500 flex-shrink-0" />
-                <span className="text-slate-700 font-medium">{item}</span>
+          <div className="space-y-8">
+            <div className="flex items-start space-x-6">
+              <div className="w-12 h-12 bg-sky-500 rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">
+                1
               </div>
-            ))}
-          </div>
+              <div>
+                <h3 className="text-xl font-bold text-slate-900 mb-2">Valutazione Iniziale</h3>
+                <p className="text-slate-600">Sopralluogo gratuito per valutare spazi, esigenze specifiche e definire il piano di intervento ottimale.</p>
+              </div>
+            </div>
 
-          <div className="mt-12 bg-sky-50 rounded-xl p-8">
-            <h3 className="text-xl font-bold text-slate-900 mb-4">
-              Sicurezza e Certificazioni
-            </h3>
-            <div className="grid md:grid-cols-2 gap-6">
-              <div>
-                <h4 className="font-semibold text-slate-900 mb-2">Formazione del Personale:</h4>
-                <ul className="space-y-1 text-slate-600">
-                  <li>• Corso sicurezza sui luoghi di lavoro</li>
-                  <li>• Formazione su sostanze chimiche</li>
-                  <li>• Utilizzo DPI specifici per industria</li>
-                  <li>• Procedure di emergenza</li>
-                </ul>
+            <div className="flex items-start space-x-6">
+              <div className="w-12 h-12 bg-sky-500 rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">
+                2
               </div>
               <div>
-                <h4 className="font-semibold text-slate-900 mb-2">Certificazioni:</h4>
-                <ul className="space-y-1 text-slate-600">
-                  <li>• ISO 45001 Sicurezza sul Lavoro</li>
-                  <li>• Certificazione ambientale ISO 14001</li>
-                  <li>• Abilitazioni per spazi confinati</li>
-                  <li>• Autorizzazioni trasporto rifiuti</li>
-                </ul>
+                <h3 className="text-xl font-bold text-slate-900 mb-2">Pianificazione Personalizzata</h3>
+                <p className="text-slate-600">Creiamo un programma su misura che rispetta i vostri orari di lavoro e le esigenze operative.</p>
+              </div>
+            </div>
+
+            <div className="flex items-start space-x-6">
+              <div className="w-12 h-12 bg-sky-500 rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">
+                3
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-slate-900 mb-2">Esecuzione Professionale</h3>
+                <p className="text-slate-600">Interventi regolari con personale qualificato, prodotti certificati e attrezzature professionali.</p>
+              </div>
+            </div>
+
+            <div className="flex items-start space-x-6">
+              <div className="w-12 h-12 bg-emerald-500 rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">
+                4
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-slate-900 mb-2">Controllo Qualità</h3>
+                <p className="text-slate-600">Verifiche costanti e feedback regolari per garantire sempre la massima soddisfazione.</p>
               </div>
             </div>
           </div>
@@ -272,11 +264,11 @@ const PulizieIndustriali = () => {
       <section className="py-20 bg-gradient-to-br from-slate-900 to-slate-800">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-            Migliora la Sicurezza del Tuo Stabilimento
+            Trasforma i Tuoi Uffici in Spazi Professionali
           </h2>
           <p className="text-xl text-slate-300 mb-8 leading-relaxed">
-            Affidati ai nostri esperti per pulizie industriali sicure ed efficaci. 
-            Sopralluogo gratuito e preventivo personalizzato entro 24 ore.
+            Ricevi un preventivo gratuito e personalizzato per i tuoi uffici. 
+            Sopralluogo senza impegno entro 48 ore.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -299,4 +291,4 @@ const PulizieIndustriali = () => {
   );
 };
 
-export default PulizieIndustriali;
+export default PulizieUffici;
