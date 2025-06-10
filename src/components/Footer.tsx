@@ -11,7 +11,7 @@ const Footer = () => {
             <Link to="/" className="flex items-center space-x-3">
               <div className="w-10 h-10 flex items-center justify-center">
                 <img 
-                  src="https://wqpaktchbzycelxnfodz.supabase.co/storage/v1/object/public/immagini-sito//logo%20artic%20clean%20service-Photoroom.png" 
+                  src="https://i.imgur.com/ks6yQn1.png" 
                   alt="Arctic Clean Service Logo" 
                   className="w-full h-full object-contain"
                 />
