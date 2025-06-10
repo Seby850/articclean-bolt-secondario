@@ -117,17 +117,17 @@ const Homepage = () => {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <div className="space-y-12">
             <div className="space-y-8">
-              <h1 className="hero-title-montserrat text-5xl lg:text-7xl font-bold text-slate-900 leading-tight max-w-5xl mx-auto tracking-tight">
+              <h1 className="hero-title-montserrat text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-slate-900 leading-tight max-w-5xl mx-auto tracking-tight">
                 PULIZIE AZIENDALI
                 <span className="block bg-gradient-to-r from-sky-600 via-cyan-500 to-teal-500 bg-clip-text text-transparent">
                   PROFESSIONALI
                 </span>
-                <span className="block text-4xl lg:text-5xl font-semibold text-slate-700 mt-2">
+                <span className="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl font-semibold text-slate-700 mt-2">
                   PER LA TUA AZIENDA
                 </span>
               </h1>
               
-              <p className="text-xl lg:text-2xl text-slate-600 max-w-3xl mx-auto leading-relaxed font-light">
+              <p className="text-lg sm:text-xl lg:text-2xl text-slate-600 max-w-3xl mx-auto leading-relaxed font-light px-4">
                 Offriamo servizi di pulizia specializzati per uffici, aziende e ambienti industriali. 
                 <span className="block mt-2 font-medium text-sky-700">
                   Affidabilità, qualità e risultati garantiti per il tuo business.
@@ -136,16 +136,16 @@ const Homepage = () => {
             </div>
             
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-6 lg:gap-8 justify-center items-center mt-16">
+            <div className="flex flex-col sm:flex-row gap-6 lg:gap-8 justify-center items-center mt-16 px-4">
               <Link to="/richiedi-preventivo">
-                <button className="primary-cta-button group relative overflow-hidden">
+                <button className="primary-cta-button group relative overflow-hidden w-full sm:w-auto">
                   <div className="absolute inset-0 bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 transition-all duration-300 group-hover:from-emerald-400 group-hover:via-teal-400 group-hover:to-cyan-400"></div>
                   <div className="absolute inset-0 bg-gradient-to-r from-emerald-400 to-cyan-400 opacity-0 group-hover:opacity-30 transition-opacity duration-300 blur-xl"></div>
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out"></div>
                   
-                  <div className="relative z-10 flex items-center justify-center space-x-3 px-8 py-4 lg:px-10 lg:py-5">
+                  <div className="relative z-10 flex items-center justify-center space-x-3 px-6 py-3 sm:px-8 sm:py-4 lg:px-10 lg:py-5">
                     <Sparkles className="w-5 h-5 lg:w-6 lg:h-6 text-white group-hover:rotate-12 transition-transform duration-300" />
-                    <span className="font-bold text-lg lg:text-xl text-white">
+                    <span className="font-bold text-base sm:text-lg lg:text-xl text-white whitespace-nowrap">
                       Richiedi Preventivo
                     </span>
                     <ArrowRight className="w-5 h-5 lg:w-6 lg:h-6 text-white group-hover:translate-x-1 transition-transform duration-300" />
@@ -156,7 +156,7 @@ const Homepage = () => {
               </Link>
               
               <Link to="/servizi">
-                <button className="white-bg-button group relative overflow-hidden rounded-xl transition-all duration-300 transform perspective-1000 hover:translateY(-3px) shadow-lg hover:shadow-xl">
+                <button className="white-bg-button group relative overflow-hidden rounded-xl transition-all duration-300 transform perspective-1000 hover:translateY(-3px) shadow-lg hover:shadow-xl w-full sm:w-auto">
                   {/* Background completamente bianco */}
                   <div className="absolute inset-0 bg-white rounded-xl"></div>
                   
@@ -168,8 +168,8 @@ const Homepage = () => {
                   {/* Subtle Glow */}
                   <div className="absolute inset-0 bg-gradient-to-r from-sky-400 to-cyan-400 opacity-0 group-hover:opacity-10 transition-opacity duration-300 blur-xl"></div>
                   
-                  <div className="relative z-10 flex items-center justify-center space-x-3 px-8 py-4 lg:px-10 lg:py-5">
-                    <span className="font-bold text-lg lg:text-xl text-slate-700 group-hover:text-sky-700 transition-colors duration-300">
+                  <div className="relative z-10 flex items-center justify-center space-x-3 px-6 py-3 sm:px-8 sm:py-4 lg:px-10 lg:py-5">
+                    <span className="font-bold text-base sm:text-lg lg:text-xl text-slate-700 group-hover:text-sky-700 transition-colors duration-300 whitespace-nowrap">
                       Scopri i Nostri Servizi
                     </span>
                     <ArrowRight className="w-5 h-5 lg:w-6 lg:h-6 text-slate-600 group-hover:text-sky-600 group-hover:translate-x-1 transition-all duration-300" />
@@ -179,7 +179,7 @@ const Homepage = () => {
             </div>
 
             {/* Trust Indicators */}
-            <div className="flex flex-wrap justify-center items-center gap-6 lg:gap-8 mt-12 text-sm lg:text-base text-slate-600">
+            <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-6 lg:gap-8 mt-12 text-xs sm:text-sm lg:text-base text-slate-600 px-4">
               <div className="flex items-center space-x-2">
                 <div className="w-2 h-2 bg-emerald-500 rounded-full"></div>
                 <span>Preventivo gratuito in 24h</span>
