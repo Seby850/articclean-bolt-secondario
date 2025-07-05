@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Homepage from './pages/Homepage';
 import Servizi from './pages/Servizi';
 import PulizieUffici from './pages/servizi/PulizieUffici';
@@ -12,21 +12,19 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <Router>
-      <div className="min-h-screen flex flex-col">
-        <Header />
-        <Routes>
-          <Route path="/" element={<Homepage />} />
-          <Route path="/servizi" element={<Servizi />} />
-          <Route path="/servizi/pulizie-uffici" element={<PulizieUffici />} />
-          <Route path="/servizi/pulizie-industriali" element={<PulizieIndustriali />} />
-          <Route path="/servizi/pulizie-post-cantiere" element={<PuliziePostCantiere />} />
-          <Route path="/servizi/pulizie-vetri" element={<PulizieVetri />} />
-          <Route path="/richiedi-preventivo" element={<RichidiPreventivo />} />
-        </Routes>
-        <Footer />
-      </div>
-    </Router>
+    <div className="min-h-screen flex flex-col">
+      <Header />
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/servizi" element={<Servizi />} />
+        <Route path="/servizi/pulizie-uffici" element={<PulizieUffici />} />
+        <Route path="/servizi/pulizie-industriali" element={<PulizieIndustriali />} />
+        <Route path="/servizi/pulizie-post-cantiere" element={<PuliziePostCantiere />} />
+        <Route path="/servizi/pulizie-vetri" element={<PulizieVetri />} />
+        <Route path="/richiedi-preventivo" element={<RichidiPreventivo />} />
+      </Routes>
+      <Footer />
+    </div>
   );
 }
 
