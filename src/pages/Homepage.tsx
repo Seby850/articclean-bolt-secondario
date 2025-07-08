@@ -117,7 +117,7 @@ const Homepage = () => {
           <div className="space-y-12">
             <div className="space-y-8">
               <h1 className="hero-title-montserrat text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-slate-900 leading-tight max-w-5xl mx-auto tracking-tight">
-                PULIZIE AZIENDALI
+                PULIZIE
                 <span className="block bg-gradient-to-r from-sky-600 via-cyan-500 to-teal-500 bg-clip-text text-transparent">
                   PROFESSIONALI
                 </span>
