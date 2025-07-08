@@ -48,6 +48,7 @@ const RichidiPreventivo = () => {
 
       if (response.ok) {
         setSubmitStatus('success');
+        window.scrollTo(0, 0);
         setFormData({
           nome: '',
           cognome: '',
