@@ -1,4 +1,3 @@
-import React from 'react';
 import { Building2, CheckCircle, ArrowRight, Users, Clock, Shield, Sparkles } from 'lucide-react';
 import { Link } from 'react-router-dom';
 

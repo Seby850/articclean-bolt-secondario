@@ -1,5 +1,4 @@
-import React from 'react';
-import { ArrowRight, Sparkles, Shield, Clock, Award, Users, Star, Phone } from 'lucide-react';
+import { ArrowRight, Sparkles, Shield, Clock, Award, Users, Star } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { CTASection } from '@/components/ui/cta-with-rectangle';
 

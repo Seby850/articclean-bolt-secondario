@@ -1,4 +1,3 @@
-import React from 'react';
 import { Sparkles, CheckCircle, ArrowRight, Sun, Building, Eye, Droplets } from 'lucide-react';
 import { Link } from 'react-router-dom';
 

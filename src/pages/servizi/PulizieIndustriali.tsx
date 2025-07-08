@@ -1,4 +1,3 @@
-import React from 'react';
 import { Factory, CheckCircle, ArrowRight, Shield, Users, Wrench, AlertTriangle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
