@@ -121,7 +121,7 @@ const Homepage = () => {
                 <span className="block bg-gradient-to-r from-sky-600 via-cyan-500 to-teal-500 bg-clip-text text-transparent">
                   PROFESSIONALI
                 </span>
-                <span className="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl font-semibold text-slate-700 mt-2">
+                <span className="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl font-bold text-sky-700 mt-2">
                   PER LA TUA AZIENDA
                 </span>
               </h1>
