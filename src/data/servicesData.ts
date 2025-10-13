@@ -208,5 +208,40 @@ export const locations: Location[] = [
     slug: 'salo',
     province: 'Brescia',
     area: 'Lago di Garda occidentale'
+  },
+  {
+    id: 'castenedolo',
+    name: 'Castenedolo',
+    slug: 'castenedolo',
+    province: 'Brescia',
+    area: 'zona sud Brescia'
+  },
+  {
+    id: 'sarezzo',
+    name: 'Sarezzo',
+    slug: 'sarezzo',
+    province: 'Brescia',
+    area: 'Val Trompia'
+  },
+  {
+    id: 'orzinuovi',
+    name: 'Orzinuovi',
+    slug: 'orzinuovi',
+    province: 'Brescia',
+    area: 'bassa bresciana centrale'
+  },
+  {
+    id: 'concesio',
+    name: 'Concesio',
+    slug: 'concesio',
+    province: 'Brescia',
+    area: 'Val Trompia sud'
+  },
+  {
+    id: 'travagliato',
+    name: 'Travagliato',
+    slug: 'travagliato',
+    province: 'Brescia',
+    area: 'bassa bresciana ovest'
   }
 ];

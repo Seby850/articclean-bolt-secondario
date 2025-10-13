@@ -13,7 +13,148 @@ export interface LocalPageContent {
   ctaText: string;
 }
 
-const generateContent = (serviceId: string, locationId: string): LocalPageContent => {
+
+const contentDatabase: Record<string, Record<string, any>> = {
+  'pulizie-uffici': {
+    'brescia': {
+      h1: 'Pulizie Uffici a Brescia Centro – Professionisti della Pulizia Aziendale',
+      metaTitle: 'Pulizie Uffici Brescia | Servizi per Aziende e Professionisti',
+      metaDescription: 'Pulizie uffici Brescia centro e provincia. Team di 28 operatori per aziende e studi. Interventi quotidiani o programmati. Preventivo gratuito!',
+      intro: 'Nel cuore di Brescia, dalla zona di Piazza Loggia fino a Lamarmora e Poliambulanza, forniamo servizi di pulizia uffici completi per ogni realtà aziendale. La nostra squadra opera quotidianamente negli uffici del centro città garantendo ambienti sempre impeccabili. Serviamo società, studi legali, cliniche private e attività commerciali con un team specializzato che conosce perfettamente le esigenze del tessuto imprenditoriale bresciano.',
+      whyChoose: 'Affidarci la pulizia dei vostri uffici nel centro di Brescia significa scegliere un partner locale affidabile. Conosciamo bene la città, dagli edifici storici del centro alle moderne palazzine di Urago Mella. I nostri operatori utilizzano prodotti ecologici certificati e seguono protocolli precisi per ogni tipologia di ufficio. Offriamo massima flessibilità negli orari: interveniamo prima dell\'apertura, durante la pausa pranzo o dopo la chiusura, secondo le vostre necessità operative.',
+      area: 'Operiamo in tutto il comune di Brescia, con particolare focus su Brescia Centro, Lamarmora, zona Poliambulanza, San Polo e Mompiano. I nostri servizi raggiungono anche Rezzato, Castenedolo, Concesio e tutti i comuni della prima cintura bresciana. La posizione strategica della nostra sede ci permette di intervenire rapidamente ovunque nella città e provincia.',
+      cta: 'Cercate un\'impresa di pulizie affidabile per il vostro ufficio a Brescia? Chiamateci per un sopralluogo gratuito nel vostro quartiere, che sia il centro storico o le zone più moderne. Rispondiamo entro 24 ore con un preventivo personalizzato e trasparente.'
+    },
+    'desenzano-del-garda': {
+      h1: 'Pulizie Uffici Desenzano del Garda – Servizi Professionali sul Lago',
+      metaTitle: 'Pulizie Uffici Desenzano | Servizi Lago di Garda',
+      metaDescription: 'Pulizie uffici Desenzano del Garda per aziende turistiche e studi. Turni flessibili anche serali. Preventivo rapido entro 24h!',
+      intro: 'A Desenzano del Garda, dalla zona del Porto Vecchio fino a Rivoltella, garantiamo servizi di pulizia uffici studiati per le attività sul lago. Operiamo per agenzie turistiche, studi professionali e società commerciali che necessitano di ambienti sempre curati, soprattutto nei mesi di alta stagione. La nostra esperienza nel territorio gardesano ci ha insegnato l\'importanza di spazi puliti per trasmettere professionalità ai clienti e turisti.',
+      whyChoose: 'Scegliere i nostri servizi a Desenzano significa contare su un team che comprende le dinamiche del lago. Sappiamo che molte attività lavorano intensamente in estate e necessitano di pulizie anche serali o nei weekend. Per questo offriamo turni personalizzati che non interferiscono con l\'operatività. Utilizziamo prodotti delicati ma efficaci, perfetti per gli ambienti climatizzati tipici della zona lago.',
+      area: 'Serviamo l\'intero territorio di Desenzano del Garda, incluse Rivoltella e San Martino della Battaglia. I nostri servizi si estendono a Lonato del Garda, Sirmione, Padenghe e tutta la fascia meridionale del lago. Conosciamo bene la viabilità estiva e organizziamo i nostri interventi per garantire sempre puntualità.',
+      cta: 'Il vostro ufficio è a Desenzano o nelle vicinanze del lago? Richiedete un preventivo gratuito per pulizie professionali. Interveniamo rapidamente, anche con turni serali per non disturbare la vostra attività durante il giorno.'
+    },
+    'montichiari': {
+      h1: 'Pulizie Uffici Montichiari – Esperti in Ambienti Aziendali',
+      metaTitle: 'Pulizie Uffici Montichiari | Professionali e Puntuali',
+      metaDescription: 'Pulizie uffici a Montichiari: servizi per aziende zona fiera e aeroporto. Contratti flessibili. Chiamaci per un preventivo immediato!',
+      intro: 'A Montichiari, nelle vicinanze del Centro Fiera e dell\'Aeroporto Gabriele D\'Annunzio, offriamo pulizie uffici professionali per le numerose aziende del territorio. Il nostro team serve quotidianamente imprese della zona industriale, società di servizi e uffici amministrativi con interventi mirati e programmati. Grazie alla conoscenza del tessuto produttivo locale, sappiamo adattarci alle necessità specifiche di ogni realtà.',
+      whyChoose: 'Optare per noi a Montichiari vuol dire affidarsi a specialisti della pulizia aziendale. Conosciamo le esigenze delle imprese locali, dalle PMI alle grandi aziende della zona fiera. I nostri operatori sono formati per lavorare anche in ambienti con elevato passaggio di persone, come gli uffici delle società di logistica o delle attività legate all\'aeroporto. Garantiamo standard qualitativi elevati e massima riservatezza.',
+      area: 'I nostri interventi coprono tutto Montichiari, con particolare attenzione alla zona di Borgosotto e alle aree industriali. Operiamo regolarmente anche a Ghedi, Calcinato, Carpenedolo e nell\'intera bassa bresciana centrale. La vicinanza all\'aeroporto ci rende particolarmente veloci negli interventi urgenti.',
+      cta: 'Gestite uffici o spazi aziendali a Montichiari? Scriveteci o telefonateci per un\'offerta personalizzata. Effettuiamo sopralluoghi nella zona fiera, aeroporto e centro paese, rispondendo sempre entro 24 ore.'
+    },
+    'ghedi': {
+      h1: 'Pulizie Uffici Ghedi – Soluzioni Professionali per Aziende Locali',
+      metaTitle: 'Pulizie Uffici Ghedi | Servizi per Imprese Bresciane',
+      metaDescription: 'Pulizie uffici Ghedi e zona industriale. Interventi programmati per aziende e studi. Richiedi ora un sopralluogo gratuito!',
+      intro: 'A Ghedi, zona strategica della bassa bresciana con importante presenza industriale, forniamo servizi di pulizia uffici mirati per aziende manifatturiere, società di servizi e professionisti. Dalla zona industriale fino al centro di via Rimembranze, il nostro team interviene con regolarità garantendo standard elevati. Conosciamo le specificità del territorio e le esigenze delle imprese ghedesi.',
+      whyChoose: 'Sceglierci significa contare su un\'impresa che conosce il tessuto produttivo di Ghedi. Lavoriamo con aziende che necessitano di pulizie anche in orari non convenzionali per non fermare la produzione. Utilizziamo attrezzature moderne e prodotti sgrassanti professionali, ideali per ambienti che combinano uffici amministrativi e aree produttive. Ogni intervento viene documentato per garantire la massima tracciabilità.',
+      area: 'Operiamo su tutto il comune di Ghedi, compresa la vasta zona industriale. I nostri servizi raggiungono anche Leno, Manerbio, Montichiari e tutti i comuni limitrofi della bassa. La nostra organizzazione logistica ci permette di coordinare interventi anche su più sedi nella stessa area.',
+      cta: 'La vostra azienda si trova a Ghedi o nella zona industriale? Chiamateci per organizzare un sopralluogo gratuito. Valutiamo insieme le aree da pulire e vi proponiamo un piano di interventi flessibile e conveniente.'
+    },
+    'chiari': {
+      h1: 'Pulizie Uffici Chiari – Qualità e Affidabilità per Professionisti',
+      metaTitle: 'Pulizie Uffici Chiari | Servizi Professionali Franciacorta',
+      metaDescription: 'Pulizie uffici Chiari per studi e aziende. Operatori qualificati, prodotti certificati. Preventivo gratuito in 24 ore!',
+      intro: 'A Chiari, cittadina dinamica della Franciacorta, garantiamo pulizie uffici complete per studi professionali, società commerciali e uffici pubblici. Dal quartiere Sant\'Andrea fino alla zona della fiera agricola, serviamo con puntualità realtà di ogni dimensione. Il nostro approccio personalizzato ci consente di adattare il servizio alle specifiche necessità di commercialisti, avvocati, medici e aziende locali.',
+      whyChoose: 'Affidarci la pulizia dei vostri uffici a Chiari significa ricevere un servizio su misura. Comprendiamo che ogni studio o ufficio ha esigenze diverse: alcuni necessitano di pulizie quotidiane, altri di interventi settimanali più approfonditi. I nostri operatori sono discreti, puntuali e rispettosi degli spazi di lavoro. Utilizziamo esclusivamente prodotti certificati che non lasciano odori forti, perfetti per ambienti dove si ricevono clienti.',
+      area: 'I nostri interventi coprono l\'intero territorio di Chiari, inclusa la zona di via Cortesi e le aree residenziali. Operiamo regolarmente anche a Rovato, Coccaglio, Castrezzato e in tutta la Franciacorta. La conoscenza del territorio ci permette di garantire massima puntualità e flessibilità negli orari.',
+      cta: 'Cercate un servizio di pulizie affidabile per il vostro studio o ufficio a Chiari? Richiedete un preventivo personalizzato. Effettuiamo sopralluoghi gratuiti e rispondiamo rapidamente con proposte chiare e dettagliate.'
+    },
+    'rovato': {
+      h1: 'Pulizie Uffici Rovato – Servizi su Misura per la Franciacorta',
+      metaTitle: 'Pulizie Uffici Rovato | Impresa Pulizie Franciacorta',
+      metaDescription: 'Pulizie uffici Rovato e Franciacorta. Servizi professionali per aziende vitivinicole e studi. Chiama per un preventivo!',
+      intro: 'A Rovato, porta della Franciacorta, offriamo pulizie uffici professionali per le numerose realtà aziendali del territorio. Dalla zona mercato fino all\'uscita dell\'A4, serviamo cantine vitivinicole, aziende commerciali e studi professionali con standard qualitativi elevati. La nostra presenza nel territorio ci ha fatto conoscere le esigenze specifiche delle attività locali, dalle aziende agricole alle società di servizi.',
+      whyChoose: 'Scegliere noi a Rovato significa affidarsi a professionisti che conoscono la Franciacorta. Molte aziende della zona ricevono visitatori e clienti internazionali, per questo è fondamentale trasmettere un\'immagine curata. I nostri operatori garantiscono ambienti sempre impeccabili, utilizzando prodotti delicati adatti anche agli uffici nelle cantine storiche. Offriamo contratti flessibili con interventi programmati secondo le vostre necessità.',
+      area: 'Copriamo tutto il territorio di Rovato, compresa la zona del casello autostradale e le aree vitivinicole. I nostri servizi raggiungono Coccaglio, Chiari, Erbusco e tutta la Franciacorta. La posizione strategica di Rovato ci permette di servire efficacemente l\'intera area con tempi di intervento rapidi.',
+      cta: 'Il vostro ufficio o cantina si trova a Rovato o in Franciacorta? Contattateci per un sopralluogo nella vostra zona. Proponiamo soluzioni personalizzate che rispettano le caratteristiche degli ambienti, anche quelli più prestigiosi.'
+    },
+    'rezzato': {
+      h1: 'Pulizie Uffici Rezzato – Esperienza e Professionalità Garantite',
+      metaTitle: 'Pulizie Uffici Rezzato | Servizi Professionali Brescia Sud',
+      metaDescription: 'Pulizie uffici Rezzato e zona artigianale. Team esperto, interventi rapidi. Richiedi ora un preventivo personalizzato!',
+      intro: 'A Rezzato, importante centro della prima cintura bresciana, garantiamo pulizie uffici complete per aziende della zona artigianale e studi del centro paese. Dal quartiere San Carlo fino alle aree produttive, il nostro team interviene quotidianamente presso imprese manifatturiere, società di servizi e professionisti. La vicinanza a Brescia ci permette di combinare interventi multipli ottimizzando tempi e costi.',
+      whyChoose: 'Optare per i nostri servizi a Rezzato vuol dire scegliere la qualità di un\'impresa strutturata. Conosciamo bene il territorio e le sue caratteristiche: molte aziende di Rezzato hanno sia uffici amministrativi che aree produttive. Per questo offriamo servizi integrati che garantiscono pulizia anche degli spazi comuni, spogliatoi e aree esterne. I nostri operatori sono formati per lavorare in sicurezza rispettando tutte le normative.',
+      area: 'Serviamo l\'intero comune di Rezzato, con particolare attenzione alla zona artigianale e all\'area delle cave. I nostri interventi raggiungono Brescia sud, Mazzano, Nuvolera e tutti i comuni limitrofi. La conoscenza della viabilità locale ci consente di programmare i percorsi in modo efficiente.',
+      cta: 'Gestite uffici o spazi aziendali a Rezzato? Scriveteci per ricevere un\'offerta dettagliata. Effettuiamo sopralluoghi gratuiti nella zona artigianale e in centro paese, proponendo soluzioni su misura per ogni esigenza.'
+    },
+    'lonato-del-garda': {
+      h1: 'Pulizie Uffici Lonato del Garda – Professionalità sul Lago',
+      metaTitle: 'Pulizie Uffici Lonato | Servizi Professionali Garda',
+      metaDescription: 'Pulizie uffici Lonato del Garda per aziende e studi. Interventi flessibili zona Rocca e centro. Preventivo veloce!',
+      intro: 'A Lonato del Garda, dalla storica Rocca fino alla zona Esselunga e Maguzzano, forniamo servizi di pulizia uffici completi per attività commerciali, studi professionali e aziende del settore turistico. Il nostro team conosce le particolarità del territorio gardesano e si adatta alle esigenze stagionali tipiche della zona. Serviamo con regolarità società che operano nel turismo, commercio e servizi.',
+      whyChoose: 'Scegliere noi a Lonato significa contare su un partner che comprende il territorio del lago. Molte attività hanno picchi di lavoro nei mesi estivi e necessitano di pulizie più frequenti in alta stagione. Offriamo contratti modulari che si adattano a queste esigenze, con possibilità di intensificare gli interventi quando serve. Utilizziamo prodotti eco-compatibili, ideali per la zona del lago.',
+      area: 'Operiamo su tutto il comune di Lonato del Garda, dal centro storico fino alle zone più periferiche. I nostri servizi raggiungono Desenzano, Pozzolengo, Castiglione delle Stiviere e tutta l\'area sud del lago. La posizione strategica ci permette di servire efficacemente l\'intera zona gardesana.',
+      cta: 'Il vostro ufficio si trova a Lonato o dintorni? Richiedete un sopralluogo gratuito nella vostra area. Studiamo le vostre necessità e proponiamo un piano di pulizie personalizzato, anche con turni adattabili alle stagionalità.'
+    },
+    'palazzolo-oglio': {
+      h1: 'Pulizie Uffici Palazzolo sull\'Oglio – Servizi Completi Bassa Bresciana',
+      metaTitle: 'Pulizie Uffici Palazzolo | Professionali ed Efficienti',
+      metaDescription: 'Pulizie uffici Palazzolo sull\'Oglio per aziende e professionisti. Zona Torre del Popolo e industriale. Chiamaci ora!',
+      intro: 'A Palazzolo sull\'Oglio, tra il centro storico con la Torre del Popolo e la moderna zona industriale, garantiamo servizi di pulizia uffici per imprese manifatturiere, società commerciali e studi professionali. Il nostro team opera con regolarità nel territorio palazzolese, conoscendo bene le caratteristiche delle aziende locali che spaziano dalla meccanica ai servizi. Offriamo soluzioni personalizzate per ogni dimensione aziendale.',
+      whyChoose: 'Affidarci la pulizia dei vostri uffici a Palazzolo significa scegliere competenza e affidabilità. Comprendiamo le esigenze delle imprese locali che necessitano di ambienti sempre ordinati per ricevere clienti e partner commerciali. I nostri operatori intervengono con discrezione, utilizzando attrezzature moderne e prodotti professionali. Garantiamo orari flessibili, anche fuori dagli orari di ufficio per non interferire con l\'attività lavorativa.',
+      area: 'Serviamo l\'intero territorio di Palazzolo sull\'Oglio, compresa l\'area industriale lungo l\'Oglio. I nostri interventi raggiungono Chiari, Cologne, Paratico e tutta la bassa bresciana orientale. La conoscenza del territorio ci permette di organizzare percorsi ottimizzati e garantire massima puntualità.',
+      cta: 'Cercate un servizio professionale per il vostro ufficio a Palazzolo? Contattateci per un preventivo gratuito. Interveniamo in centro storico, zona industriale e in tutte le aree del comune con soluzioni personalizzate.'
+    },
+    'salo': {
+      h1: 'Pulizie Uffici Salò – Qualità e Cura sul Lago di Garda',
+      metaTitle: 'Pulizie Uffici Salò | Servizi Premium Garda Occidentale',
+      metaDescription: 'Pulizie uffici Salò lungolago e centro. Servizi per studi e attività turistiche. Turni flessibili. Preventivo 24h!',
+      intro: 'A Salò, perla del lago di Garda, dal suggestivo Lungolago Zanardelli fino al centro pedonale, offriamo pulizie uffici di alta qualità per studi professionali, agenzie immobiliari e attività legate al turismo. Il nostro team comprende l\'importanza di trasmettere un\'immagine curata in una località turistica di prestigio. Serviamo quotidianamente uffici che ricevono clientela internazionale, garantendo standard elevati.',
+      whyChoose: 'Scegliere i nostri servizi a Salò significa affidarsi a professionisti che conoscono le aspettative di una località turistica premium. Utilizziamo prodotti di alta qualità, delicati sui materiali pregiati tipici degli edifici storici del lungolago. I nostri operatori sono formati per lavorare con discrezione e rispetto, caratteristiche fondamentali in un contesto elegante come quello salodiano. Offriamo turni serali per non disturbare l\'operatività diurna.',
+      area: 'Operiamo su tutto il territorio di Salò, dal centro storico alle zone collinari. I nostri servizi si estendono a Gardone Riviera, San Felice del Benaco, Manerba e tutta la costa occidentale del lago. Conosciamo bene la viabilità estiva e organizziamo i percorsi per garantire sempre la massima puntualità.',
+      cta: 'Il vostro studio o ufficio si affaccia sul lungolago di Salò? Richiedete un sopralluogo personalizzato. Offriamo servizi premium studiati per mantenere l\'eleganza e il prestigio dei vostri ambienti.'
+    },
+    'castenedolo': {
+      h1: 'Pulizie Uffici Castenedolo – Efficienza per la Zona Sud di Brescia',
+      metaTitle: 'Pulizie Uffici Castenedolo | Servizi Rapidi Brescia Sud',
+      metaDescription: 'Pulizie uffici Castenedolo zona industriale e centro. Team esperto per aziende. Richiedi subito un preventivo!',
+      intro: 'A Castenedolo, importante snodo della zona sud di Brescia, garantiamo pulizie uffici professionali per le numerose aziende della zona industriale e le attività del centro. La posizione strategica lungo i collegamenti con Brescia Est ci rende particolarmente efficienti negli interventi. Serviamo imprese logistiche, società di servizi e uffici amministrativi con un team formato e attrezzature moderne.',
+      whyChoose: 'Optare per noi a Castenedolo vuol dire scegliere rapidità ed efficienza. Conosciamo bene la zona industriale sud e le sue caratteristiche logistiche. Molte aziende dell\'area necessitano di interventi rapidi e coordinati con i turni produttivi. Offriamo questa flessibilità garantendo sempre risultati impeccabili. I nostri operatori utilizzano macchinari professionali per coprire anche grandi superfici in tempi ridotti.',
+      area: 'Copriamo tutto il comune di Castenedolo, con focus sulla zona industriale sud e sull\'area logistica. I nostri servizi raggiungono Brescia sud, Azzano Mella, Flero e tutti i comuni limitrofi. La vicinanza alla città ci permette di combinare interventi multipli ottimizzando costi e tempi.',
+      cta: 'La vostra azienda opera a Castenedolo o nella zona industriale sud? Chiamateci per organizzare un sopralluogo. Proponiamo piani di pulizia studiati per le esigenze logistiche e produttive dell\'area.'
+    },
+    'sarezzo': {
+      h1: 'Pulizie Uffici Sarezzo – Specialisti per la Val Trompia',
+      metaTitle: 'Pulizie Uffici Sarezzo | Servizi Professionali Val Trompia',
+      metaDescription: 'Pulizie uffici Sarezzo e Val Trompia. Esperti per aziende industriali. Interventi programmati. Preventivo veloce!',
+      intro: 'A Sarezzo, nel cuore della Val Trompia, offriamo servizi di pulizia uffici specializzati per le aziende del settore metalmeccanico e manifatturiero. Dalla zona industriale nord fino al centro valle, il nostro team serve con regolarità imprese che necessitano di pulizie professionali sia per gli uffici amministrativi che per le aree produttive. Conosciamo le specificità del territorio vallare e le esigenze delle sue imprese storiche.',
+      whyChoose: 'Scegliere i nostri servizi a Sarezzo significa contare su un\'impresa che comprende la realtà industriale della Val Trompia. Lavoriamo con aziende che hanno necessità particolari: pulizie coordinate con i turni produttivi, utilizzo di prodotti specifici per ambienti industriali, massima attenzione alla sicurezza. I nostri operatori sono formati per operare in contesti produttivi complessi, garantendo sempre il rispetto delle normative.',
+      area: 'Serviamo l\'intero comune di Sarezzo e tutta la Val Trompia. I nostri interventi raggiungono Gardone Val Trompia, Villa Carcina, Lumezzane e tutti i comuni della valle. La conoscenza della viabilità montana ci permette di garantire puntualità anche nelle stagioni più difficili.',
+      cta: 'La vostra azienda si trova a Sarezzo o in Val Trompia? Scriveteci per ricevere un preventivo personalizzato. Effettuiamo sopralluoghi nella zona industriale nord e in tutte le aree della valle.'
+    },
+    'orzinuovi': {
+      h1: 'Pulizie Uffici Orzinuovi – Servizi Affidabili Bassa Centrale',
+      metaTitle: 'Pulizie Uffici Orzinuovi | Professionali e Puntuali',
+      metaDescription: 'Pulizie uffici Orzinuovi per aziende agricole e commerciali. Zona Piazza Garibaldi e aree produttive. Preventivo gratuito!',
+      intro: 'A Orzinuovi, importante centro della bassa bresciana centrale, garantiamo pulizie uffici per aziende agricole, società commerciali e studi professionali. Dalla storica Piazza Garibaldi con la Torre Civica fino alle aree produttive lungo l\'Oglio, serviamo realtà di ogni dimensione. Il nostro team comprende le specificità del territorio, dove convivono attività agricole tradizionali e moderne imprese di servizi.',
+      whyChoose: 'Affidarci la pulizia dei vostri uffici a Orzinuovi significa scegliere un partner che conosce la realtà locale. Molte aziende del territorio operano nel settore agricolo e agroalimentare, con esigenze particolari legate alla stagionalità. Offriamo contratti flessibili che si adattano ai ritmi produttivi. Utilizziamo prodotti certificati per il settore alimentare quando necessario e garantiamo il rispetto delle normative HACCP.',
+      area: 'Operiamo su tutto il territorio comunale di Orzinuovi, comprese le aree agricole e la zona lungo il fiume Oglio. I nostri servizi raggiungono Pumenengo, Soncino, Roccafranca e tutta la bassa centrale. La conoscenza della rete viaria ci permette di servire efficacemente anche le aziende più periferiche.',
+      cta: 'Gestite uffici o strutture aziendali a Orzinuovi? Contattateci per un sopralluogo gratuito. Proponiamo soluzioni su misura per il settore agricolo, commerciale e dei servizi, con massima flessibilità.'
+    },
+    'concesio': {
+      h1: 'Pulizie Uffici Concesio – Qualità all\'Ingresso della Val Trompia',
+      metaTitle: 'Pulizie Uffici Concesio | Servizi Nord Brescia',
+      metaDescription: 'Pulizie uffici Concesio e Val Trompia sud. Interventi per aziende e studi. Operatori qualificati. Chiamaci ora!',
+      intro: 'A Concesio, porta della Val Trompia e città natale di Papa Paolo VI, offriamo servizi di pulizia uffici completi per le attività della zona nord di Brescia. Dal centro storico fino alle aree più moderne, serviamo studi professionali, piccole imprese e società di servizi. La vicinanza a Brescia e l\'ingresso della valle fanno di Concesio un territorio strategico che conosciamo approfonditamente.',
+      whyChoose: 'Scegliere i nostri servizi a Concesio significa affidarsi a professionisti locali. Comprendiamo le esigenze sia degli studi del centro paese che delle piccole imprese artigianali della zona. I nostri operatori garantiscono pulizie accurate utilizzando prodotti ecologici, particolarmente adatti per un territorio collinare e verde come quello concesiano. Offriamo massima flessibilità negli orari, adattandoci alle vostre necessità operative.',
+      area: 'Serviamo l\'intero comune di Concesio, dalla zona collinare fino al fondovalle. I nostri interventi raggiungono Brescia nord, Villa Carcina, Gussago e tutti i comuni limitrofi. La posizione strategica ci permette di coordinare facilmente interventi sia verso Brescia che verso la Val Trompia.',
+      cta: 'Il vostro studio o ufficio si trova a Concesio o nella zona nord? Richiedete un preventivo personalizzato. Effettuiamo sopralluoghi gratuiti e rispondiamo rapidamente con proposte chiare e convenienti.'
+    },
+    'travagliato': {
+      h1: 'Pulizie Uffici Travagliato – Soluzioni Efficienti Bassa Ovest',
+      metaTitle: 'Pulizie Uffici Travagliato | Servizi Zona Fiera',
+      metaDescription: 'Pulizie uffici Travagliato per aziende zona fiera e logistica. Team esperto, interventi rapidi. Preventivo immediato!',
+      intro: 'A Travagliato, conosciuta per la Fiera dei Cavalli e la vasta zona industriale ovest, garantiamo pulizie uffici professionali per le numerose aziende del territorio. Dalla zona del centro fiera fino all\'area logistica lungo la provinciale, serviamo imprese commerciali, società di trasporti e studi professionali. Il nostro team conosce le dinamiche produttive dell\'area e offre servizi coordinati con le attività aziendali.',
+      whyChoose: 'Optare per noi a Travagliato vuol dire scegliere efficienza e competenza. Molte aziende della zona industriale ovest necessitano di interventi rapidi e programmati per non interferire con i turni logistici. Offriamo questa flessibilità con operatori formati per lavorare anche in ambienti complessi. Utilizziamo macchinari professionali per coprire grandi superfici e garantiamo sempre risultati impeccabili.',
+      area: 'Operiamo su tutto il comune di Travagliato, con particolare attenzione alla zona industriale ovest e all\'area del centro fiera. I nostri servizi raggiungono Torbole Casaglia, Roncadelle, Ospitaletto e tutta la bassa ovest. La conoscenza della viabilità ci permette di ottimizzare i percorsi e garantire puntualità.',
+      cta: 'La vostra azienda opera a Travagliato o nella zona industriale? Scriveteci per un preventivo dettagliato. Interveniamo nell\'area fiera, zona logistica e in tutto il territorio comunale con soluzioni su misura.'
+    }
+  }
+};
+
+const generateUniqueContent = (serviceId: string, locationId: string): LocalPageContent => {
   const service = services.find(s => s.id === serviceId);
   const location = locations.find(l => l.id === locationId);
 
@@ -26,78 +167,34 @@ const generateContent = (serviceId: string, locationId: string): LocalPageConten
     .slice(0, 4)
     .map(l => l.name);
 
-  const contentVariations: Record<string, any> = {
-    'pulizie-uffici': {
-      h1Suffix: 'Servizi Professionali per Aziende e Studi',
-      intro: `Offriamo servizi professionali di ${service.name.toLowerCase()} a ${location.name} e in tutta la provincia di ${location.province}. La nostra impresa garantisce ambienti di lavoro sempre puliti e ordinati con un team di oltre 28 operatori qualificati. Utilizziamo prodotti professionali ad alta efficacia sgrassante e attrezzature certificate per risultati impeccabili. Serviamo quotidianamente aziende, studi professionali e uffici pubblici nella zona ${location.area ? `di ${location.area}` : `di ${location.name}`} con interventi programmati e flessibili.`,
-      whyChoose: `Scegliere i nostri servizi di pulizia uffici a ${location.name} significa affidarsi a professionisti con esperienza consolidata nel territorio. Garantiamo puntualità negli interventi, utilizzo di prodotti certificati e personale formato continuamente. Operiamo con contratti flessibili personalizzati sulle esigenze di ogni cliente, dalle piccole imprese alle grandi aziende. Il nostro obiettivo è creare ambienti di lavoro salubri e professionali che trasmettano una buona immagine ai vostri clienti e dipendenti.`,
-      area: `I nostri servizi di pulizia uffici sono attivi su tutto il territorio di ${location.name} e comuni limitrofi. Operiamo regolarmente nella zona ${location.area ? `${location.area}` : `di ${location.name}`}, raggiungendo anche le località vicine come ${nearby.slice(0, 3).join(', ')}. La vicinanza al territorio ci permette di garantire interventi rapidi, sopralluoghi gratuiti e un servizio clienti sempre disponibile.`,
-      cta: `Contattaci ora per un preventivo gratuito di pulizia uffici a ${location.name}. Offriamo sopralluoghi senza impegno e rispondiamo entro 24 ore. Il nostro team è a disposizione per valutare le tue esigenze e proporti la soluzione più adatta al tuo ufficio o studio professionale.`
-    },
-    'pulizie-condomini': {
-      h1Suffix: 'Manutenzione Professionale Spazi Comuni',
-      intro: `La nostra impresa è specializzata nei servizi di ${service.name.toLowerCase()} a ${location.name} e provincia. Ci occupiamo della pulizia e manutenzione di scale, androni, ascensori e tutte le aree comuni condominiali. Con oltre 28 operatori qualificati, garantiamo interventi programmati, puntualità e professionalità. Serviamo condomini di ogni dimensione nella zona ${location.area ? `${location.area}` : `di ${location.name}`} con contratti flessibili e personalizzati sulle esigenze di ogni amministratore e condominio.`,
-      whyChoose: `Affidarsi a noi per le pulizie condominiali a ${location.name} significa scegliere qualità e affidabilità. Utilizziamo attrezzature professionali e prodotti specifici per ogni superficie. Il nostro personale è formato per lavorare in sicurezza e nel rispetto delle normative vigenti. Garantiamo interventi regolari con frequenza personalizzabile, dalla pulizia giornaliera a quella settimanale o mensile. La nostra esperienza nel territorio ci permette di conoscere bene le esigenze specifiche dei condomini della zona.`,
-      area: `Operiamo attivamente su tutto il comune di ${location.name} e nelle località limitrofe della provincia di Brescia. I nostri servizi raggiungono regolarmente anche ${nearby.slice(0, 3).join(', ')} e tutta l'area ${location.area ? `${location.area}` : `circostante`}. La presenza capillare sul territorio ci consente di intervenire rapidamente in caso di necessità straordinarie e di garantire sempre il massimo della puntualità.`,
-      cta: `Richiedi subito un preventivo gratuito per le pulizie del tuo condominio a ${location.name}. Offriamo sopralluoghi senza impegno per valutare le aree da pulire e proporti un piano di interventi personalizzato. Contattaci per migliorare il decoro e l'igiene degli spazi comuni del tuo edificio.`
-    },
-    'pulizie-industriali': {
-      h1Suffix: 'Pulizia Capannoni e Aree Produttive',
-      intro: `Siamo specializzati in ${service.name.toLowerCase()} a ${location.name} e in tutta la provincia di Brescia. Ci occupiamo della pulizia di capannoni produttivi, aree industriali, magazzini e spazi logistici con attrezzature specifiche e personale altamente qualificato. Il nostro team di oltre 28 operatori esperti interviene con macchinari industriali professionali per garantire ambienti di lavoro puliti, sicuri e conformi alle normative. Serviamo aziende di ogni settore nella zona ${location.area ? `${location.area}` : `di ${location.name}`} con massima flessibilità negli orari di intervento.`,
-      whyChoose: `Scegliere i nostri servizi di pulizia industriale a ${location.name} significa affidarsi a professionisti che conoscono le specifiche esigenze del settore produttivo. Utilizziamo macchinari industriali certificati, prodotti specifici per ogni tipo di superficie e sporco industriale. Lavoriamo in totale sicurezza rispettando tutte le normative HACCP e di sicurezza sul lavoro. I nostri interventi possono essere programmati negli orari più comodi, anche di notte o nei weekend, per non interferire con l'attività produttiva.`,
-      area: `I nostri servizi di pulizia industriale coprono tutto il territorio di ${location.name} e l'intera area produttiva della provincia di Brescia. Operiamo regolarmente anche a ${nearby.slice(0, 3).join(', ')} servendo le principali zone industriali del territorio. La nostra organizzazione logistica ci permette di intervenire rapidamente su chiamata e di gestire anche commesse di grandi dimensioni.`,
-      cta: `Richiedi un preventivo gratuito per la pulizia del tuo capannone o area industriale a ${location.name}. Effettuiamo sopralluoghi tecnici senza impegno per valutare le tue esigenze produttive e proporti un piano di interventi su misura. Contattaci per un servizio professionale e affidabile.`
-    },
-    'pulizie-post-cantiere': {
-      h1Suffix: 'Pulizia Finale dopo Lavori e Ristrutturazioni',
-      intro: `La nostra impresa offre servizi specializzati di ${service.name.toLowerCase()} a ${location.name} e provincia. Ci occupiamo della pulizia finale di immobili dopo lavori di costruzione, ristrutturazione o manutenzione straordinaria. Il nostro team rimuove detriti, polveri, residui di cantiere e prepara gli ambienti per la consegna o l'utilizzo. Con oltre 28 operatori esperti e attrezzature professionali, garantiamo risultati impeccabili nella zona ${location.area ? `${location.area}` : `di ${location.name}`}. Serviamo imprese edili, privati e amministrazioni pubbliche con interventi rapidi e accurati.`,
-      whyChoose: `Affidarsi a noi per le pulizie post cantiere a ${location.name} significa ricevere un servizio completo e professionale. Conosciamo bene le problematiche legate alla pulizia dopo i lavori edili: polvere, residui di stucco, macchie di vernice e materiali vari. Utilizziamo aspiratori industriali, prodotti specifici per ogni superficie e tecniche professionali per rimuovere anche lo sporco più ostinato. Interveniamo rapidamente per rispettare le vostre tempistiche di consegna e garantiamo ambienti perfettamente puliti e pronti all'uso.`,
-      area: `Operiamo su tutto il territorio comunale di ${location.name} e nei comuni limitrofi della provincia di Brescia. I nostri servizi di pulizia post cantiere raggiungono regolarmente anche ${nearby.slice(0, 3).join(', ')} e l'intera area ${location.area ? `${location.area}` : `circostante`}. Grazie alla conoscenza del territorio, possiamo intervenire rapidamente e coordinare gli interventi con i lavori delle imprese edili.`,
-      cta: `Hai bisogno di una pulizia post cantiere a ${location.name}? Contattaci per un preventivo immediato e senza impegno. Valutiamo le superfici da pulire e ti proponiamo un intervento personalizzato con tempi certi e prezzi trasparenti. Richiedi ora un sopralluogo gratuito.`
-    },
-    'sanificazione-ambienti': {
-      h1Suffix: 'Igiene Totale e Sicurezza Garantita',
-      intro: `Offriamo servizi professionali di ${service.name.toLowerCase()} a ${location.name} e in tutta la provincia di Brescia. Utilizziamo prodotti certificati e protocolli sanitari rigorosi per garantire ambienti perfettamente igienizzati e sicuri. Il nostro team di oltre 28 operatori specializzati interviene su uffici, negozi, scuole, ambulatori, ristoranti e qualsiasi tipo di ambiente che necessiti di disinfezione profonda. Operiamo nella zona ${location.area ? `${location.area}` : `di ${location.name}`} con certificazione di ogni intervento eseguito e massima attenzione alle normative sanitarie vigenti.`,
-      whyChoose: `Scegliere i nostri servizi di sanificazione a ${location.name} significa affidarsi a professionisti certificati. Utilizziamo prodotti virucidi e battericidi autorizzati dal Ministero della Salute, efficaci contro virus, batteri e agenti patogeni. Seguiamo protocolli specifici per ogni tipo di ambiente e rilasciamo sempre la certificazione dell'intervento eseguito. Il nostro personale è formato continuamente sulle più recenti tecniche di sanificazione e sui protocolli anti COVID-19. Garantiamo sicurezza massima per dipendenti, clienti e utenti.`,
-      area: `I nostri servizi di sanificazione sono attivi su tutto il territorio di ${location.name} e comuni limitrofi. Interveniamo regolarmente anche a ${nearby.slice(0, 3).join(', ')} e in tutta l'area ${location.area ? `${location.area}` : `della provincia di Brescia`}. La rapidità di intervento è garantita dalla nostra presenza capillare sul territorio e dalla disponibilità anche per emergenze sanitarie.`,
-      cta: `Hai bisogno di una sanificazione professionale a ${location.name}? Contattaci subito per un preventivo gratuito. Interveniamo rapidamente con prodotti certificati e rilasciamo attestazione dell'avvenuta sanificazione. Proteggi la salute di dipendenti e clienti con un servizio professionale e sicuro.`
-    },
-    'pulizia-vetri': {
-      h1Suffix: 'Lavaggio Professionale Vetrate e Infissi',
-      intro: `La nostra impresa è specializzata in ${service.name.toLowerCase()} a ${location.name} e provincia. Ci occupiamo del lavaggio professionale di vetrate per uffici, negozi, condomini e abitazioni private con attrezzature specifiche e personale qualificato. Il nostro team interviene su vetrate di ogni dimensione, anche in altezza, garantendo risultati perfetti senza aloni o macchie. Operiamo nella zona ${location.area ? `${location.area}` : `di ${location.name}`} con oltre 28 operatori esperti e attrezzature professionali per vetrate di difficile accesso.`,
-      whyChoose: `Affidarsi a noi per la pulizia vetri a ${location.name} significa ricevere un servizio accurato e professionale. Utilizziamo prodotti specifici che non lasciano aloni, aste telescopiche per raggiungere ogni altezza e tecniche professionali per vetrate di grandi dimensioni. Il nostro personale è formato per lavorare in sicurezza anche in condizioni difficili. Offriamo contratti periodici con interventi programmati mensili, bimestrali o stagionali per mantenere sempre le tue vetrate perfettamente pulite.`,
-      area: `Operiamo attivamente su tutto il comune di ${location.name} e nelle località limitrofe della provincia di Brescia. I nostri servizi di pulizia vetri raggiungono regolarmente anche ${nearby.slice(0, 3).join(', ')} e tutta l'area ${location.area ? `${location.area}` : `circostante`}. La conoscenza del territorio ci permette di organizzare interventi efficienti anche per clienti con più sedi nella stessa zona.`,
-      cta: `Vuoi vetrate sempre perfettamente pulite a ${location.name}? Contattaci per un preventivo gratuito. Offriamo sopralluoghi senza impegno per valutare le superfici vetrate e proporti un piano di interventi personalizzato, anche con contratti periodici a prezzi vantaggiosi.`
-    },
-    'gestione-carrellati': {
-      h1Suffix: 'Gestione Professionale Raccolta Differenziata',
-      intro: `Offriamo servizi professionali di ${service.name.toLowerCase()} a ${location.name} e in tutta la provincia di Brescia. Ci occupiamo della gestione completa dei bidoni per la raccolta differenziata di condomini, aziende e attività commerciali. Il nostro servizio include il posizionamento dei carrellati nei giorni di raccolta, il ritiro dopo lo svuotamento e la pulizia periodica dei contenitori. Operiamo nella zona ${location.area ? `${location.area}` : `di ${location.name}`} coordinandoci perfettamente con il servizio di raccolta comunale e garantendo il massimo rispetto delle normative ambientali.`,
-      whyChoose: `Scegliere i nostri servizi di gestione carrellati a ${location.name} significa liberarsi di un'incombenza quotidiana. Ci occupiamo di tutto: conosciamo perfettamente i calendari di raccolta del comune, posizioniamo i bidoni negli orari corretti e li ritiriamo dopo lo svuotamento. Puliamo e sanifichiamo periodicamente i contenitori per garantire igiene e decoro. Per i condomini, questo servizio migliora il decoro degli spazi comuni e risolve i problemi legati alla gestione della raccolta differenziata. Per le aziende, garantisce il pieno rispetto delle normative ambientali.`,
-      area: `I nostri servizi sono attivi su tutto il territorio comunale di ${location.name} e nei comuni limitrofi. Operiamo regolarmente anche a ${nearby.slice(0, 3).join(', ')} gestendo i calendari specifici di ogni comune. La conoscenza approfondita delle zone di raccolta e degli orari ci permette di garantire un servizio impeccabile e puntuale.`,
-      cta: `Vuoi liberarti della gestione dei bidoni a ${location.name}? Contattaci per un preventivo gratuito. Ti proporremo un servizio completo e su misura che include posizionamento, ritiro e pulizia periodica dei carrellati. Risparmia tempo e migliora il decoro del tuo condominio o azienda.`
-    },
-    'giardinaggio': {
-      h1Suffix: 'Cura del Verde e Manutenzione Professionale',
-      intro: `La nostra impresa offre servizi completi di ${service.name.toLowerCase()} a ${location.name} e in tutta la provincia di Brescia. Ci occupiamo della cura e manutenzione di giardini privati, aree verdi condominiali, parchi aziendali e spazi pubblici. Il nostro team di giardinieri professionisti interviene con attrezzature moderne per taglio erba, potatura, pulizia e sistemazione delle aree verdi. Operiamo nella zona ${location.area ? `${location.area}` : `di ${location.name}`} con oltre 28 operatori qualificati e mezzi specifici per ogni tipo di intervento sul verde.`,
-      whyChoose: `Affidarsi a noi per il giardinaggio a ${location.name} significa avere giardini sempre curati e ordinati. I nostri giardinieri sono esperti nella cura delle diverse tipologie di piante e nella manutenzione di prati e aiuole. Utilizziamo attrezzature professionali: trattorini rasaerba, decespugliatori, motoseghe e biotrituratori. Offriamo contratti di manutenzione periodica con interventi programmati mensili o stagionali, perfetti per chi vuole un giardino sempre in ordine senza doversi preoccupare di nulla. Realizziamo anche piccoli interventi di sistemazione verde e piantumazione.`,
-      area: `I nostri servizi di giardinaggio coprono tutto il territorio di ${location.name} e i comuni limitrofi della provincia di Brescia. Operiamo regolarmente anche a ${nearby.slice(0, 3).join(', ')} servendo l'intera area ${location.area ? `${location.area}` : `circostante`}. La conoscenza del territorio ci permette di organizzare percorsi efficienti e di intervenire rapidamente in caso di necessità.`,
-      cta: `Vuoi un giardino sempre curato e in ordine a ${location.name}? Contattaci per un sopralluogo gratuito e senza impegno. Valutiamo le tue aree verdi e ti proponiamo un piano di manutenzione personalizzato con interventi programmati e prezzi trasparenti. Richiedi ora il tuo preventivo.`
-    }
-  };
+  const content = contentDatabase[serviceId]?.[locationId];
 
-  const content = contentVariations[serviceId];
+  if (content) {
+    return {
+      serviceId,
+      locationId,
+      h1: content.h1,
+      metaTitle: content.metaTitle,
+      metaDescription: content.metaDescription,
+      introText: content.intro,
+      whyChooseText: content.whyChoose,
+      areaDescription: content.area,
+      nearbyAreas: nearby,
+      ctaText: content.cta
+    };
+  }
 
   return {
     serviceId,
     locationId,
-    h1: `${service.name} a ${location.name} – ${content.h1Suffix}`,
+    h1: `${service.name} a ${location.name} – Servizi Professionali`,
     metaTitle: `${service.name} ${location.name} | Professionali e Affidabili`,
-    metaDescription: `${service.name} a ${location.name}: servizi professionali con 28+ operatori qualificati. Preventivo gratuito in 24h. Zona ${location.area || location.name}.`,
-    introText: content.intro,
-    whyChooseText: content.whyChoose,
-    areaDescription: content.area,
+    metaDescription: `${service.name} a ${location.name}: servizi professionali con 28+ operatori qualificati. Preventivo gratuito in 24h.`,
+    introText: `Servizi professionali di ${service.name.toLowerCase()} a ${location.name} e provincia.`,
+    whyChooseText: `Scegli i nostri servizi a ${location.name} per qualità e affidabilità.`,
+    areaDescription: `Operiamo su tutto il territorio di ${location.name} e comuni limitrofi.`,
     nearbyAreas: nearby,
-    ctaText: content.cta
+    ctaText: `Richiedi un preventivo gratuito per ${service.name.toLowerCase()} a ${location.name}.`
   };
 };
 
@@ -106,7 +203,7 @@ export const getAllLocalPages = (): LocalPageContent[] => {
 
   services.forEach(service => {
     locations.forEach(location => {
-      pages.push(generateContent(service.id, location.id));
+      pages.push(generateUniqueContent(service.id, location.id));
     });
   });
 
@@ -121,5 +218,5 @@ export const getLocalPageContent = (serviceSlug: string, locationSlug: string): 
     return null;
   }
 
-  return generateContent(service.id, location.id);
+  return generateUniqueContent(service.id, location.id);
 };
