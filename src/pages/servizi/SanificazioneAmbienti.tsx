@@ -87,7 +87,7 @@ const SanificazioneAmbienti = () => {
     "Disinfettanti virucidi certificati",
     "Prodotti battericidi specifici",
     "Soluzioni fungicide professionali",
-    "Detergenti sanificanti ecologici",
+    "Detergenti sanificanti professionali",
     "Nebulizzatori professionali",
     "Sistemi di vaporizzazione"
   ];

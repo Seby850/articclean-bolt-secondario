@@ -14,20 +14,20 @@ const Homepage = () => {
       image: "https://i.imgur.com/RAZaa1z.jpeg"
     },
     {
-      title: "Pulizie Industriali", 
+      title: "Pulizie Condomini",
+      description: "Pulizie professionali per aree comuni condominiali con contratti singoli o periodici programmati.",
+      icon: "🏘️",
+      features: ["Aree comuni", "Scale e ascensori", "Gestione carrellati"],
+      link: "/servizi/pulizie-condomini",
+      image: "https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=800"
+    },
+    {
+      title: "Pulizie Industriali",
       description: "Interventi specializzati per capannoni, magazzini e ambienti industriali di ogni dimensione.",
       icon: "🏭",
       features: ["Pulizia capannoni", "Aspirazione industriale", "Trattamento pavimenti"],
       link: "/servizi/pulizie-industriali",
       image: "https://i.imgur.com/ja4pwgZ.png"
-    },
-    {
-      title: "Pulizie Post-Cantiere",
-      description: "Pulizie specializzate per la consegna di nuove costruzioni o ristrutturazioni.",
-      icon: "🔨",
-      features: ["Rimozione detriti", "Pulizia finale", "Consegna immediata"],
-      link: "/servizi/pulizie-post-cantiere",
-      image: "https://i.imgur.com/eUBWEu3.jpeg"
     },
     {
       title: "Pulizie Vetri e Vetrate",
@@ -38,20 +38,28 @@ const Homepage = () => {
       image: "https://i.imgur.com/mwIw3dd.jpeg"
     },
     {
-      title: "Sanificazione Ambienti",
-      description: "Trattamenti certificati per la sicurezza e l'igiene degli ambienti di lavoro.",
-      icon: "🦠",
-      features: ["Sanificazione certificata", "Prodotti ecologici", "Protocolli sicurezza"],
-      link: "/servizi/sanificazione-ambienti",
-      image: "https://images.pexels.com/photos/4099471/pexels-photo-4099471.jpeg?auto=compress&cs=tinysrgb&w=800"
+      title: "Giardinaggio",
+      description: "Cura e manutenzione di parchi, giardini e aiuole. Promozione speciale per condomini.",
+      icon: "🌳",
+      features: ["Manutenzione verde", "Potature", "Cura aiuole"],
+      link: "/servizi/giardinaggio",
+      image: "https://images.pexels.com/photos/1301856/pexels-photo-1301856.jpeg?auto=compress&cs=tinysrgb&w=800"
+    },
+    {
+      title: "Gestione Carrellati",
+      description: "Gestione professionale dei bidoni per la raccolta differenziata in condomini e aziende.",
+      icon: "♻️",
+      features: ["Raccolta differenziata", "Pulizia carrellati", "Gestione periodica"],
+      link: "/servizi/gestione-carrellati",
+      image: "https://images.pexels.com/photos/3735218/pexels-photo-3735218.jpeg?auto=compress&cs=tinysrgb&w=800"
     }
   ];
 
   const advantages = [
     {
       icon: Award,
-      title: "15+ Anni di Esperienza",
-      description: "Un team esperto al servizio delle aziende con competenze certificate e formazione continua."
+      title: "Alta Qualità del Servizio",
+      description: "Un team di 28 dipendenti qualificati al servizio di aziende e privati con standard elevati."
     },
     {
       icon: Clock,
@@ -60,8 +68,8 @@ const Homepage = () => {
     },
     {
       icon: Shield,
-      title: "Prodotti Ecologici",
-      description: "Utilizziamo solo prodotti certificati, sicuri per l'ambiente e per la salute delle persone."
+      title: "Prodotti Professionali",
+      description: "Utilizziamo prodotti professionali ad alta efficacia sgrassante per risultati impeccabili."
     },
     {
       icon: Users,
@@ -97,10 +105,10 @@ const Homepage = () => {
   return (
     <div>
       <SEO
-        title="Arctic Clean Service - Pulizie Professionali per Aziende | Uffici, Industrie, Sanificazione"
-        description="Arctic Clean Service offre servizi di pulizie professionali per aziende, uffici, capannoni industriali e sanificazione ambienti. Preventivo gratuito in 24h. Oltre 15 anni di esperienza."
-        keywords="pulizie professionali, pulizie uffici, pulizie industriali, sanificazione ambienti, pulizie aziendali, impresa di pulizie"
-        canonical="https://www.arcticclean.it/"
+        title="Impresa di Pulizie Brescia - Pulizie Professionali | Uffici, Condomini, Industrie, Giardinaggio"
+        description="Impresa di Pulizie a Brescia con 28 dipendenti qualificati. Pulizie per uffici, condomini, industrie e giardinaggio. Zona operativa: Brescia e provincia. Preventivo gratuito. Contratti singoli e periodici."
+        keywords="pulizie professionali brescia, pulizie uffici brescia, pulizie condomini, giardinaggio brescia, impresa di pulizie brescia, gestione carrellati"
+        canonical="https://www.impresapulizie.it/"
       />
       {/* Hero Section */}
       <section className="pt-24 pb-20 relative overflow-hidden min-h-screen bg-gradient-to-br from-white via-sky-50/30 to-cyan-50/20">
@@ -132,9 +140,9 @@ const Homepage = () => {
               </h1>
               
               <p className="text-lg sm:text-xl lg:text-2xl text-slate-600 max-w-3xl mx-auto leading-relaxed font-light px-4">
-                Offriamo servizi di pulizia specializzati per uffici, aziende e ambienti industriali. 
+                Offriamo servizi di pulizia per aziende e privati: uffici, condomini, industrie e giardinaggio.
                 <span className="block mt-2 font-medium text-sky-700">
-                  Affidabilità, qualità e risultati garantiti per il tuo business.
+                  Via Carpaccio 10, Brescia - Zona operativa: Brescia e provincia.
                 </span>
               </p>
             </div>
@@ -186,15 +194,15 @@ const Homepage = () => {
             <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-6 lg:gap-8 mt-12 text-xs sm:text-sm lg:text-base text-slate-600 px-4">
               <div className="flex items-center space-x-2">
                 <div className="w-2 h-2 bg-emerald-500 rounded-full"></div>
-                <span>Preventivo gratuito in 24h</span>
+                <span>Sopralluoghi gratuiti</span>
               </div>
               <div className="flex items-center space-x-2">
                 <div className="w-2 h-2 bg-sky-500 rounded-full"></div>
-                <span>Oltre 500 aziende servite</span>
+                <span>28 dipendenti qualificati</span>
               </div>
               <div className="flex items-center space-x-2">
                 <div className="w-2 h-2 bg-teal-500 rounded-full"></div>
-                <span>Risultati garantiti</span>
+                <span>Prezzi competitivi</span>
               </div>
             </div>
           </div>
@@ -261,11 +269,10 @@ const Homepage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
-              Perché Scegliere <span className="text-sky-500">Arctic Clean</span>
+              Perché Scegliere la Nostra <span className="text-sky-500">Impresa di Pulizie</span>
             </h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-              La qualità superiore, l'affidabilità e l'attenzione ai dettagli che ci distinguono 
-              nel settore delle pulizie professionali.
+              Alta qualità del servizio e prezzi competitivi che ci distinguono nel settore delle pulizie professionali a Brescia.
             </p>
           </div>
 
@@ -345,8 +352,8 @@ const Homepage = () => {
         badge={{
           text: "Preventivo Gratuito"
         }}
-        title="Pronto a iniziare con Arctic Clean?"
-        description="Contattaci oggi per un preventivo personalizzato e gratuito. Il nostro team di esperti ti fornirà una soluzione su misura per le tue esigenze di pulizia aziendale."
+        title="Pronto a iniziare con la nostra Impresa di Pulizie?"
+        description="Contattaci per un preventivo personalizzato e gratuito. Sopralluoghi senza impegno. Serviamo aziende e privati a Brescia e provincia con contratti singoli o periodici programmati."
         action={{
           text: "Richiedi Preventivo Gratuito",
           href: "/richiedi-preventivo",

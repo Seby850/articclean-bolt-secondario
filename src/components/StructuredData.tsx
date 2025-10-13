@@ -5,29 +5,37 @@ const StructuredData = () => {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "@id": "https://www.arcticclean.it/#business",
-    "name": "Arctic Clean Service",
-    "description": "Servizi di pulizie professionali per aziende, uffici, industrie e sanificazione ambienti",
-    "url": "https://www.arcticclean.it",
-    "telephone": "+39-XXX-XXXXXXX",
+    "name": "Impresa di Pulizie",
+    "description": "Servizi di pulizie professionali per aziende, privati, condomini, uffici, industrie, giardinaggio e gestione carrellati. 28 dipendenti qualificati",
+    "url": "https://www.impresapulizie.it",
+    "telephone": "+39-030-9876543",
     "priceRange": "€€",
     "image": "https://www.arcticclean.it/logo.png",
     "address": {
       "@type": "PostalAddress",
+      "streetAddress": "Via Carpaccio 10",
       "addressCountry": "IT",
-      "addressLocality": "Milano",
+      "addressLocality": "Brescia",
+      "postalCode": "25100",
       "addressRegion": "Lombardia"
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": "45.4642",
-      "longitude": "9.1900"
+      "latitude": "45.5416",
+      "longitude": "10.2118"
     },
     "openingHoursSpecification": [
       {
         "@type": "OpeningHoursSpecification",
         "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        "opens": "08:00",
-        "closes": "18:00"
+        "opens": "07:30",
+        "closes": "18:30"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Saturday",
+        "opens": "07:30",
+        "closes": "13:00"
       }
     ],
     "sameAs": [
@@ -44,12 +52,12 @@ const StructuredData = () => {
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "Arctic Clean Service",
-    "url": "https://www.arcticclean.it",
+    "name": "Impresa di Pulizie",
+    "url": "https://www.impresapulizie.it",
     "logo": "https://www.arcticclean.it/logo.png",
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+39-XXX-XXXXXXX",
+      "telephone": "+39-030-9876543",
       "contactType": "customer service",
       "availableLanguage": ["Italian"],
       "areaServed": "IT"
@@ -62,8 +70,8 @@ const StructuredData = () => {
     "serviceType": "Pulizie Professionali",
     "provider": {
       "@type": "LocalBusiness",
-      "name": "Arctic Clean Service",
-      "url": "https://www.arcticclean.it"
+      "name": "Impresa di Pulizie",
+      "url": "https://www.impresapulizie.it"
     },
     "areaServed": {
       "@type": "Country",
@@ -95,6 +103,30 @@ const StructuredData = () => {
             "@type": "Service",
             "name": "Sanificazione Ambienti",
             "description": "Trattamenti certificati per la sicurezza e igiene"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Pulizie Condomini",
+            "description": "Servizi di pulizia per aree comuni condominiali"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Giardinaggio e Manutenzione Verde",
+            "description": "Cura e manutenzione di parchi, giardini e aiuole"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Gestione Carrellati",
+            "description": "Gestione bidoni per raccolta differenziata"
           }
         }
       ]

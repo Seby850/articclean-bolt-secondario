@@ -75,20 +75,24 @@ const RichidiPreventivo = () => {
 
   const tipiServizio = [
     'Pulizie Uffici',
+    'Pulizie Condomini',
     'Pulizie Industriali',
     'Pulizie Post-Cantiere',
     'Pulizie Vetri e Vetrate',
     'Sanificazione Ambienti',
+    'Giardinaggio e Manutenzione Verde',
+    'Gestione Carrellati',
     'Servizi Multipli',
     'Altro (specificare nel messaggio)'
   ];
 
   const opzioniFrequenza = [
+    'Intervento Singolo',
     'Giornaliera',
     'Settimanale',
     'Bisettimanale',
     'Mensile',
-    'Occasionale',
+    'Contratto Periodico Programmato',
     'Da valutare'
   ];
 
@@ -109,10 +113,13 @@ const RichidiPreventivo = () => {
             </p>
             <div className="bg-sky-50 rounded-lg p-4 mb-6">
               <p className="text-sky-800 font-semibold">
-                📞 Per urgenze: +39 030 987 6543
+                📞 Telefono: +39 030 987 6543
               </p>
               <p className="text-sky-700">
-                📧 Email: info@arcticclean.it
+                📧 Email: info@impresapulizie.it
+              </p>
+              <p className="text-sky-700">
+                📍 Via Carpaccio 10, Brescia
               </p>
             </div>
             <a

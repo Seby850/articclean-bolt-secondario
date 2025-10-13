@@ -9,19 +9,19 @@ const Footer = () => {
           <div className="space-y-4">
             <Link to="/" className="flex items-center space-x-3">
               <div className="w-10 h-10 flex items-center justify-center">
-                <img 
-                  src="https://i.imgur.com/ks6yQn1.png" 
-                  alt="Arctic Clean Service Logo" 
+                <img
+                  src="https://i.imgur.com/ks6yQn1.png"
+                  alt="Impresa di Pulizie Logo"
                   className="w-full h-full object-contain"
                 />
               </div>
               <div>
-                <h1 className="text-lg font-bold">Arctic Clean</h1>
+                <h1 className="text-lg font-bold">Impresa di Pulizie</h1>
               </div>
             </Link>
             <p className="text-slate-300 leading-relaxed">
-              Servizi di pulizia professionale per uffici, aziende e strutture commerciali. 
-              Qualità, affidabilità e risultati garantiti.
+              Servizi di pulizia professionale per aziende, privati, condomini e giardinaggio.
+              28 dipendenti al vostro servizio con alta qualità e prezzi competitivi.
             </p>
           </div>
 
@@ -29,10 +29,11 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Servizi</h3>
             <ul className="space-y-2 text-slate-300">
               <li><Link to="/servizi/pulizie-uffici" className="hover:text-sky-400 transition-colors">Pulizia Uffici</Link></li>
+              <li><Link to="/servizi/pulizie-condomini" className="hover:text-sky-400 transition-colors">Pulizie Condomini</Link></li>
               <li><Link to="/servizi/pulizie-industriali" className="hover:text-sky-400 transition-colors">Pulizie Industriali</Link></li>
-              <li><Link to="/servizi/sanificazione-ambienti" className="hover:text-sky-400 transition-colors">Sanificazione</Link></li>
               <li><Link to="/servizi/pulizie-vetri" className="hover:text-sky-400 transition-colors">Pulizia Vetri</Link></li>
-              <li><Link to="/servizi/pulizie-post-cantiere" className="hover:text-sky-400 transition-colors">Pulizie Post-Cantiere</Link></li>
+              <li><Link to="/servizi/giardinaggio" className="hover:text-sky-400 transition-colors">Giardinaggio</Link></li>
+              <li><Link to="/servizi/gestione-carrellati" className="hover:text-sky-400 transition-colors">Gestione Carrellati</Link></li>
             </ul>
           </div>
 
@@ -56,12 +57,19 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-4 h-4 text-sky-400" />
-                <a href="mailto:info@arcticclean.it" className="hover:text-sky-400 transition-colors">info@arcticclean.it</a>
+                <a href="mailto:info@impresapulizie.it" className="hover:text-sky-400 transition-colors">info@impresapulizie.it</a>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="w-4 h-4 text-sky-400" />
-                <span>Brescia, Lombardia</span>
+                <span>Via Carpaccio 10, Brescia</span>
               </div>
+            </div>
+            <div className="mt-4 text-sm text-slate-400">
+              <p className="font-semibold text-slate-300 mb-1">Orari:</p>
+              <p>Lun-Ven: 7:30 - 18:30</p>
+              <p>Sabato: 7:30 - 13:00</p>
+              <p>Domenica: Chiuso</p>
+              <p className="mt-2 text-sky-400">Pronto intervento: tutti i giorni (escluso domenica)</p>
             </div>
 
             <div className="mt-6">
@@ -82,7 +90,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-slate-800 mt-12 pt-8 text-center text-slate-400">
-          <p>&copy; 2025 Arctic Clean Service. Tutti i diritti riservati.</p>
+          <p>&copy; 2025 Impresa di Pulizie. Tutti i diritti riservati. | Via Carpaccio 10, Brescia | Zona operativa: Brescia e provincia</p>
         </div>
       </div>
     </footer>

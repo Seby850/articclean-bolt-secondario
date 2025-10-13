@@ -7,10 +7,13 @@ import StructuredData from './components/StructuredData';
 const Homepage = lazy(() => import('./pages/Homepage'));
 const Servizi = lazy(() => import('./pages/Servizi'));
 const PulizieUffici = lazy(() => import('./pages/servizi/PulizieUffici'));
+const PulizieCondomini = lazy(() => import('./pages/servizi/PulizieCondomini'));
 const PulizieIndustriali = lazy(() => import('./pages/servizi/PulizieIndustriali'));
 const PuliziePostCantiere = lazy(() => import('./pages/servizi/PuliziePostCantiere'));
 const PulizieVetri = lazy(() => import('./pages/servizi/PulizieVetri'));
 const SanificazioneAmbienti = lazy(() => import('./pages/servizi/SanificazioneAmbienti'));
+const Giardinaggio = lazy(() => import('./pages/servizi/Giardinaggio'));
+const GestioneCarrellati = lazy(() => import('./pages/servizi/GestioneCarrellati'));
 const RichidiPreventivo = lazy(() => import('./pages/RichidiPreventivo'));
 
 const LoadingSpinner = () => (
@@ -29,10 +32,13 @@ function App() {
           <Route path="/" element={<Homepage />} />
           <Route path="/servizi" element={<Servizi />} />
           <Route path="/servizi/pulizie-uffici" element={<PulizieUffici />} />
+          <Route path="/servizi/pulizie-condomini" element={<PulizieCondomini />} />
           <Route path="/servizi/pulizie-industriali" element={<PulizieIndustriali />} />
           <Route path="/servizi/pulizie-post-cantiere" element={<PuliziePostCantiere />} />
           <Route path="/servizi/pulizie-vetri" element={<PulizieVetri />} />
           <Route path="/servizi/sanificazione-ambienti" element={<SanificazioneAmbienti />} />
+          <Route path="/servizi/giardinaggio" element={<Giardinaggio />} />
+          <Route path="/servizi/gestione-carrellati" element={<GestioneCarrellati />} />
           <Route path="/richiedi-preventivo" element={<RichidiPreventivo />} />
         </Routes>
       </Suspense>

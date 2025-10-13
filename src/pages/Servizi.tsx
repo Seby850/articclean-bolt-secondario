@@ -108,6 +108,27 @@ const Servizi = () => {
         "Tranquillità per clienti e visitatori"
       ],
       image: "https://images.pexels.com/photos/4099471/pexels-photo-4099471.jpeg?auto=compress&cs=tinysrgb&w=800"
+    },
+    {
+      id: 'condomini',
+      icon: Building2,
+      title: "Pulizie Condomini",
+      description: "Servizi professionali per aree comuni condominiali con contratti singoli o periodici.",
+      features: [
+        "Pulizia scale e pianerottoli",
+        "Sanificazione ascensori",
+        "Pulizia atrii e ingressi",
+        "Gestione bidoni raccolta differenziata",
+        "Pulizia vetri aree comuni",
+        "Cura cortili e giardini"
+      ],
+      benefits: [
+        "Condominio sempre pulito e ordinato",
+        "Contratti flessibili su misura",
+        "Servizio affidabile e puntuale",
+        "Promozione per servizi integrati"
+      ],
+      image: "https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=800"
     }
   ];
 
@@ -119,8 +140,8 @@ const Servizi = () => {
     },
     {
       icon: Shield,
-      title: "Prodotti Ecologici",
-      description: "Prodotti certificati, sicuri per l'ambiente e per la salute delle persone."
+      title: "Prodotti Professionali",
+      description: "Prodotti professionali ad alta efficacia sgrassante per risultati impeccabili."
     },
     {
       icon: Building2,
@@ -132,10 +153,10 @@ const Servizi = () => {
   return (
     <div className="pt-24 pb-20">
       <SEO
-        title="Servizi di Pulizia Professionali per Aziende"
-        description="Scopri tutti i nostri servizi: pulizie uffici, pulizie industriali, pulizie post-cantiere, pulizie vetri e sanificazione ambienti. Soluzioni complete per ogni esigenza."
-        keywords="servizi pulizie professionali, pulizie uffici, pulizie industriali, pulizie vetri, sanificazione, post cantiere"
-        canonical="https://www.arcticclean.it/servizi"
+        title="Servizi di Pulizia Professionali Brescia - Uffici, Condomini, Industrie, Giardinaggio"
+        description="Tutti i servizi di Impresa di Pulizie a Brescia: pulizie uffici, condomini, industrie, vetri, giardinaggio e gestione carrellati. 28 dipendenti qualificati. Contratti singoli e periodici."
+        keywords="servizi pulizie brescia, pulizie uffici, pulizie condomini, pulizie industriali, giardinaggio brescia, gestione carrellati"
+        canonical="https://www.impresapulizie.it/servizi"
       />
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-white via-sky-50/30 to-cyan-50/20">
@@ -144,8 +165,8 @@ const Servizi = () => {
             I Nostri <span className="text-sky-500">Servizi</span>
           </h1>
           <p className="text-xl text-slate-600 leading-relaxed max-w-3xl mx-auto">
-            Soluzioni complete per ogni esigenza di pulizia aziendale, 
-            con personale qualificato e attrezzature professionali.
+            Soluzioni complete per aziende e privati a Brescia e provincia.
+            28 dipendenti qualificati, contratti singoli o periodici programmati.
           </p>
         </div>
       </section>
@@ -265,12 +286,12 @@ const Servizi = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               "Uffici e Coworking",
-              "Industrie Manifatturiere", 
+              "Condomini",
+              "Industrie Manifatturiere",
               "Strutture Sanitarie",
-              "Centri Commerciali",
+              "Aree Verdi e Giardini",
               "Scuole e Università",
               "Hotel e Ristoranti",
-              "Palestre e Spa",
               "Edifici Residenziali"
             ].map((sector, index) => (
               <div 
