@@ -18,10 +18,14 @@ const Header = () => {
       hasDropdown: true,
       dropdownItems: [
         { name: 'Pulizie Uffici', path: '/servizi/pulizie-uffici' },
+        { name: 'Pulizie Condomini', path: '/servizi/pulizie-condomini' },
         { name: 'Pulizie Industriali', path: '/servizi/pulizie-industriali' },
         { name: 'Pulizie Post-Cantiere', path: '/servizi/pulizie-post-cantiere' },
         { name: 'Pulizie Vetri e Vetrate', path: '/servizi/pulizie-vetri' },
-        { name: 'Sanificazione Ambienti', path: '/servizi/sanificazione-ambienti' }
+        { name: 'Sanificazione Ambienti', path: '/servizi/sanificazione-ambienti' },
+        { name: 'Giardinaggio', path: '/servizi/giardinaggio' },
+        { name: 'Gestione Carrellati', path: '/servizi/gestione-carrellati' },
+        { name: 'Vedi Tutti i Servizi', path: '/servizi', isHighlighted: true }
       ]
     },
     { name: 'Come Lavoriamo', path: '/come-lavoriamo' },
@@ -66,7 +70,7 @@ const Header = () => {
                     </button>
                     
                     {/* Dropdown */}
-                    <div 
+                    <div
                       className={`absolute top-full left-0 mt-1 w-56 bg-white rounded-xl shadow-lg border border-slate-100 py-2 transition-all duration-200 ${
                         isServicesOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'
                       }`}
@@ -77,7 +81,11 @@ const Header = () => {
                         <Link
                           key={dropdownItem.name}
                           to={dropdownItem.path}
-                          className="block px-4 py-3 text-sm text-slate-600 hover:text-sky-600 hover:bg-sky-50 transition-colors"
+                          className={`block px-4 py-3 text-sm transition-colors ${
+                            dropdownItem.isHighlighted
+                              ? 'font-semibold text-sky-600 hover:text-sky-700 hover:bg-sky-50 border-t border-slate-100 mt-1 pt-3'
+                              : 'text-slate-600 hover:text-sky-600 hover:bg-sky-50'
+                          }`}
                         >
                           {dropdownItem.name}
                         </Link>
@@ -140,7 +148,11 @@ const Header = () => {
                         <Link
                           key={dropdownItem.name}
                           to={dropdownItem.path}
-                          className="block px-4 py-2 text-sm text-slate-500 hover:text-sky-600 hover:bg-sky-50 rounded-lg transition-colors"
+                          className={`block px-4 py-2 text-sm rounded-lg transition-colors ${
+                            dropdownItem.isHighlighted
+                              ? 'font-semibold text-sky-600 hover:text-sky-700 hover:bg-sky-50 mt-2 border-t border-slate-200 pt-3'
+                              : 'text-slate-500 hover:text-sky-600 hover:bg-sky-50'
+                          }`}
                           onClick={() => setIsMenuOpen(false)}
                         >
                           {dropdownItem.name}
