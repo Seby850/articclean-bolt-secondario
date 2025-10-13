@@ -2,7 +2,6 @@ import { lazy, Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import StructuredData from './components/StructuredData';
 
 const Homepage = lazy(() => import('./pages/Homepage'));
 const ChiSiamo = lazy(() => import('./pages/ChiSiamo'));
@@ -28,7 +27,6 @@ const LoadingSpinner = () => (
 function App() {
   return (
     <div className="min-h-screen flex flex-col">
-      <StructuredData />
       <Header />
       <Suspense fallback={<LoadingSpinner />}>
         <Routes>

@@ -7,6 +7,7 @@ interface SEOProps {
   canonical?: string;
   ogImage?: string;
   type?: string;
+  structuredData?: object[];
 }
 
 const SEO = ({
@@ -15,7 +16,8 @@ const SEO = ({
   keywords = 'pulizie professionali, pulizie uffici, pulizie industriali, sanificazione ambienti, pulizie post cantiere, pulizie vetri, servizi di pulizia aziende, impresa di pulizie',
   canonical = 'https://www.arcticclean.it/',
   ogImage = 'https://www.arcticclean.it/og-image.jpg',
-  type = 'website'
+  type = 'website',
+  structuredData
 }: SEOProps) => {
   const fullTitle = title.includes('Arctic Clean') ? title : `${title} | Arctic Clean Service`;
 
@@ -24,6 +26,8 @@ const SEO = ({
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
+      <meta name="robots" content="index, follow" />
+      <meta name="author" content="Arctic Clean Service" />
       <link rel="canonical" href={canonical} />
 
       <meta property="og:type" content={type} />
@@ -32,11 +36,18 @@ const SEO = ({
       <meta property="og:url" content={canonical} />
       <meta property="og:image" content={ogImage} />
       <meta property="og:site_name" content="Arctic Clean Service" />
+      <meta property="og:locale" content="it_IT" />
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={ogImage} />
+
+      {structuredData && structuredData.map((schema, index) => (
+        <script key={`structured-data-${index}`} type="application/ld+json">
+          {JSON.stringify(schema)}
+        </script>
+      ))}
     </Helmet>
   );
 };
