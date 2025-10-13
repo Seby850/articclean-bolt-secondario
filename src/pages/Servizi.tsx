@@ -1,4 +1,4 @@
-import { Building2, Factory, Hammer, Sparkles, Shield, CheckCircle, ArrowRight, Phone } from 'lucide-react';
+import { Building2, Factory, Hammer, Sparkles, Shield, CheckCircle, ArrowRight, Phone, Leaf, Trash2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import SEO from '@/components/SEO';
 
@@ -129,6 +129,48 @@ const Servizi = () => {
         "Promozione per servizi integrati"
       ],
       image: "https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=800"
+    },
+    {
+      id: 'giardinaggio',
+      icon: Leaf,
+      title: "Giardinaggio e Manutenzione Verde",
+      description: "Cura professionale di giardini, aree verdi e spazi esterni per aziende e condomini.",
+      features: [
+        "Manutenzione prati e tappeti erbosi",
+        "Potatura piante e siepi",
+        "Pulizia aree verdi e aiuole",
+        "Trattamenti fitosanitari",
+        "Irrigazione e drenaggio",
+        "Progettazione spazi verdi"
+      ],
+      benefits: [
+        "Spazi esterni sempre curati",
+        "Valorizzazione dell'immobile",
+        "Ambiente più salubre e piacevole",
+        "Servizio programmato e affidabile"
+      ],
+      image: "https://images.pexels.com/photos/2132227/pexels-photo-2132227.jpeg?auto=compress&cs=tinysrgb&w=800"
+    },
+    {
+      id: 'carrellati',
+      icon: Trash2,
+      title: "Gestione Carrellati",
+      description: "Servizio completo di gestione, pulizia e manutenzione dei carrellati per la raccolta rifiuti.",
+      features: [
+        "Pulizia e sanificazione carrellati",
+        "Gestione posizionamento bidoni",
+        "Lavaggio ad alta pressione",
+        "Disinfezione e deodorazione",
+        "Manutenzione ordinaria",
+        "Servizio programmato settimanale"
+      ],
+      benefits: [
+        "Igiene e decoro garantiti",
+        "Eliminazione cattivi odori",
+        "Conformità normative sanitarie",
+        "Risparmio tempo per il personale"
+      ],
+      image: "https://images.pexels.com/photos/3186574/pexels-photo-3186574.jpeg?auto=compress&cs=tinysrgb&w=800"
     }
   ];
 
