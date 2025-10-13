@@ -10,22 +10,22 @@ interface NearbyLocation {
   anchorText: string;
 }
 
-const areaGroups: Record<string, string[]> = {
-  'centro città': ['brescia'],
-  'Lago di Garda': ['desenzano-del-garda', 'lonato-del-garda', 'salo'],
-  'bassa bresciana': ['montichiari', 'ghedi', 'orzinuovi', 'travagliato'],
-  'Franciacorta': ['chiari', 'rovato', 'palazzolo-oglio'],
-  'prima cintura': ['rezzato', 'castenedolo'],
-  'Val Trompia': ['sarezzo', 'concesio']
-};
-
-const getLocationArea = (locationId: string): string[] => {
-  for (const locationIds of Object.values(areaGroups)) {
-    if (locationIds.includes(locationId)) {
-      return locationIds;
-    }
-  }
-  return [];
+const nearbyLocationsMap: Record<string, string[]> = {
+  'brescia': ['rezzato', 'concesio', 'roncadelle', 'castelmella'],
+  'desenzano-del-garda': ['sirmione', 'lonato-del-garda', 'padenghe-sul-garda', 'pozzolengo'],
+  'montichiari': ['ghedi', 'calcinato', 'carpenedolo', 'bedizzole'],
+  'ghedi': ['montichiari', 'leno', 'bagnolo-mella', 'manerbio'],
+  'chiari': ['rovato', 'palazzolo-oglio', 'cazzago-san-martino', 'castrezzato'],
+  'rovato': ['coccaglio', 'erbusco', 'cazzago-san-martino', 'chiari'],
+  'rezzato': ['mazzano', 'castenedolo', 'botticino', 'brescia'],
+  'lonato-del-garda': ['desenzano-del-garda', 'bedizzole', 'calcinato', 'padenghe-sul-garda'],
+  'palazzolo-oglio': ['chiari', 'capriolo', 'adro', 'castrezzato'],
+  'salo': ['gardone-riviera', 'roe-volciano', 'san-felice-del-benaco', 'puegnago-del-garda'],
+  'castenedolo': ['rezzato', 'mazzano', 'montichiari', 'brescia'],
+  'sarezzo': ['concesio', 'villa-carcina', 'gardone-val-trompia', 'lumezzane'],
+  'orzinuovi': ['roccafranca', 'orzivecchi', 'pompiano', 'verolanuova'],
+  'concesio': ['sarezzo', 'villa-carcina', 'collebeato', 'brescia'],
+  'travagliato': ['ospitaletto', 'castegnato', 'roncadelle', 'torbole-casaglia']
 };
 
 export const getRelatedServices = (currentServiceId: string, locationId: string): RelatedService[] => {
@@ -51,32 +51,25 @@ export const getRelatedServices = (currentServiceId: string, locationId: string)
 };
 
 export const getNearbyLocations = (currentLocationId: string, serviceId: string): NearbyLocation[] => {
-  const currentLocation = locations.find(l => l.id === currentLocationId);
-  if (!currentLocation) return [];
+  const nearbyLocationIds = nearbyLocationsMap[currentLocationId];
 
-  const areaLocations = getLocationArea(currentLocationId);
+  if (!nearbyLocationIds || nearbyLocationIds.length === 0) {
+    return [];
+  }
 
-  const sameAreaLocations = locations.filter(
-    l => l.id !== currentLocationId && areaLocations.includes(l.id)
-  );
-
-  const otherLocations = locations.filter(
-    l => l.id !== currentLocationId && !areaLocations.includes(l.id)
-  );
-
-  const nearbyLocationsList = [
-    ...sameAreaLocations.slice(0, 2),
-    ...otherLocations.slice(0, 2)
-  ].slice(0, 4);
+  const nearbyLocationsList = nearbyLocationIds
+    .map(id => locations.find(l => l.id === id))
+    .filter((l): l is Location => l !== undefined)
+    .slice(0, 4);
 
   const service = services.find(s => s.id === serviceId);
   if (!service) return [];
 
   const anchorVariations = [
     (l: Location) => `${service.name} a ${l.name}`,
-    (l: Location) => `${service.name} per aziende a ${l.name}`,
     (l: Location) => `Servizio di ${service.name.toLowerCase()} a ${l.name}`,
-    (l: Location) => `${service.name} professionale a ${l.name}`
+    (l: Location) => `${service.name} ${l.name}`,
+    (l: Location) => `${service.name} professionali a ${l.name}`
   ];
 
   return nearbyLocationsList.map((location, index) => ({
