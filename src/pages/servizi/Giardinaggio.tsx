@@ -1,6 +1,7 @@
 import { Trees, CheckCircle, ArrowRight, Leaf, Sun, Droplets, Scissors } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import SEO from '@/components/SEO';
+import LocationsGrid from '@/components/LocationsGrid';
 
 const Giardinaggio = () => {
   const features = [
@@ -275,6 +276,8 @@ const Giardinaggio = () => {
           </div>
         </div>
       </section>
+
+      <LocationsGrid serviceSlug="giardinaggio" serviceName="Giardinaggio" />
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-br from-slate-900 to-slate-800">

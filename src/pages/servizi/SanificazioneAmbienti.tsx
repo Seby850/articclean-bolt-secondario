@@ -1,5 +1,6 @@
 import { Shield, CheckCircle, ArrowRight, Heart, Building, Users, Award } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import LocationsGrid from '@/components/LocationsGrid';
 
 const SanificazioneAmbienti = () => {
   const features = [
@@ -372,6 +373,8 @@ const SanificazioneAmbienti = () => {
           </div>
         </div>
       </section>
+
+      <LocationsGrid serviceSlug="sanificazione-ambienti" serviceName="Sanificazione Ambienti" />
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-br from-slate-900 to-slate-800">

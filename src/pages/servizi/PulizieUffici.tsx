@@ -1,6 +1,7 @@
 import { Building2, CheckCircle, ArrowRight, Users, Clock, Shield, Sparkles, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import SEO from '@/components/SEO';
+import LocationsGrid from '@/components/LocationsGrid';
 
 const PulizieUffici = () => {
   const features = [
@@ -223,6 +224,8 @@ const PulizieUffici = () => {
           </div>
         </div>
       </section>
+
+      <LocationsGrid serviceSlug="pulizie-uffici" serviceName="Pulizie Uffici" />
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-br from-slate-900 to-slate-800">

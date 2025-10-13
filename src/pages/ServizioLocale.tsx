@@ -1,6 +1,7 @@
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { ArrowRight, CheckCircle, MapPin, Phone, Users, Clock, Shield, Sparkles } from 'lucide-react';
 import SEO from '@/components/SEO';
+import Breadcrumb from '@/components/Breadcrumb';
 import { getLocalPageContent } from '@/data/localContent';
 import { services, locations } from '@/data/servicesData';
 import { getRelatedServices, getNearbyLocations } from '@/utils/internalLinks';
@@ -53,6 +54,14 @@ const ServizioLocale = () => {
         description={content.metaDescription}
         keywords={`${service.name.toLowerCase()} ${location.name}, impresa pulizie ${location.name}, ${service.slug} ${location.slug}, pulizie professionali ${location.name}`}
         canonical={`https://www.impresapulizie.it/servizi/${servizio}/${localita}`}
+      />
+
+      <Breadcrumb
+        items={[
+          { label: 'Servizi', path: '/servizi' },
+          { label: service.name, path: `/servizi/${servizio}` },
+          { label: location.name }
+        ]}
       />
 
       <section className="py-20 bg-gradient-to-br from-white via-sky-50/30 to-cyan-50/20">

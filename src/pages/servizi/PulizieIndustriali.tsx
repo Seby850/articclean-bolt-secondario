@@ -1,5 +1,6 @@
 import { Factory, CheckCircle, ArrowRight, Shield, Users, Wrench, AlertTriangle } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import LocationsGrid from '@/components/LocationsGrid';
 
 const PulizieIndustriali = () => {
   const features = [
@@ -266,6 +267,8 @@ const PulizieIndustriali = () => {
           </div>
         </div>
       </section>
+
+      <LocationsGrid serviceSlug="pulizie-industriali" serviceName="Pulizie Industriali" />
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-br from-slate-900 to-slate-800">
