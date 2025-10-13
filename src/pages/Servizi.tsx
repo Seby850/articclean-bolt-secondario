@@ -1,5 +1,6 @@
 import { Building2, Factory, Hammer, Sparkles, Shield, CheckCircle, ArrowRight, Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import SEO from '@/components/SEO';
 
 const Servizi = () => {
   const services = [
@@ -130,6 +131,12 @@ const Servizi = () => {
 
   return (
     <div className="pt-24 pb-20">
+      <SEO
+        title="Servizi di Pulizia Professionali per Aziende"
+        description="Scopri tutti i nostri servizi: pulizie uffici, pulizie industriali, pulizie post-cantiere, pulizie vetri e sanificazione ambienti. Soluzioni complete per ogni esigenza."
+        keywords="servizi pulizie professionali, pulizie uffici, pulizie industriali, pulizie vetri, sanificazione, post cantiere"
+        canonical="https://www.arcticclean.it/servizi"
+      />
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-white via-sky-50/30 to-cyan-50/20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

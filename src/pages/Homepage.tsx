@@ -1,6 +1,7 @@
 import { ArrowRight, Sparkles, Shield, Clock, Award, Users, Star } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { CTASection } from '@/components/ui/cta-with-rectangle';
+import SEO from '@/components/SEO';
 
 const Homepage = () => {
   const services = [
@@ -95,6 +96,12 @@ const Homepage = () => {
 
   return (
     <div>
+      <SEO
+        title="Arctic Clean Service - Pulizie Professionali per Aziende | Uffici, Industrie, Sanificazione"
+        description="Arctic Clean Service offre servizi di pulizie professionali per aziende, uffici, capannoni industriali e sanificazione ambienti. Preventivo gratuito in 24h. Oltre 15 anni di esperienza."
+        keywords="pulizie professionali, pulizie uffici, pulizie industriali, sanificazione ambienti, pulizie aziendali, impresa di pulizie"
+        canonical="https://www.arcticclean.it/"
+      />
       {/* Hero Section */}
       <section className="pt-24 pb-20 relative overflow-hidden min-h-screen bg-gradient-to-br from-white via-sky-50/30 to-cyan-50/20">
         {/* Animated Background */}
@@ -108,8 +115,6 @@ const Homepage = () => {
           <div className="particles-container">
             <div className="particle particle-1"></div>
             <div className="particle particle-2"></div>
-            <div className="particle particle-3"></div>
-            <div className="particle particle-4"></div>
           </div>
         </div>
 
