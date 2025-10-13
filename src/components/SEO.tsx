@@ -44,9 +44,11 @@ const SEO = ({
       <meta name="twitter:image" content={ogImage} />
 
       {structuredData && structuredData.map((schema, index) => (
-        <script key={`structured-data-${index}`} type="application/ld+json">
-          {JSON.stringify(schema)}
-        </script>
+        <script
+          key={`structured-data-${index}`}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
       ))}
     </Helmet>
   );
