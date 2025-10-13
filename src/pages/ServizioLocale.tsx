@@ -3,6 +3,7 @@ import { ArrowRight, CheckCircle, MapPin, Phone, Users, Clock, Shield, Sparkles 
 import SEO from '@/components/SEO';
 import { getLocalPageContent } from '@/data/localContent';
 import { services, locations } from '@/data/servicesData';
+import { getRelatedServices, getNearbyLocations } from '@/utils/internalLinks';
 
 const ServizioLocale = () => {
   const { servizio, localita } = useParams<{ servizio: string; localita: string }>();
@@ -19,13 +20,8 @@ const ServizioLocale = () => {
     return <Navigate to="/servizi" replace />;
   }
 
-  const relatedServices = services
-    .filter(s => s.id !== service.id)
-    .slice(0, 3);
-
-  const relatedLocations = locations
-    .filter(l => l.id !== location.id)
-    .slice(0, 4);
+  const relatedServices = getRelatedServices(service.id, location.id);
+  const relatedLocations = getNearbyLocations(location.id, service.id);
 
   const benefits = [
     {
@@ -195,25 +191,33 @@ const ServizioLocale = () => {
 
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-            Altri Servizi a {location.name}
-          </h2>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-4">
+              Altri servizi in {location.name}
+            </h2>
+            <p className="text-lg text-slate-600">
+              Scopri anche questi servizi attivi a {location.name}
+            </p>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {relatedServices.map((relService) => (
               <Link
-                key={relService.id}
-                to={`/servizi/${relService.slug}/${localita}`}
-                className="bg-slate-50 rounded-xl p-6 hover:bg-sky-50 transition-all duration-300 group"
+                key={relService.service.id}
+                to={`/servizi/${relService.service.slug}/${localita}`}
+                className="group bg-gradient-to-br from-slate-50 to-slate-100/50 rounded-2xl p-6 hover:from-sky-50 hover:to-cyan-50/50 transition-all duration-300 border border-slate-200 hover:border-sky-300 hover:shadow-lg"
               >
-                <h3 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-sky-600">
-                  {relService.name} a {location.name}
+                <div className="flex items-start justify-between mb-4">
+                  <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-sm group-hover:shadow-md transition-shadow">
+                    <CheckCircle className="w-6 h-6 text-sky-600" />
+                  </div>
+                  <ArrowRight className="w-5 h-5 text-slate-400 group-hover:text-sky-600 group-hover:translate-x-1 transition-all" />
+                </div>
+                <h3 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-sky-700 transition-colors">
+                  {relService.anchorText}
                 </h3>
-                <p className="text-slate-600 text-sm mb-4">
-                  {relService.shortDescription}
+                <p className="text-slate-600 text-sm leading-relaxed">
+                  {relService.service.shortDescription}
                 </p>
-                <span className="text-sky-600 font-semibold text-sm inline-flex items-center">
-                  Scopri di più <ArrowRight className="w-4 h-4 ml-1" />
-                </span>
               </Link>
             ))}
           </div>
@@ -222,23 +226,32 @@ const ServizioLocale = () => {
 
       <section className="py-16 bg-slate-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
-            {service.name} nelle Località Vicine
-          </h2>
-          <div className="grid md:grid-cols-4 gap-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-4">
+              {service.name} nelle località vicine
+            </h2>
+            <p className="text-lg text-slate-600">
+              Lo stesso servizio è disponibile anche in queste zone
+            </p>
+          </div>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
             {relatedLocations.map((relLocation) => (
               <Link
-                key={relLocation.id}
-                to={`/servizi/${servizio}/${relLocation.slug}`}
-                className="bg-white rounded-lg p-4 hover:bg-sky-50 transition-all duration-300 text-center group"
+                key={relLocation.location.id}
+                to={`/servizi/${servizio}/${relLocation.location.slug}`}
+                className="group bg-white rounded-xl p-5 hover:bg-sky-50 transition-all duration-300 border border-slate-200 hover:border-sky-300 hover:shadow-md text-center"
               >
-                <MapPin className="w-6 h-6 text-sky-500 mx-auto mb-2" />
-                <h3 className="text-base font-bold text-slate-900 group-hover:text-sky-600">
-                  {relLocation.name}
+                <div className="w-12 h-12 bg-sky-100 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:bg-sky-200 transition-colors">
+                  <MapPin className="w-6 h-6 text-sky-600" />
+                </div>
+                <h3 className="text-base font-bold text-slate-900 group-hover:text-sky-700 transition-colors mb-1">
+                  {relLocation.anchorText}
                 </h3>
-                <p className="text-slate-500 text-xs mt-1">
-                  {relLocation.area}
-                </p>
+                {relLocation.location.area && (
+                  <p className="text-slate-500 text-xs">
+                    {relLocation.location.area}
+                  </p>
+                )}
               </Link>
             ))}
           </div>
