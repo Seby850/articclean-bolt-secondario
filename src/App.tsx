@@ -19,7 +19,7 @@ const SanificazioneAmbienti = lazy(() => import('./pages/servizi/SanificazioneAm
 const Giardinaggio = lazy(() => import('./pages/servizi/Giardinaggio'));
 const GestioneCarrellati = lazy(() => import('./pages/servizi/GestioneCarrellati'));
 const RichidiPreventivo = lazy(() => import('./pages/RichidiPreventivo'));
-const ServizioLocale = lazy(() => import('./pages/ServizioLocale'));
+const ServizioLocaleDynamic = lazy(() => import('./pages/ServizioLocaleDynamic'));
 
 const LoadingSpinner = () => (
   <div className="min-h-screen flex items-center justify-center">
@@ -48,7 +48,7 @@ function App() {
           <Route path="/servizi/sanificazione-ambienti" element={<SanificazioneAmbienti />} />
           <Route path="/servizi/giardinaggio" element={<Giardinaggio />} />
           <Route path="/servizi/gestione-carrellati" element={<GestioneCarrellati />} />
-          <Route path="/servizi/:servizio/:localita" element={<ServizioLocale />} />
+          <Route path="/servizi/:servizio/:localita" element={<ServizioLocaleDynamic />} />
           <Route path="/richiedi-preventivo" element={<RichidiPreventivo />} />
         </Routes>
       </Suspense>
