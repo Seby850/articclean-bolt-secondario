@@ -268,7 +268,7 @@ const PulizieIndustriali = () => {
         </div>
       </section>
 
-      <LocationsGrid serviceSlug="pulizie-industriali" serviceName="Pulizie Industriali" />
+      <LocationsGrid serviceSlug="pulizie-industriali" serviceName="Pulizie Industriali" showAll={false} />
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-br from-slate-900 to-slate-800">

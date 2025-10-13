@@ -9,6 +9,7 @@ const ChiSiamo = lazy(() => import('./pages/ChiSiamo'));
 const ComeLavoriamo = lazy(() => import('./pages/ComeLavoriamo'));
 const Recensioni = lazy(() => import('./pages/Recensioni'));
 const Servizi = lazy(() => import('./pages/Servizi'));
+const DoveOperiamo = lazy(() => import('./pages/DoveOperiamo'));
 const PulizieUffici = lazy(() => import('./pages/servizi/PulizieUffici'));
 const PulizieCondomini = lazy(() => import('./pages/servizi/PulizieCondomini'));
 const PulizieIndustriali = lazy(() => import('./pages/servizi/PulizieIndustriali'));
@@ -38,6 +39,7 @@ function App() {
           <Route path="/come-lavoriamo" element={<ComeLavoriamo />} />
           <Route path="/recensioni" element={<Recensioni />} />
           <Route path="/servizi" element={<Servizi />} />
+          <Route path="/dove-operiamo" element={<DoveOperiamo />} />
           <Route path="/servizi/pulizie-uffici" element={<PulizieUffici />} />
           <Route path="/servizi/pulizie-condomini" element={<PulizieCondomini />} />
           <Route path="/servizi/pulizie-industriali" element={<PulizieIndustriali />} />

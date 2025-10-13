@@ -281,7 +281,7 @@ const GestioneCarrellati = () => {
         </div>
       </section>
 
-      <LocationsGrid serviceSlug="gestione-carrellati" serviceName="Gestione Carrellati" />
+      <LocationsGrid serviceSlug="gestione-carrellati" serviceName="Gestione Carrellati" showAll={false} />
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-br from-slate-900 to-slate-800">
