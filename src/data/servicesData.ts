@@ -243,5 +243,243 @@ export const locations: Location[] = [
     slug: 'travagliato',
     province: 'Brescia',
     area: 'bassa bresciana ovest'
+  },
+  {
+    id: 'roncadelle',
+    name: 'Roncadelle',
+    slug: 'roncadelle',
+    province: 'Brescia',
+    area: 'prima cintura'
+  },
+  {
+    id: 'castelmella',
+    name: 'Castelmella',
+    slug: 'castelmella',
+    province: 'Brescia',
+    area: 'prima cintura'
+  },
+  {
+    id: 'sirmione',
+    name: 'Sirmione',
+    slug: 'sirmione',
+    province: 'Brescia',
+    area: 'Lago di Garda'
+  },
+  {
+    id: 'padenghe-sul-garda',
+    name: 'Padenghe sul Garda',
+    slug: 'padenghe-sul-garda',
+    province: 'Brescia',
+    area: 'Lago di Garda'
+  },
+  {
+    id: 'pozzolengo',
+    name: 'Pozzolengo',
+    slug: 'pozzolengo',
+    province: 'Brescia',
+    area: 'Lago di Garda sud'
+  },
+  {
+    id: 'calcinato',
+    name: 'Calcinato',
+    slug: 'calcinato',
+    province: 'Brescia',
+    area: 'bassa bresciana'
+  },
+  {
+    id: 'carpenedolo',
+    name: 'Carpenedolo',
+    slug: 'carpenedolo',
+    province: 'Brescia',
+    area: 'bassa bresciana'
+  },
+  {
+    id: 'bedizzole',
+    name: 'Bedizzole',
+    slug: 'bedizzole',
+    province: 'Brescia',
+    area: 'bassa bresciana'
+  },
+  {
+    id: 'leno',
+    name: 'Leno',
+    slug: 'leno',
+    province: 'Brescia',
+    area: 'bassa bresciana'
+  },
+  {
+    id: 'bagnolo-mella',
+    name: 'Bagnolo Mella',
+    slug: 'bagnolo-mella',
+    province: 'Brescia',
+    area: 'bassa bresciana'
+  },
+  {
+    id: 'manerbio',
+    name: 'Manerbio',
+    slug: 'manerbio',
+    province: 'Brescia',
+    area: 'bassa bresciana'
+  },
+  {
+    id: 'cazzago-san-martino',
+    name: 'Cazzago San Martino',
+    slug: 'cazzago-san-martino',
+    province: 'Brescia',
+    area: 'Franciacorta'
+  },
+  {
+    id: 'castrezzato',
+    name: 'Castrezzato',
+    slug: 'castrezzato',
+    province: 'Brescia',
+    area: 'Franciacorta'
+  },
+  {
+    id: 'coccaglio',
+    name: 'Coccaglio',
+    slug: 'coccaglio',
+    province: 'Brescia',
+    area: 'Franciacorta'
+  },
+  {
+    id: 'erbusco',
+    name: 'Erbusco',
+    slug: 'erbusco',
+    province: 'Brescia',
+    area: 'Franciacorta'
+  },
+  {
+    id: 'capriolo',
+    name: 'Capriolo',
+    slug: 'capriolo',
+    province: 'Brescia',
+    area: 'Franciacorta'
+  },
+  {
+    id: 'adro',
+    name: 'Adro',
+    slug: 'adro',
+    province: 'Brescia',
+    area: 'Franciacorta'
+  },
+  {
+    id: 'mazzano',
+    name: 'Mazzano',
+    slug: 'mazzano',
+    province: 'Brescia',
+    area: 'prima cintura'
+  },
+  {
+    id: 'botticino',
+    name: 'Botticino',
+    slug: 'botticino',
+    province: 'Brescia',
+    area: 'prima cintura'
+  },
+  {
+    id: 'gardone-riviera',
+    name: 'Gardone Riviera',
+    slug: 'gardone-riviera',
+    province: 'Brescia',
+    area: 'Lago di Garda occidentale'
+  },
+  {
+    id: 'roe-volciano',
+    name: 'Roè Volciano',
+    slug: 'roe-volciano',
+    province: 'Brescia',
+    area: 'Lago di Garda occidentale'
+  },
+  {
+    id: 'san-felice-del-benaco',
+    name: 'San Felice del Benaco',
+    slug: 'san-felice-del-benaco',
+    province: 'Brescia',
+    area: 'Lago di Garda occidentale'
+  },
+  {
+    id: 'puegnago-del-garda',
+    name: 'Puegnago del Garda',
+    slug: 'puegnago-del-garda',
+    province: 'Brescia',
+    area: 'Lago di Garda occidentale'
+  },
+  {
+    id: 'villa-carcina',
+    name: 'Villa Carcina',
+    slug: 'villa-carcina',
+    province: 'Brescia',
+    area: 'Val Trompia'
+  },
+  {
+    id: 'gardone-val-trompia',
+    name: 'Gardone Val Trompia',
+    slug: 'gardone-val-trompia',
+    province: 'Brescia',
+    area: 'Val Trompia'
+  },
+  {
+    id: 'lumezzane',
+    name: 'Lumezzane',
+    slug: 'lumezzane',
+    province: 'Brescia',
+    area: 'Val Trompia'
+  },
+  {
+    id: 'collebeato',
+    name: 'Collebeato',
+    slug: 'collebeato',
+    province: 'Brescia',
+    area: 'Val Trompia sud'
+  },
+  {
+    id: 'roccafranca',
+    name: 'Roccafranca',
+    slug: 'roccafranca',
+    province: 'Brescia',
+    area: 'bassa bresciana centrale'
+  },
+  {
+    id: 'orzivecchi',
+    name: 'Orzivecchi',
+    slug: 'orzivecchi',
+    province: 'Brescia',
+    area: 'bassa bresciana centrale'
+  },
+  {
+    id: 'pompiano',
+    name: 'Pompiano',
+    slug: 'pompiano',
+    province: 'Brescia',
+    area: 'bassa bresciana centrale'
+  },
+  {
+    id: 'verolanuova',
+    name: 'Verolanuova',
+    slug: 'verolanuova',
+    province: 'Brescia',
+    area: 'bassa bresciana centrale'
+  },
+  {
+    id: 'ospitaletto',
+    name: 'Ospitaletto',
+    slug: 'ospitaletto',
+    province: 'Brescia',
+    area: 'bassa bresciana ovest'
+  },
+  {
+    id: 'castegnato',
+    name: 'Castegnato',
+    slug: 'castegnato',
+    province: 'Brescia',
+    area: 'bassa bresciana ovest'
+  },
+  {
+    id: 'torbole-casaglia',
+    name: 'Torbole Casaglia',
+    slug: 'torbole-casaglia',
+    province: 'Brescia',
+    area: 'bassa bresciana ovest'
   }
 ];
