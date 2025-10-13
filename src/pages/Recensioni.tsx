@@ -1,6 +1,6 @@
 import { Star, Quote, Building2, Home, Factory } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import SEO from '@/components/SEO';
+import SEO from '../components/SEO';
 
 const Recensioni = () => {
   const reviews = [

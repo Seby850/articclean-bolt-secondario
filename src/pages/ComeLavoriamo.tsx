@@ -1,6 +1,6 @@
 import { CheckCircle, ClipboardList, Users, Sparkles, Shield, Phone, Calendar, Award } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import SEO from '@/components/SEO';
+import SEO from '../components/SEO';
 
 const ComeLavoriamo = () => {
   const steps = [

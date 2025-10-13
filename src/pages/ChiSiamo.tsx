@@ -1,6 +1,6 @@
 import { Award, Users, MapPin, Calendar, Target, Heart, Shield, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import SEO from '@/components/SEO';
+import SEO from '../components/SEO';
 
 const ChiSiamo = () => {
   const stats = [
