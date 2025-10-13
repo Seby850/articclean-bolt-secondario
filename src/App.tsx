@@ -5,6 +5,9 @@ import Footer from './components/Footer';
 import StructuredData from './components/StructuredData';
 
 const Homepage = lazy(() => import('./pages/Homepage'));
+const ChiSiamo = lazy(() => import('./pages/ChiSiamo'));
+const ComeLavoriamo = lazy(() => import('./pages/ComeLavoriamo'));
+const Recensioni = lazy(() => import('./pages/Recensioni'));
 const Servizi = lazy(() => import('./pages/Servizi'));
 const PulizieUffici = lazy(() => import('./pages/servizi/PulizieUffici'));
 const PulizieCondomini = lazy(() => import('./pages/servizi/PulizieCondomini'));
@@ -30,6 +33,9 @@ function App() {
       <Suspense fallback={<LoadingSpinner />}>
         <Routes>
           <Route path="/" element={<Homepage />} />
+          <Route path="/chi-siamo" element={<ChiSiamo />} />
+          <Route path="/come-lavoriamo" element={<ComeLavoriamo />} />
+          <Route path="/recensioni" element={<Recensioni />} />
           <Route path="/servizi" element={<Servizi />} />
           <Route path="/servizi/pulizie-uffici" element={<PulizieUffici />} />
           <Route path="/servizi/pulizie-condomini" element={<PulizieCondomini />} />
