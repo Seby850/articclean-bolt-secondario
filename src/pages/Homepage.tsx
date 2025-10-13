@@ -140,10 +140,7 @@ const Homepage = () => {
               </h1>
               
               <p className="text-lg sm:text-xl lg:text-2xl text-slate-600 max-w-3xl mx-auto leading-relaxed font-light px-4">
-                Offriamo servizi di pulizia specializzati per uffici, aziende e ambienti industriali.
-                <span className="block mt-2 font-medium text-sky-700">
-                  Affidabilità, qualità e risultati garantiti per il tuo business.
-                </span>
+                Offriamo servizi di pulizia per aziende e privati: uffici, condomini, industrie e giardinaggio.
               </p>
             </div>
             
