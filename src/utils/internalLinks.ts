@@ -11,21 +11,21 @@ interface NearbyLocation {
 }
 
 const nearbyLocationsMap: Record<string, string[]> = {
-  'brescia': ['rezzato', 'concesio', 'roncadelle', 'castelmella'],
-  'desenzano-del-garda': ['sirmione', 'lonato-del-garda', 'padenghe-sul-garda', 'pozzolengo'],
-  'montichiari': ['ghedi', 'calcinato', 'carpenedolo', 'bedizzole'],
-  'ghedi': ['montichiari', 'leno', 'bagnolo-mella', 'manerbio'],
-  'chiari': ['rovato', 'palazzolo-oglio', 'cazzago-san-martino', 'castrezzato'],
-  'rovato': ['coccaglio', 'erbusco', 'cazzago-san-martino', 'chiari'],
-  'rezzato': ['mazzano', 'castenedolo', 'botticino', 'brescia'],
-  'lonato-del-garda': ['desenzano-del-garda', 'bedizzole', 'calcinato', 'padenghe-sul-garda'],
-  'palazzolo-oglio': ['chiari', 'capriolo', 'adro', 'castrezzato'],
-  'salo': ['gardone-riviera', 'roe-volciano', 'san-felice-del-benaco', 'puegnago-del-garda'],
-  'castenedolo': ['rezzato', 'mazzano', 'montichiari', 'brescia'],
-  'sarezzo': ['concesio', 'villa-carcina', 'gardone-val-trompia', 'lumezzane'],
-  'orzinuovi': ['roccafranca', 'orzivecchi', 'pompiano', 'verolanuova'],
-  'concesio': ['sarezzo', 'villa-carcina', 'collebeato', 'brescia'],
-  'travagliato': ['ospitaletto', 'castegnato', 'roncadelle', 'torbole-casaglia']
+  'brescia': ['rezzato', 'concesio', 'castenedolo', 'travagliato'],
+  'desenzano-del-garda': ['lonato-del-garda', 'salo', 'montichiari', 'brescia'],
+  'montichiari': ['ghedi', 'castenedolo', 'lonato-del-garda', 'rezzato'],
+  'ghedi': ['montichiari', 'castenedolo', 'rezzato', 'brescia'],
+  'chiari': ['rovato', 'palazzolo-oglio', 'orzinuovi', 'travagliato'],
+  'rovato': ['chiari', 'palazzolo-oglio', 'travagliato', 'orzinuovi'],
+  'rezzato': ['brescia', 'castenedolo', 'concesio', 'montichiari'],
+  'lonato-del-garda': ['desenzano-del-garda', 'montichiari', 'salo', 'brescia'],
+  'palazzolo-oglio': ['chiari', 'rovato', 'travagliato', 'orzinuovi'],
+  'salo': ['desenzano-del-garda', 'lonato-del-garda', 'rezzato', 'brescia'],
+  'castenedolo': ['rezzato', 'brescia', 'montichiari', 'ghedi'],
+  'sarezzo': ['concesio', 'brescia', 'rezzato', 'travagliato'],
+  'orzinuovi': ['chiari', 'rovato', 'palazzolo-oglio', 'travagliato'],
+  'concesio': ['brescia', 'sarezzo', 'rezzato', 'travagliato'],
+  'travagliato': ['rovato', 'chiari', 'palazzolo-oglio', 'brescia']
 };
 
 export const getRelatedServices = (currentServiceId: string, locationId: string): RelatedService[] => {
