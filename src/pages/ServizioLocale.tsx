@@ -5,6 +5,11 @@ import Breadcrumb from '@/components/Breadcrumb';
 import { getLocalPageContent } from '@/data/localContent';
 import { services, locations } from '@/data/servicesData';
 import { getRelatedServices, getNearbyLocations } from '@/utils/internalLinks';
+import InternalLinkSection from '@/components/InternalLinkSection';
+import { buildCanonicalUrl } from '@/data/siteMetadata';
+import LazyImage from '@/components/LazyImage';
+import RelatedBlogPosts from '@/components/RelatedBlogPosts';
+import { cdnImage } from '@/utils/image';
 
 const ServizioLocale = () => {
   const { servizio, localita } = useParams<{ servizio: string; localita: string }>();
@@ -53,7 +58,7 @@ const ServizioLocale = () => {
         title={content.metaTitle}
         description={content.metaDescription}
         keywords={`${service.name.toLowerCase()} ${location.name}, impresa pulizie ${location.name}, ${service.slug} ${location.slug}, pulizie professionali ${location.name}`}
-        canonical={`https://www.impresapulizie.it/servizi/${servizio}/${localita}`}
+        canonical={buildCanonicalUrl(`/servizi/${servizio}/${localita}`)}
       />
 
       <Breadcrumb
@@ -87,10 +92,13 @@ const ServizioLocale = () => {
               </Link>
             </div>
             <div>
-              <img
-                src="https://images.pexels.com/photos/6195275/pexels-photo-6195275.jpeg?auto=compress&cs=tinysrgb&w=800"
+              <LazyImage
+                src={cdnImage('https://images.pexels.com/photos/6195275/pexels-photo-6195275.jpeg?auto=compress&cs=tinysrgb&w=1200', { width: 1280, quality: 70, fit: 'cover' })}
+                fallbackSrc="https://images.pexels.com/photos/6195275/pexels-photo-6195275.jpeg?auto=compress&cs=tinysrgb&w=1200"
                 alt={`${service.name} a ${location.name}`}
                 className="w-full h-96 object-cover rounded-xl shadow-lg"
+                width={640}
+                height={540}
               />
             </div>
           </div>
@@ -266,6 +274,10 @@ const ServizioLocale = () => {
           </div>
         </div>
       </section>
+
+      <RelatedBlogPosts serviceIds={[service.id]} />
+
+      <InternalLinkSection title="Altri collegamenti utili" intro={`Consulta le pagine chiave di Arctic Pulizie per scoprire tutti i servizi, verificare le zone coperte, leggere le recensioni e richiedere un preventivo per ${location.name}.`} />
 
       <section className="py-20 bg-gradient-to-br from-slate-900 to-slate-800">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

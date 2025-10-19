@@ -2,6 +2,44 @@ import { Trees, CheckCircle, ArrowRight, Leaf, Sun, Droplets, Scissors } from 'l
 import { Link } from 'react-router-dom';
 import SEO from '@/components/SEO';
 import LocationsGrid from '@/components/LocationsGrid';
+import InternalLinkSection from '@/components/InternalLinkSection';
+import LazyImage from '@/components/LazyImage';
+import RelatedBlogPosts from '@/components/RelatedBlogPosts';
+import { buildCanonicalUrl } from '@/data/siteMetadata';
+import { cdnImage } from '@/utils/image';
+
+const faqSchema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Quali servizi di giardinaggio offrite a Brescia?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Arctic Pulizie cura taglio erba, potature, manutenzione aiuole, irrigazione e trattamenti stagionali per aree verdi aziendali e condominiali."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Posso abbinare il giardinaggio alle pulizie condominiali?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sì, offriamo pacchetti combinati pulizie + giardinaggio con condizioni dedicate ai condomini gestiti da Arctic Pulizie."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Effettuate interventi straordinari su richiesta?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Interveniamo su richiesta per potature importanti, sistemazione stagionale e rifacimento aree verdi."
+        }
+      }
+    ]
+  }
+];
 
 const Giardinaggio = () => {
   const features = [
@@ -86,10 +124,11 @@ const Giardinaggio = () => {
   return (
     <div className="pt-24 pb-20">
       <SEO
-        title="Giardinaggio e Manutenzione Verde Brescia - Parchi, Giardini, Aiuole"
-        description="Servizi di giardinaggio e manutenzione del verde a Brescia e provincia. Cura parchi, giardini e aiuole. Promozione speciale per condomini. Contratti periodici e interventi singoli."
-        keywords="giardinaggio brescia, manutenzione giardini brescia, cura parchi, potatura piante, manutenzione aiuole"
-        canonical="https://www.impresapulizie.it/servizi/giardinaggio"
+        title="Giardinaggio e Manutenzione Verde a Brescia | Arctic Pulizie"
+        description="Cura professionale di giardini condominiali e aree verdi aziendali a Brescia. Arctic Pulizie offre contratti periodici e interventi straordinari su richiesta."
+        keywords="giardinaggio brescia, manutenzione verde brescia, cura giardini arctic pulizie"
+        canonical={buildCanonicalUrl('/servizi/giardinaggio')}
+        structuredData={faqSchema}
       />
 
       {/* Hero Section */}
@@ -117,10 +156,13 @@ const Giardinaggio = () => {
               </Link>
             </div>
             <div>
-              <img
-                src="https://images.pexels.com/photos/1301856/pexels-photo-1301856.jpeg?auto=compress&cs=tinysrgb&w=800"
-                alt="Giardinaggio e manutenzione verde professionale"
+              <LazyImage
+                src={cdnImage('https://images.pexels.com/photos/1301856/pexels-photo-1301856.jpeg?auto=compress&cs=tinysrgb&w=1200', { width: 1280, quality: 70, fit: 'cover' })}
+                fallbackSrc="https://images.pexels.com/photos/1301856/pexels-photo-1301856.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                alt="Giardinaggio professionale a Brescia con Arctic Pulizie"
                 className="w-full h-96 object-cover rounded-xl shadow-lg"
+                width={640}
+                height={540}
               />
             </div>
           </div>
@@ -278,6 +320,10 @@ const Giardinaggio = () => {
       </section>
 
       <LocationsGrid serviceSlug="giardinaggio" serviceName="Giardinaggio" showAll={false} />
+
+      <RelatedBlogPosts serviceIds={['giardinaggio']} />
+
+      <InternalLinkSection title="Servizi correlati al verde e alla pulizia" intro="Raggiungi le altre pagine Arctic Pulizie per scoprire tutti i servizi disponibili, le zone operative, le testimonianze e richiedere un preventivo." />
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-br from-slate-900 to-slate-800">

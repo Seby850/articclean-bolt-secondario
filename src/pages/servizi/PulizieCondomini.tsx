@@ -2,6 +2,44 @@ import { Building, CheckCircle, ArrowRight, Users, Clock, Shield, Sparkles } fro
 import { Link } from 'react-router-dom';
 import SEO from '@/components/SEO';
 import LocationsGrid from '@/components/LocationsGrid';
+import InternalLinkSection from '@/components/InternalLinkSection';
+import LazyImage from '@/components/LazyImage';
+import RelatedBlogPosts from '@/components/RelatedBlogPosts';
+import { buildCanonicalUrl } from '@/data/siteMetadata';
+import { cdnImage } from '@/utils/image';
+
+const faqSchema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Quali aree del condominio pulite?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Gestiamo scale, pianerottoli, ingressi, cortili, ascensori e carrellati con interventi programmati su Brescia e provincia."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Offrite contratti flessibili per i condomini?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sì, Arctic Pulizie propone interventi singoli o contratti settimanali e mensili su misura per il condominio."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "È possibile abbinare i servizi di giardinaggio?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Possiamo integrare la manutenzione del verde condominiale con condizioni vantaggiose insieme alla pulizia ordinaria."
+        }
+      }
+    ]
+  }
+];
 
 const PulizieCondomini = () => {
   const features = [
@@ -62,10 +100,11 @@ const PulizieCondomini = () => {
   return (
     <div className="pt-24 pb-20">
       <SEO
-        title="Pulizie Condomini Brescia - Aree Comuni e Gestione Carrellati"
-        description="Servizi di pulizia per condomini a Brescia e provincia. Contratti singoli o periodici programmati. Pulizia aree comuni, gestione carrellati e giardinaggio. Sopralluogo gratuito."
-        keywords="pulizie condomini brescia, pulizie aree comuni, gestione carrellati, pulizie scale condominio"
-        canonical="https://www.impresapulizie.it/servizi/pulizie-condomini"
+        title="Pulizie Condomini a Brescia | Arctic Pulizie"
+        description="Pulizia scale, ingressi e aree comuni dei condomini a Brescia e provincia. Arctic Pulizie offre gestione carrellati, giardinaggio e contratti flessibili."
+        keywords="pulizie condomini brescia, pulizia scale condominio brescia, gestione carrellati arctic pulizie"
+        canonical={buildCanonicalUrl('/servizi/pulizie-condomini')}
+        structuredData={faqSchema}
       />
 
       {/* Hero Section */}
@@ -93,10 +132,13 @@ const PulizieCondomini = () => {
               </Link>
             </div>
             <div>
-              <img
-                src="https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=800"
-                alt="Pulizia condomini professionale"
+              <LazyImage
+                src={cdnImage('https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=1200', { width: 1200, quality: 70, fit: 'cover' })}
+                fallbackSrc="https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                alt="Pulizie condomini a Brescia con Arctic Pulizie"
                 className="w-full h-96 object-cover rounded-xl shadow-lg"
+                width={640}
+                height={540}
               />
             </div>
           </div>
@@ -235,6 +277,10 @@ const PulizieCondomini = () => {
       </section>
 
       <LocationsGrid serviceSlug="pulizie-condomini" serviceName="Pulizie Condomini" showAll={false} />
+
+      <RelatedBlogPosts serviceIds={['pulizie-condomini', 'gestione-carrellati']} />
+
+      <InternalLinkSection title="Approfondisci i servizi per il condominio" intro="Consulta rapidamente le altre pagine Arctic Pulizie utili per amministratori e proprietari: servizi dedicati, zone servite, recensioni e preventivi." />
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-br from-slate-900 to-slate-800">

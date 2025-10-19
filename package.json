@@ -8,7 +8,14 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "optimize:images": "node scripts/optimize-images.mjs",
+    "perf:images": "node scripts/performance/check-images.mjs",
+    "perf:alt": "node scripts/performance/check-alt-text.mjs",
+    "perf:lighthouse": "node scripts/performance/lighthouse.mjs",
+    "perf:sitemap": "node scripts/performance/update-sitemap.mjs",
+    "blog:new": "node scripts/blog/create-post.mjs",
+    "seo:audit": "node scripts/seo/run-audit.mjs"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.75.0",

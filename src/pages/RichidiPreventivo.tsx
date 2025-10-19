@@ -1,5 +1,8 @@
 import { useState } from 'react';
 import { Send, CheckCircle, AlertCircle, FileText, Building2, Mail, Phone, User } from 'lucide-react';
+import SEO from '@/components/SEO';
+import InternalLinkSection from '@/components/InternalLinkSection';
+import { buildCanonicalUrl, siteMetadata } from '@/data/siteMetadata';
 
 const RichidiPreventivo = () => {
   const [formData, setFormData] = useState({
@@ -18,6 +21,23 @@ const RichidiPreventivo = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const [errorMessage, setErrorMessage] = useState('');
+
+  const canonicalUrl = buildCanonicalUrl('/richiedi-preventivo');
+  const seoConfig = {
+    title: 'Richiedi Preventivo Pulizie a Brescia | Arctic Pulizie',
+    description: 'Richiedi un preventivo gratuito per le pulizie Arctic Pulizie a Brescia. Compila il modulo e ricevi una proposta personalizzata in 24 ore.',
+    keywords: 'preventivo pulizie brescia, richiedi preventivo arctic pulizie, preventivo impresa pulizie, sopralluogo gratuito pulizie',
+    canonical: canonicalUrl,
+    structuredData: [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'ContactPage',
+        name: `${siteMetadata.siteName} - Richiedi Preventivo`,
+        url: canonicalUrl,
+        description: 'Modulo per richiedere un preventivo gratuito ai consulenti Arctic Pulizie.'
+      }
+    ] as Record<string, unknown>[]
+  };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -42,7 +62,7 @@ const RichidiPreventivo = () => {
         body: JSON.stringify({
           ...formData,
           timestamp: new Date().toISOString(),
-          source: 'Arctic Clean Website'
+          source: 'Arctic Pulizie Website'
         })
       });
 
@@ -98,49 +118,54 @@ const RichidiPreventivo = () => {
 
   if (submitStatus === 'success') {
     return (
-      <div className="pt-24 pb-20 min-h-screen bg-gradient-to-br from-white via-sky-50/30 to-cyan-50/20">
-        <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white rounded-xl shadow-lg p-8 text-center">
-            <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-6">
-              <CheckCircle className="w-8 h-8 text-emerald-600" />
+      <>
+        <SEO {...seoConfig} />
+        <div className="pt-24 pb-20 min-h-screen bg-gradient-to-br from-white via-sky-50/30 to-cyan-50/20">
+          <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="bg-white rounded-xl shadow-lg p-8 text-center">
+              <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <CheckCircle className="w-8 h-8 text-emerald-600" />
+              </div>
+              <h1 className="text-3xl font-bold text-slate-900 mb-4">
+                Richiesta Inviata con Successo!
+              </h1>
+              <p className="text-lg text-slate-600 mb-6">
+                Grazie per aver richiesto un preventivo. Il nostro team ti contatterà entro 24 ore
+                per fornirti una proposta personalizzata.
+              </p>
+              <div className="bg-sky-50 rounded-lg p-4 mb-6">
+                <p className="text-sky-800 font-semibold">
+                  📞 Telefono: +39 030 987 6543
+                </p>
+                <p className="text-sky-700">
+                  📧 Email: info@arcticpulizie.it
+                </p>
+                <p className="text-sky-700">
+                  📍 Via Carpaccio 10, Brescia
+                </p>
+              </div>
+              <a
+                href="/"
+                className="inline-flex items-center space-x-2 bg-gradient-to-r from-sky-500 to-cyan-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-sky-600 hover:to-cyan-600 transition-all duration-300"
+              >
+                <span>Torna alla Home</span>
+              </a>
             </div>
-            <h1 className="text-3xl font-bold text-slate-900 mb-4">
-              Richiesta Inviata con Successo!
-            </h1>
-            <p className="text-lg text-slate-600 mb-6">
-              Grazie per aver richiesto un preventivo. Il nostro team ti contatterà entro 24 ore 
-              per fornirti una proposta personalizzata.
-            </p>
-            <div className="bg-sky-50 rounded-lg p-4 mb-6">
-              <p className="text-sky-800 font-semibold">
-                📞 Telefono: +39 030 987 6543
-              </p>
-              <p className="text-sky-700">
-                📧 Email: info@impresapulizie.it
-              </p>
-              <p className="text-sky-700">
-                📍 Via Carpaccio 10, Brescia
-              </p>
-            </div>
-            <a
-              href="/"
-              className="inline-flex items-center space-x-2 bg-gradient-to-r from-sky-500 to-cyan-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-sky-600 hover:to-cyan-600 transition-all duration-300"
-            >
-              <span>Torna alla Home</span>
-            </a>
           </div>
         </div>
-      </div>
+      </>
     );
   }
 
   return (
-    <div className="pt-24 pb-20 min-h-screen bg-gradient-to-br from-white via-sky-50/30 to-cyan-50/20">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <div className="flex items-center justify-center space-x-3 mb-6">
-            <FileText className="w-8 h-8 text-sky-500" />
+    <>
+      <SEO {...seoConfig} />
+      <div className="pt-24 pb-20 min-h-screen bg-gradient-to-br from-white via-sky-50/30 to-cyan-50/20">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Header */}
+          <div className="text-center mb-12">
+            <div className="flex items-center justify-center space-x-3 mb-6">
+              <FileText className="w-8 h-8 text-sky-500" />
             <h1 className="text-4xl lg:text-5xl font-bold text-slate-900">
               Richiedi <span className="text-sky-500">Preventivo</span>
             </h1>
@@ -410,8 +435,11 @@ const RichidiPreventivo = () => {
             </div>
           </div>
         </div>
+
+        <InternalLinkSection title="Collegamenti utili dopo la richiesta" intro="Approfondisci i servizi Arctic Pulizie, consulta le aree servite, leggi le recensioni e valuta altre soluzioni prima di ricevere il preventivo." />
       </div>
     </div>
+  </>
   );
 };
 

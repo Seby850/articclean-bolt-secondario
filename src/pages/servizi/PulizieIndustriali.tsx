@@ -1,6 +1,45 @@
 import { Factory, CheckCircle, ArrowRight, Shield, Users, Wrench, AlertTriangle } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import SEO from '@/components/SEO';
 import LocationsGrid from '@/components/LocationsGrid';
+import InternalLinkSection from '@/components/InternalLinkSection';
+import LazyImage from '@/components/LazyImage';
+import RelatedBlogPosts from '@/components/RelatedBlogPosts';
+import { buildCanonicalUrl } from '@/data/siteMetadata';
+import { cdnImage } from '@/utils/image';
+
+const faqSchema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Quali ambienti industriali pulisce Arctic Pulizie?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Puliamo capannoni, magazzini, stabilimenti produttivi, linee di produzione e impianti industriali in tutta la provincia di Brescia."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Che attrezzature utilizzate per le pulizie industriali?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Usiamo lavasciuga industriali, aspiratori ad alta potenza, idropulitrici e macchinari dedicati alle superfici continue."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "È possibile programmare interventi notturni?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sì, pianifichiamo anche interventi in orario notturno o nei weekend per non fermare la produzione."
+        }
+      }
+    ]
+  }
+];
 
 const PulizieIndustriali = () => {
   const features = [
@@ -69,6 +108,13 @@ const PulizieIndustriali = () => {
 
   return (
     <div className="pt-24 pb-20">
+      <SEO
+        title="Pulizie Industriali a Brescia | Arctic Pulizie"
+        description="Pulizie industriali e manutenzione capannoni a Brescia con macchinari professionali e protocolli certificati. Arctic Pulizie garantisce sicurezza e continuità produttiva."
+        keywords="pulizie industriali brescia, pulizia capannoni brescia, pulizie fabbriche arctic pulizie, manutenzione industriale brescia"
+        canonical={buildCanonicalUrl('/servizi/pulizie-industriali')}
+        structuredData={faqSchema}
+      />
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-white via-sky-50/30 to-cyan-50/20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -95,10 +141,13 @@ const PulizieIndustriali = () => {
               </Link>
             </div>
             <div>
-              <img 
-                src="https://i.imgur.com/ja4pwgZ.png"
-                alt="Pulizia industriale professionale"
+              <LazyImage
+                src={cdnImage('https://i.imgur.com/ja4pwgZ.png', { width: 1280, quality: 80 })}
+                alt="Pulizie industriali a Brescia con Arctic Pulizie"
                 className="w-full h-96 object-cover rounded-xl shadow-lg"
+                width={640}
+                height={540}
+                fallbackSrc="https://i.imgur.com/ja4pwgZ.png"
               />
             </div>
           </div>
@@ -269,6 +318,10 @@ const PulizieIndustriali = () => {
       </section>
 
       <LocationsGrid serviceSlug="pulizie-industriali" serviceName="Pulizie Industriali" showAll={false} />
+
+      <RelatedBlogPosts serviceIds={['pulizie-industriali']} />
+
+      <InternalLinkSection title="Collegamenti per responsabili di stabilimento" intro="Approfondisci rapidamente gli altri contenuti Arctic Pulizie: elenco servizi, zone operative, recensioni clienti industriali e richiesta preventivo." />
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-br from-slate-900 to-slate-800">

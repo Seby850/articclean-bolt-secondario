@@ -3,6 +3,8 @@ import { MapPin, ArrowRight } from 'lucide-react';
 import { locations } from '@/data/servicesData';
 import SEO from '@/components/SEO';
 import Breadcrumb from '@/components/Breadcrumb';
+import InternalLinkSection from '@/components/InternalLinkSection';
+import { buildCanonicalUrl } from '@/data/siteMetadata';
 
 const DoveOperiamo = () => {
   const sortedLocations = [...locations].sort((a, b) => {
@@ -14,10 +16,10 @@ const DoveOperiamo = () => {
   return (
     <div className="pt-24 pb-20">
       <SEO
-        title="Dove Operiamo - Tutte le Località Servite | Impresa di Pulizie Brescia"
-        description="Servizi di pulizia professionali in 15 località della provincia di Brescia: Brescia, Desenzano, Montichiari e molte altre zone. Scopri dove operiamo."
-        keywords="pulizie brescia, pulizie provincia brescia, località servite, dove operiamo, zone operative"
-        canonical="https://www.impresapulizie.it/dove-operiamo"
+        title="Dove Operiamo a Brescia e Provincia | Arctic Pulizie"
+        description="Servizi di pulizia Arctic Pulizie attivi a Brescia, Desenzano, Montichiari, Chiari e in oltre 15 località della provincia. Scopri le zone servite."
+        keywords="dove operiamo arctic pulizie, pulizie provincia brescia, località servite arctic pulizie"
+        canonical={buildCanonicalUrl('/dove-operiamo')}
       />
 
       <Breadcrumb
@@ -134,6 +136,8 @@ const DoveOperiamo = () => {
           </div>
         </div>
       </section>
+
+      <InternalLinkSection title="Approfondisci i servizi Arctic Pulizie" intro="Consulta le pagine chiave per scoprire l'intera offerta, leggere le recensioni e richiedere un preventivo dedicato alle tue esigenze." />
     </div>
   );
 };

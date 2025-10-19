@@ -11,17 +11,20 @@ const Footer = () => {
               <div className="w-10 h-10 flex items-center justify-center">
                 <img
                   src="https://i.imgur.com/ks6yQn1.png"
-                  alt="Impresa di Pulizie Logo"
+                  alt="Arctic Clean logo"
                   className="w-full h-full object-contain"
+                  width={40}
+                  height={40}
+                  loading="lazy"
                 />
               </div>
               <div>
-                <h1 className="text-lg font-bold">Impresa di Pulizie</h1>
+                <h1 className="text-lg font-bold">Arctic Clean</h1>
               </div>
             </Link>
             <p className="text-slate-300 leading-relaxed">
-              Servizi di pulizia professionale per aziende, privati, condomini e giardinaggio.
-              28 dipendenti al vostro servizio con alta qualità e prezzi competitivi.
+              Impresa di pulizie a Brescia specializzata in uffici, condomini, industrie e sanificazioni.
+              Squadre certificate, sopralluoghi rapidi e preventivo in 24 ore in tutta la provincia.
             </p>
           </div>
 
@@ -44,6 +47,7 @@ const Footer = () => {
             <ul className="space-y-2 text-slate-300">
               <li><Link to="/chi-siamo" className="hover:text-sky-400 transition-colors">Chi Siamo</Link></li>
               <li><Link to="/come-lavoriamo" className="hover:text-sky-400 transition-colors">Come Lavoriamo</Link></li>
+              <li><Link to="/blog" className="hover:text-sky-400 transition-colors">Blog</Link></li>
               <li><Link to="/recensioni" className="hover:text-sky-400 transition-colors">Recensioni</Link></li>
               <li><Link to="/faq" className="hover:text-sky-400 transition-colors">FAQ</Link></li>
               <li><Link to="/privacy-policy" className="hover:text-sky-400 transition-colors">Privacy Policy</Link></li>
@@ -59,11 +63,11 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-4 h-4 text-sky-400" />
-                <a href="mailto:info@impresapulizie.it" className="hover:text-sky-400 transition-colors">info@impresapulizie.it</a>
+                <a href="mailto:info@arcticpulizie.it" className="hover:text-sky-400 transition-colors">info@arcticpulizie.it</a>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="w-4 h-4 text-sky-400" />
-                <span>Via Carpaccio 10, Brescia</span>
+                <span>Via Carpaccio 10, 25100 Brescia</span>
               </div>
             </div>
             <div className="mt-4 text-sm text-slate-400">
@@ -92,7 +96,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-slate-800 mt-12 pt-8 text-center text-slate-400">
-          <p>&copy; 2025 Impresa di Pulizie. Tutti i diritti riservati. | Via Carpaccio 10, Brescia | Zona operativa: Brescia e provincia</p>
+          <p>&copy; 2025 Arctic Pulizie Srl · Via Carpaccio 10, 25100 Brescia · Zona operativa: Brescia e provincia</p>
         </div>
       </div>
     </footer>

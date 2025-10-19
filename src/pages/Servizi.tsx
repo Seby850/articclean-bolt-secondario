@@ -1,6 +1,44 @@
 import { Building2, Factory, Hammer, Sparkles, Shield, CheckCircle, ArrowRight, Phone, Leaf, Trash2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import SEO from '@/components/SEO';
+import InternalLinkSection from '@/components/InternalLinkSection';
+import LazyImage from '@/components/LazyImage';
+import RelatedBlogPosts from '@/components/RelatedBlogPosts';
+import { buildCanonicalUrl } from '@/data/siteMetadata';
+import { cdnImage } from '@/utils/image';
+
+const servicesPageStructuredData = [
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Quali servizi di pulizia offrite a Brescia?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Arctic Pulizie offre servizi di pulizia professionale per uffici, condomini, industrie, vetrate, post-cantiere, giardinaggio e gestione carrellati in tutta la provincia di Brescia."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Posso richiedere un servizio di pulizia personalizzato?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sì, creiamo piani di pulizia su misura in base al tipo di struttura, alla metratura e alla frequenza richiesta."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quanto tempo impiegate per organizzare il servizio?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Dopo il preventivo e il sopralluogo gratuito, attiviamo il servizio entro pochi giorni con personale dedicato."
+        }
+      }
+    ]
+  }
+];
 
 const Servizi = () => {
   const services = [
@@ -23,7 +61,8 @@ const Servizi = () => {
         "Riduzione assenze per malattia",
         "Immagine aziendale impeccabile"
       ],
-      image: "https://i.imgur.com/RAZaa1z.jpeg"
+      image: cdnImage('https://i.imgur.com/RAZaa1z.jpeg', { width: 1200, quality: 75 }),
+      fallbackImage: 'https://i.imgur.com/RAZaa1z.jpeg'
     },
     {
       id: 'industriale',
@@ -44,7 +83,8 @@ const Servizi = () => {
         "Prevenzione incidenti",
         "Mantenimento efficienza impianti"
       ],
-      image: "https://i.imgur.com/ja4pwgZ.png"
+      image: cdnImage('https://i.imgur.com/ja4pwgZ.png', { width: 1200, quality: 80 }),
+      fallbackImage: 'https://i.imgur.com/ja4pwgZ.png'
     },
     {
       id: 'post-cantiere',
@@ -65,7 +105,8 @@ const Servizi = () => {
         "Rimozione completa detriti",
         "Risparmio di tempo e costi"
       ],
-      image: "https://i.imgur.com/eUBWEu3.jpeg"
+      image: cdnImage('https://i.imgur.com/eUBWEu3.jpeg', { width: 1200, quality: 80 }),
+      fallbackImage: 'https://i.imgur.com/eUBWEu3.jpeg'
     },
     {
       id: 'vetri',
@@ -86,7 +127,8 @@ const Servizi = () => {
         "Maggiore durata delle superfici",
         "Risparmio energetico illuminazione"
       ],
-      image: "https://i.imgur.com/mwIw3dd.jpeg"
+      image: cdnImage('https://i.imgur.com/mwIw3dd.jpeg', { width: 1200, quality: 80 }),
+      fallbackImage: 'https://i.imgur.com/mwIw3dd.jpeg'
     },
     {
       id: 'sanificazione',
@@ -107,7 +149,8 @@ const Servizi = () => {
         "Riduzione rischi biologici",
         "Tranquillità per clienti e visitatori"
       ],
-      image: "https://images.pexels.com/photos/4099471/pexels-photo-4099471.jpeg?auto=compress&cs=tinysrgb&w=800"
+      image: cdnImage('https://images.pexels.com/photos/4099471/pexels-photo-4099471.jpeg?auto=compress&cs=tinysrgb&w=1200', { width: 1200, quality: 70, fit: 'cover' }),
+      fallbackImage: 'https://images.pexels.com/photos/4099471/pexels-photo-4099471.jpeg?auto=compress&cs=tinysrgb&w=1200'
     },
     {
       id: 'condomini',
@@ -128,7 +171,8 @@ const Servizi = () => {
         "Servizio affidabile e puntuale",
         "Promozione per servizi integrati"
       ],
-      image: "https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=800"
+      image: cdnImage('https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=1200', { width: 1200, quality: 70, fit: 'cover' }),
+      fallbackImage: 'https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=1200'
     },
     {
       id: 'giardinaggio',
@@ -149,7 +193,8 @@ const Servizi = () => {
         "Ambiente più salubre e piacevole",
         "Servizio programmato e affidabile"
       ],
-      image: "https://images.pexels.com/photos/2132227/pexels-photo-2132227.jpeg?auto=compress&cs=tinysrgb&w=800"
+      image: cdnImage('https://images.pexels.com/photos/2132227/pexels-photo-2132227.jpeg?auto=compress&cs=tinysrgb&w=1200', { width: 1200, quality: 70, fit: 'cover' }),
+      fallbackImage: 'https://images.pexels.com/photos/2132227/pexels-photo-2132227.jpeg?auto=compress&cs=tinysrgb&w=1200'
     },
     {
       id: 'carrellati',
@@ -170,7 +215,8 @@ const Servizi = () => {
         "Conformità normative sanitarie",
         "Risparmio tempo per il personale"
       ],
-      image: "https://images.pexels.com/photos/3186574/pexels-photo-3186574.jpeg?auto=compress&cs=tinysrgb&w=800"
+      image: cdnImage('https://images.pexels.com/photos/3186574/pexels-photo-3186574.jpeg?auto=compress&cs=tinysrgb&w=1200', { width: 1200, quality: 70, fit: 'cover' }),
+      fallbackImage: 'https://images.pexels.com/photos/3186574/pexels-photo-3186574.jpeg?auto=compress&cs=tinysrgb&w=1200'
     }
   ];
 
@@ -195,10 +241,11 @@ const Servizi = () => {
   return (
     <div className="pt-24 pb-20">
       <SEO
-        title="Servizi di Pulizia Professionali Brescia - Uffici, Condomini, Industrie, Giardinaggio"
-        description="Tutti i servizi di Impresa di Pulizie a Brescia: pulizie uffici, condomini, industrie, vetri, giardinaggio e gestione carrellati. 28 dipendenti qualificati. Contratti singoli e periodici."
-        keywords="servizi pulizie brescia, pulizie uffici, pulizie condomini, pulizie industriali, giardinaggio brescia, gestione carrellati"
-        canonical="https://www.impresapulizie.it/servizi"
+        title="Servizi di Pulizia Professionali a Brescia | Arctic Pulizie"
+        description="Pulizie uffici, condomini, industrie, vetrate, post-cantiere e giardinaggio a Brescia. Arctic Pulizie prepara preventivi in 24 ore con squadre dedicate."
+        keywords="servizi pulizie brescia, pulizie professionali brescia, pulizie uffici arctic pulizie, pulizie condomini brescia"
+        canonical={buildCanonicalUrl('/servizi')}
+        structuredData={servicesPageStructuredData}
       />
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-white via-sky-50/30 to-cyan-50/20">
@@ -273,10 +320,13 @@ const Servizi = () => {
 
                 {/* Image */}
                 <div className={`${index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}`}>
-                  <img 
+                  <LazyImage
                     src={service.image}
-                    alt={service.title}
+                    fallbackSrc={service.fallbackImage}
+                    alt={`${service.title} a Brescia`}
                     className="w-full h-80 lg:h-96 object-cover rounded-xl shadow-lg"
+                    width={600}
+                    height={480}
                   />
                 </div>
               </div>
@@ -346,6 +396,10 @@ const Servizi = () => {
           </div>
         </div>
       </section>
+
+      <RelatedBlogPosts serviceIds={services.map((service) => service.id)} title="Dal nostro blog: consigli per ogni servizio" />
+
+      <InternalLinkSection title="Pagine principali di Arctic Pulizie" intro="Accedi velocemente ai contenuti chiave per conoscere l'azienda, le zone servite, le recensioni e richiedere un preventivo personalizzato." />
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-br from-slate-900 to-slate-800">

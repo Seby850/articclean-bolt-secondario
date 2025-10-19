@@ -1,6 +1,45 @@
 import { Sparkles, CheckCircle, ArrowRight, Sun, Building, Eye, Droplets } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import SEO from '@/components/SEO';
 import LocationsGrid from '@/components/LocationsGrid';
+import InternalLinkSection from '@/components/InternalLinkSection';
+import LazyImage from '@/components/LazyImage';
+import RelatedBlogPosts from '@/components/RelatedBlogPosts';
+import { buildCanonicalUrl } from '@/data/siteMetadata';
+import { cdnImage } from '@/utils/image';
+
+const faqSchema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Con che frequenza consigliate la pulizia delle vetrate?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Per uffici e negozi consigliamo interventi mensili o bimestrali, valutando esposizione e traffico."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Effettuate pulizie di vetri in altezza?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sì, i nostri operatori sono abilitati ai lavori in quota e utilizzano sistemi di sicurezza certificati."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Utilizzate prodotti che non lasciano aloni?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Utilizziamo sistemi ad acqua osmotizzata e detergenti professionali per garantire vetri brillanti senza aloni."
+        }
+      }
+    ]
+  }
+];
 
 const PulizieVetri = () => {
   const features = [
@@ -92,6 +131,13 @@ const PulizieVetri = () => {
 
   return (
     <div className="pt-24 pb-20">
+      <SEO
+        title="Pulizia Vetri e Vetrate a Brescia | Arctic Pulizie"
+        description="Pulizia professionale di vetri, vetrate e facciate continue a Brescia. Arctic Pulizie opera in quota con sistemi ad acqua pura e prodotti anti-aloni."
+        keywords="pulizie vetri brescia, pulizia vetrate brescia, lavaggio vetri in quota arctic pulizie"
+        canonical={buildCanonicalUrl('/servizi/pulizie-vetri')}
+        structuredData={faqSchema}
+      />
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-white via-sky-50/30 to-cyan-50/20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -118,10 +164,13 @@ const PulizieVetri = () => {
               </Link>
             </div>
             <div>
-              <img 
-                src="https://i.imgur.com/mwIw3dd.jpeg"
-                alt="Pulizia vetri professionale"
+              <LazyImage 
+                src={cdnImage('https://i.imgur.com/mwIw3dd.jpeg', { width: 1280, quality: 80 })}
+                alt="Pulizia vetri a Brescia con Arctic Pulizie"
                 className="w-full h-96 object-cover rounded-xl shadow-lg"
+                width={640}
+                height={540}
+                fallbackSrc="https://i.imgur.com/mwIw3dd.jpeg"
               />
             </div>
           </div>
@@ -327,6 +376,10 @@ const PulizieVetri = () => {
       </section>
 
       <LocationsGrid serviceSlug="pulizia-vetri" serviceName="Pulizia Vetri" showAll={false} />
+
+      <RelatedBlogPosts serviceIds={['pulizia-vetri']} />
+
+      <InternalLinkSection title="Altri link sulla cura delle superfici vetrate" intro="Approfondisci servizi correlati, zone operative, testimonianze e preventivo rapido offerti da Arctic Pulizie." />
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-br from-slate-900 to-slate-800">

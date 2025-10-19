@@ -1,6 +1,45 @@
 import { Hammer, CheckCircle, ArrowRight, Clock, Shield, Sparkles, Building } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import SEO from '@/components/SEO';
 import LocationsGrid from '@/components/LocationsGrid';
+import InternalLinkSection from '@/components/InternalLinkSection';
+import LazyImage from '@/components/LazyImage';
+import RelatedBlogPosts from '@/components/RelatedBlogPosts';
+import { buildCanonicalUrl } from '@/data/siteMetadata';
+import { cdnImage } from '@/utils/image';
+
+const faqSchema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "In quanto tempo completate una pulizia post-cantiere?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Dopo il sopralluogo definiamo durata e squadre: piccoli appartamenti in 1 giorno, grandi cantieri in pochi giorni lavorativi."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Vi occupate anche della rimozione dei detriti?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sì, Arctic Pulizie rimuove detriti, adesivi, polveri e coordina la gestione dei materiali di scarto secondo normativa."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "È prevista la sanificazione finale degli ambienti?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Al termine della pulizia effettuiamo sanificazione e deodorazione per consegnare ambienti pronti all’uso."
+        }
+      }
+    ]
+  }
+];
 
 const PuliziePostCantiere = () => {
   const features = [
@@ -86,6 +125,13 @@ const PuliziePostCantiere = () => {
 
   return (
     <div className="pt-24 pb-20">
+      <SEO
+        title="Pulizie Post Cantiere a Brescia | Arctic Pulizie"
+        description="Pulizie post-cantiere a Brescia con rimozione detriti, lucidatura e sanificazione finale. Arctic Pulizie consegna ambienti pronti all'uso."
+        keywords="pulizie post cantiere brescia, pulizia fine lavori brescia, sanificazione post cantiere arctic pulizie"
+        canonical={buildCanonicalUrl('/servizi/pulizie-post-cantiere')}
+        structuredData={faqSchema}
+      />
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-white via-sky-50/30 to-cyan-50/20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -112,10 +158,13 @@ const PuliziePostCantiere = () => {
               </Link>
             </div>
             <div>
-              <img 
-                src="https://i.imgur.com/eUBWEu3.jpeg"
-                alt="Pulizie post-cantiere professionali"
+              <LazyImage 
+                src={cdnImage('https://i.imgur.com/eUBWEu3.jpeg', { width: 1280, quality: 80 })}
+                alt="Pulizie post-cantiere a Brescia con Arctic Pulizie"
                 className="w-full h-96 object-cover rounded-xl shadow-lg"
+                width={640}
+                height={540}
+                fallbackSrc="https://i.imgur.com/eUBWEu3.jpeg"
               />
             </div>
           </div>
@@ -294,6 +343,10 @@ const PuliziePostCantiere = () => {
       </section>
 
       <LocationsGrid serviceSlug="pulizie-post-cantiere" serviceName="Pulizie Post Cantiere" showAll={false} />
+
+      <RelatedBlogPosts serviceIds={['pulizie-post-cantiere']} />
+
+      <InternalLinkSection title="Risorse utili dopo il cantiere" intro="Consulta tutti i collegamenti fondamentali Arctic Pulizie per programmare servizi aggiuntivi, verificare le aree servite, leggere le recensioni e richiedere un preventivo." />
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-br from-slate-900 to-slate-800">

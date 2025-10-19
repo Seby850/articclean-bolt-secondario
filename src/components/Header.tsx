@@ -29,6 +29,7 @@ const Header = () => {
       ]
     },
     { name: 'Come Lavoriamo', path: '/come-lavoriamo' },
+    { name: 'Blog', path: '/blog' },
     { name: 'Recensioni', path: '/recensioni' }
   ];
 
@@ -36,13 +37,16 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-slate-100 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          {/* Logo - Nuovo URL Imgur */}
+          {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
             <div className="w-12 h-12 md:w-14 md:h-14 flex items-center justify-center">
               <img 
                 src="https://i.imgur.com/ks6yQn1.png" 
-                alt="Arctic Clean Service Logo" 
+                alt="Arctic Clean logo" 
                 className="w-full h-full object-contain"
+                width={56}
+                height={56}
+                loading="lazy"
               />
             </div>
             <div>

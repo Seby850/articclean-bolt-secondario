@@ -1,68 +1,27 @@
-import { ArrowRight, Sparkles, Shield, Clock, Award, Users, Star } from 'lucide-react';
+import { ArrowRight, Sparkles, Shield, Clock, Award, Users, Star, Calendar } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { CTASection } from '@/components/ui/cta-with-rectangle';
 import SEO from '@/components/SEO';
+import LazyImage from '@/components/LazyImage';
+import { siteMetadata, buildCanonicalUrl } from '@/data/siteMetadata';
+import { getRecentPosts } from '@/data/blogPosts';
+import { cdnImage } from '@/utils/image';
 
-const structuredData = [
+const homepageStructuredData = [
   {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "@id": "https://www.arcticclean.it/#business",
-    "name": "Impresa di Pulizie",
-    "description": "Servizi di pulizie professionali per aziende, privati, condomini, uffici, industrie, giardinaggio e gestione carrellati. 28 dipendenti qualificati",
-    "url": "https://www.impresapulizie.it",
-    "telephone": "+39-030-9876543",
-    "priceRange": "€€",
-    "image": "https://www.arcticclean.it/logo.png",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Via Carpaccio 10",
-      "addressCountry": "IT",
-      "addressLocality": "Brescia",
-      "postalCode": "25100",
-      "addressRegion": "Lombardia"
+    "@type": "WebSite",
+    "@id": `${siteMetadata.baseUrl}#website`,
+    "name": siteMetadata.siteName,
+    "url": siteMetadata.baseUrl,
+    "publisher": {
+      "@type": "Organization",
+      "name": siteMetadata.legalName
     },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": "45.5416",
-      "longitude": "10.2118"
-    },
-    "openingHoursSpecification": [
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        "opens": "07:30",
-        "closes": "18:30"
-      },
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": "Saturday",
-        "opens": "07:30",
-        "closes": "13:00"
-      }
-    ],
-    "sameAs": [
-      "https://www.facebook.com/arcticclean",
-      "https://www.instagram.com/arcticclean"
-    ],
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5",
-      "reviewCount": "150"
-    }
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Impresa di Pulizie",
-    "url": "https://www.impresapulizie.it",
-    "logo": "https://www.arcticclean.it/logo.png",
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+39-030-9876543",
-      "contactType": "customer service",
-      "availableLanguage": ["Italian"],
-      "areaServed": "IT"
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": `${siteMetadata.baseUrl}/ricerca?q={search_term_string}`,
+      "query-input": "required name=search_term_string"
     }
   },
   {
@@ -71,67 +30,77 @@ const structuredData = [
     "serviceType": "Pulizie Professionali",
     "provider": {
       "@type": "LocalBusiness",
-      "name": "Impresa di Pulizie",
-      "url": "https://www.impresapulizie.it"
+      "name": siteMetadata.siteName,
+      "url": siteMetadata.baseUrl
     },
     "areaServed": {
-      "@type": "Country",
-      "name": "Italia"
+      "@type": "City",
+      "name": siteMetadata.locality
     },
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
-      "name": "Servizi di Pulizia",
+      "name": "Servizi di Pulizia per Aziende e Condomini",
       "itemListElement": [
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "Pulizie Uffici",
-            "description": "Servizi completi per uffici e spazi lavorativi"
+            "name": "Pulizie Uffici a Brescia"
           }
         },
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "Pulizie Industriali",
-            "description": "Interventi specializzati per capannoni e industrie"
+            "name": "Pulizie Condomini Brescia e Provincia"
           }
         },
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "Sanificazione Ambienti",
-            "description": "Trattamenti certificati per la sicurezza e igiene"
+            "name": "Sanificazione Ambienti Professionale"
           }
         },
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "Pulizie Condomini",
-            "description": "Servizi di pulizia per aree comuni condominiali"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Giardinaggio e Manutenzione Verde",
-            "description": "Cura e manutenzione di parchi, giardini e aiuole"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Gestione Carrellati",
-            "description": "Gestione bidoni per raccolta differenziata"
+            "name": "Pulizie Industriali e Capannoni"
           }
         }
       ]
     }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Offrite pulizie uffici a Brescia?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sì, Arctic Pulizie gestisce pulizie uffici a Brescia e provincia con turni programmati e personale selezionato."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quanto tempo impiegate per inviare un preventivo?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Invieremo un preventivo personalizzato entro 24 ore dalla richiesta, con possibilità di sopralluogo gratuito."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Disponete di certificazioni e prodotti professionali?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Utilizziamo esclusivamente prodotti professionali certificati e protocolli di sanificazione aggiornati."
+        }
+      }
+    ]
   }
 ];
 
@@ -143,7 +112,8 @@ const Homepage = () => {
       icon: "🏢",
       features: ["Pulizia quotidiana", "Sanificazione postazioni", "Gestione rifiuti"],
       link: "/servizi/pulizie-uffici",
-      image: "https://i.imgur.com/RAZaa1z.jpeg"
+      image: cdnImage('https://i.imgur.com/RAZaa1z.jpeg', { width: 960, quality: 75 }),
+      fallbackImage: 'https://i.imgur.com/RAZaa1z.jpeg'
     },
     {
       title: "Pulizie Condomini",
@@ -151,7 +121,8 @@ const Homepage = () => {
       icon: "🏘️",
       features: ["Aree comuni", "Scale e ascensori", "Gestione carrellati"],
       link: "/servizi/pulizie-condomini",
-      image: "https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=800"
+      image: cdnImage('https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=1200', { width: 960, quality: 70, fit: 'cover' }),
+      fallbackImage: 'https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=1200'
     },
     {
       title: "Pulizie Industriali",
@@ -159,7 +130,8 @@ const Homepage = () => {
       icon: "🏭",
       features: ["Pulizia capannoni", "Aspirazione industriale", "Trattamento pavimenti"],
       link: "/servizi/pulizie-industriali",
-      image: "https://i.imgur.com/ja4pwgZ.png"
+      image: cdnImage('https://i.imgur.com/ja4pwgZ.png', { width: 960, quality: 75 }),
+      fallbackImage: 'https://i.imgur.com/ja4pwgZ.png'
     },
     {
       title: "Pulizie Vetri e Vetrate",
@@ -167,7 +139,8 @@ const Homepage = () => {
       icon: "✨",
       features: ["Vetri senza aloni", "Interventi in altezza", "Grandi superfici"],
       link: "/servizi/pulizie-vetri",
-      image: "https://i.imgur.com/mwIw3dd.jpeg"
+      image: cdnImage('https://i.imgur.com/mwIw3dd.jpeg', { width: 960, quality: 75 }),
+      fallbackImage: 'https://i.imgur.com/mwIw3dd.jpeg'
     },
     {
       title: "Giardinaggio",
@@ -175,7 +148,8 @@ const Homepage = () => {
       icon: "🌳",
       features: ["Manutenzione verde", "Potature", "Cura aiuole"],
       link: "/servizi/giardinaggio",
-      image: "https://images.pexels.com/photos/1301856/pexels-photo-1301856.jpeg?auto=compress&cs=tinysrgb&w=800"
+      image: cdnImage('https://images.pexels.com/photos/1301856/pexels-photo-1301856.jpeg?auto=compress&cs=tinysrgb&w=1200', { width: 960, quality: 70, fit: 'cover' }),
+      fallbackImage: 'https://images.pexels.com/photos/1301856/pexels-photo-1301856.jpeg?auto=compress&cs=tinysrgb&w=1200'
     },
     {
       title: "Gestione Carrellati",
@@ -183,7 +157,8 @@ const Homepage = () => {
       icon: "♻️",
       features: ["Raccolta differenziata", "Pulizia carrellati", "Gestione periodica"],
       link: "/servizi/gestione-carrellati",
-      image: "https://images.pexels.com/photos/3735218/pexels-photo-3735218.jpeg?auto=compress&cs=tinysrgb&w=800"
+      image: cdnImage('https://images.pexels.com/photos/3735218/pexels-photo-3735218.jpeg?auto=compress&cs=tinysrgb&w=1200', { width: 960, quality: 70, fit: 'cover' }),
+      fallbackImage: 'https://images.pexels.com/photos/3735218/pexels-photo-3735218.jpeg?auto=compress&cs=tinysrgb&w=1200'
     }
   ];
 
@@ -214,34 +189,36 @@ const Homepage = () => {
     {
       name: "Marco Rossi",
       company: "TechCorp Milano",
-      text: "Arctic Clean si occupa dei nostri uffici da 3 anni. Professionalità e qualità eccellenti, il nostro team lavora sempre in un ambiente perfetto.",
+      text: "Arctic Pulizie si occupa dei nostri uffici da 3 anni. Professionalità e qualità eccellenti, il nostro team lavora sempre in un ambiente perfetto.",
       rating: 5,
       role: "Responsabile Facilities"
     },
     {
       name: "Laura Bianchi", 
       company: "Studio Legale Associato",
-      text: "Servizio impeccabile e puntuale. I clienti apprezzano sempre la pulizia dei nostri locali. Consiglio vivamente Arctic Clean.",
+      text: "Servizio impeccabile e puntuale. I clienti apprezzano sempre la pulizia dei nostri locali. Consiglio vivamente Arctic Pulizie.",
       rating: 5,
       role: "Partner"
     },
     {
       name: "Giuseppe Verdi",
       company: "Industrie Meccaniche Spa",
-      text: "Per i nostri capannoni industriali, Arctic Clean garantisce standard elevati di pulizia e sicurezza. Un partner affidabile.",
+      text: "Per i nostri capannoni industriali, Arctic Pulizie garantisce standard elevati di pulizia e sicurezza. Un partner affidabile.",
       rating: 5,
       role: "Direttore Operativo"
     }
   ];
 
+  const recentPosts = getRecentPosts(3);
+
   return (
     <div>
       <SEO
-        title="Impresa di Pulizie Brescia - Pulizie Professionali | Uffici, Condomini, Industrie, Giardinaggio"
-        description="Impresa di Pulizie a Brescia con 28 dipendenti qualificati. Pulizie per uffici, condomini, industrie e giardinaggio. Zona operativa: Brescia e provincia. Preventivo gratuito. Contratti singoli e periodici."
-        keywords="pulizie professionali brescia, pulizie uffici brescia, pulizie condomini, giardinaggio brescia, impresa di pulizie brescia, gestione carrellati"
-        canonical="https://www.impresapulizie.it/"
-        structuredData={structuredData}
+        title="Impresa di Pulizie a Brescia e Provincia | Arctic Pulizie"
+        description="Impresa di pulizie a Brescia per uffici, condomini e industrie. Squadra Arctic Pulizie attiva in provincia con preventivo gratuito in 24 ore."
+        keywords="impresa pulizie brescia, pulizie uffici brescia, pulizie condomini brescia, sanificazione ambienti brescia, pulizie industriali brescia"
+        canonical={buildCanonicalUrl('/')}
+        structuredData={homepageStructuredData}
       />
       {/* Hero Section */}
       <section className="pt-24 pb-20 relative overflow-hidden min-h-screen bg-gradient-to-br from-white via-sky-50/30 to-cyan-50/20">
@@ -342,6 +319,83 @@ const Homepage = () => {
         </div>
       </section>
 
+      {/* Blog Highlights */}
+      {recentPosts.length > 0 && (
+        <section className="py-20 bg-slate-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex items-center justify-between mb-12">
+              <div>
+                <p className="inline-flex items-center px-3 py-1 text-sm font-semibold bg-sky-100 text-sky-600 rounded-full">
+                  Dal nostro blog
+                </p>
+                <h2 className="mt-4 text-3xl lg:text-4xl font-bold text-slate-900">
+                  Guide pratiche per la tua impresa a Brescia
+                </h2>
+                <p className="mt-2 text-slate-600 max-w-2xl">
+                  Checklist, consigli operativi e strategie per ottimizzare pulizie, sanificazioni e gestione condominiale.
+                </p>
+              </div>
+              <Link
+                to="/blog"
+                className="hidden md:inline-flex items-center space-x-2 bg-white border border-slate-200 hover:border-sky-300 text-sky-600 px-5 py-3 rounded-lg font-semibold transition-all duration-300"
+              >
+                <span>Visita il blog</span>
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+              {recentPosts.map((post) => (
+                <Link
+                  key={post.slug}
+                  to={`/blog/${post.slug}`}
+                  className="group bg-white rounded-3xl border border-slate-200 hover:border-sky-300 shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden"
+                >
+                  <LazyImage
+                    src={cdnImage(post.heroImage, { width: 900, quality: 70, fit: 'cover' })}
+                    fallbackSrc={post.heroImage}
+                    alt={`${post.title} - Arctic Pulizie Brescia`}
+                    className="w-full h-48 object-cover"
+                    width={900}
+                    height={360}
+                  />
+                  <div className="p-6">
+                    <div className="flex items-center text-xs text-slate-500 space-x-2 mb-3">
+                      <Calendar className="w-3 h-3" />
+                      <span>
+                        {new Intl.DateTimeFormat('it-IT', {
+                          day: '2-digit',
+                          month: 'short',
+                          year: 'numeric'
+                        }).format(new Date(post.publishedAt))}
+                      </span>
+                    </div>
+                    <h3 className="text-lg font-semibold text-slate-900 group-hover:text-sky-600 transition-colors">
+                      {post.title}
+                    </h3>
+                    <p className="mt-3 text-sm text-slate-600 leading-relaxed">{post.excerpt}</p>
+                    <div className="mt-5 inline-flex items-center space-x-2 text-sm font-semibold text-sky-600 group-hover:text-sky-700">
+                      <span>Leggi l&apos;articolo</span>
+                      <ArrowRight className="w-4 h-4" />
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+
+            <div className="mt-10 text-center md:hidden">
+              <Link
+                to="/blog"
+                className="inline-flex items-center space-x-2 bg-white border border-slate-200 hover:border-sky-300 text-sky-600 px-5 py-3 rounded-lg font-semibold transition-all duration-300"
+              >
+                <span>Visita il blog</span>
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Services Overview */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -363,6 +417,14 @@ const Homepage = () => {
                 className="group bg-slate-50 rounded-xl p-6 hover:bg-white hover:shadow-lg transition-all duration-300 border border-transparent hover:border-sky-100 cursor-pointer transform hover:scale-105"
               >
                 <div className="text-4xl mb-4">{service.icon}</div>
+                <LazyImage
+                  src={service.image}
+                  fallbackSrc={service.fallbackImage}
+                  alt={`${service.title} a Brescia e provincia`}
+                  className="w-full h-44 object-cover rounded-xl mb-4"
+                  width={600}
+                  height={320}
+                />
                 <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-sky-600 transition-colors">
                   {service.title}
                 </h3>

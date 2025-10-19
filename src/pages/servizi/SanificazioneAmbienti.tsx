@@ -1,6 +1,45 @@
 import { Shield, CheckCircle, ArrowRight, Heart, Building, Users, Award } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import SEO from '@/components/SEO';
 import LocationsGrid from '@/components/LocationsGrid';
+import InternalLinkSection from '@/components/InternalLinkSection';
+import LazyImage from '@/components/LazyImage';
+import RelatedBlogPosts from '@/components/RelatedBlogPosts';
+import { buildCanonicalUrl } from '@/data/siteMetadata';
+import { cdnImage } from '@/utils/image';
+
+const faqSchema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Che differenza c’è tra pulizia e sanificazione?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "La sanificazione elimina virus, batteri e agenti patogeni con prodotti certificati e protocolli professionali, garantendo ambienti sicuri."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Rilasciate certificati dopo la sanificazione?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sì, Arctic Pulizie rilascia report e certificazioni con i dettagli dell’intervento e dei prodotti utilizzati."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Ogni quanto è consigliata la sanificazione?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "La frequenza dipende dal settore: settimanale per ambienti sanitari, mensile per uffici e negozi con alto afflusso."
+        }
+      }
+    ]
+  }
+];
 
 const SanificazioneAmbienti = () => {
   const features = [
@@ -95,6 +134,13 @@ const SanificazioneAmbienti = () => {
 
   return (
     <div className="pt-24 pb-20">
+      <SEO
+        title="Sanificazione Ambienti a Brescia | Arctic Pulizie"
+        description="Sanificazione certificata di uffici, cliniche e ambienti industriali a Brescia. Arctic Pulizie utilizza protocolli virucidi e rilascia certificazioni ufficiali."
+        keywords="sanificazione ambienti brescia, sanificazione uffici brescia, sanificazione certificata arctic pulizie"
+        canonical={buildCanonicalUrl('/servizi/sanificazione-ambienti')}
+        structuredData={faqSchema}
+      />
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-white via-sky-50/30 to-cyan-50/20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -121,10 +167,13 @@ const SanificazioneAmbienti = () => {
               </Link>
             </div>
             <div>
-              <img 
-                src="https://images.pexels.com/photos/4099471/pexels-photo-4099471.jpeg?auto=compress&cs=tinysrgb&w=800"
-                alt="Sanificazione ambienti professionale"
+              <LazyImage 
+                src={cdnImage('https://images.pexels.com/photos/4099471/pexels-photo-4099471.jpeg?auto=compress&cs=tinysrgb&w=1200', { width: 1280, quality: 70, fit: 'cover' })}
+                fallbackSrc="https://images.pexels.com/photos/4099471/pexels-photo-4099471.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                alt="Sanificazione ambienti a Brescia con Arctic Pulizie"
                 className="w-full h-96 object-cover rounded-xl shadow-lg"
+                width={640}
+                height={540}
               />
             </div>
           </div>
@@ -375,6 +424,10 @@ const SanificazioneAmbienti = () => {
       </section>
 
       <LocationsGrid serviceSlug="sanificazione-ambienti" serviceName="Sanificazione Ambienti" showAll={false} />
+
+      <RelatedBlogPosts serviceIds={['sanificazione-ambienti']} />
+
+      <InternalLinkSection title="Approfondimenti sulla sanificazione professionale" intro="Visita le altre pagine Arctic Pulizie per conoscere tutti i servizi disponibili, le aree coperte, le recensioni certificate e richiedere un preventivo." />
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-br from-slate-900 to-slate-800">

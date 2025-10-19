@@ -3,7 +3,12 @@ import { useParams, Link, Navigate } from 'react-router-dom';
 import { ArrowRight, CheckCircle, MapPin, Phone, Clock, Shield, Sparkles, Loader2 } from 'lucide-react';
 import SEO from '@/components/SEO';
 import Breadcrumb from '@/components/Breadcrumb';
+import InternalLinkSection from '@/components/InternalLinkSection';
+import LazyImage from '@/components/LazyImage';
+import RelatedBlogPosts from '@/components/RelatedBlogPosts';
 import { getLocalServicePage, LocalServicePage, getAllServices, getAllLocations } from '@/lib/supabase';
+import { buildCanonicalUrl, siteMetadata } from '@/data/siteMetadata';
+import { cdnImage } from '@/utils/image';
 
 const ServizioLocaleDynamic = () => {
   const { servizio, localita } = useParams<{ servizio: string; localita: string }>();
@@ -76,6 +81,34 @@ const ServizioLocaleDynamic = () => {
   const { service, location } = pageData;
   const sectionOrder = pageData.section_order || ['whyChoose', 'coverage', 'problems', 'detailed', 'standards'];
   const h2Titles = pageData.h2_titles || {};
+
+  const structuredData = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": `${service.name} a ${location.name}`,
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": siteMetadata.siteName,
+        "url": siteMetadata.baseUrl
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": location.name
+      },
+      "serviceType": service.name,
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "itemListElement": (pageData.detailed_services ? Object.keys(pageData.detailed_services) : []).map((detail) => ({
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": detail
+          }
+        }))
+      }
+    }
+  ];
 
   const benefits = [
     {
@@ -236,7 +269,8 @@ const ServizioLocaleDynamic = () => {
         title={pageData.meta_title}
         description={pageData.meta_description}
         keywords={`${service.name.toLowerCase()} ${location.name}, impresa pulizie ${location.name}, pulizie professionali ${location.name}`}
-        canonical={`https://www.articclean.it/servizi/${servizio}/${localita}`}
+        canonical={buildCanonicalUrl(`/servizi/${servizio}/${localita}`)}
+        structuredData={structuredData}
       />
 
       <Breadcrumb
@@ -270,11 +304,13 @@ const ServizioLocaleDynamic = () => {
               </Link>
             </div>
             <div>
-              <img
-                src="https://images.pexels.com/photos/6195275/pexels-photo-6195275.jpeg?auto=compress&cs=tinysrgb&w=800"
+              <LazyImage
+                src={cdnImage('https://images.pexels.com/photos/6195275/pexels-photo-6195275.jpeg?auto=compress&cs=tinysrgb&w=1200', { width: 1280, quality: 70, fit: 'cover' })}
+                fallbackSrc="https://images.pexels.com/photos/6195275/pexels-photo-6195275.jpeg?auto=compress&cs=tinysrgb&w=1200"
                 alt={`${service.name} a ${location.name}`}
                 className="w-full h-96 object-cover rounded-xl shadow-lg"
-                loading="lazy"
+                width={640}
+                height={540}
               />
             </div>
           </div>
@@ -350,6 +386,10 @@ const ServizioLocaleDynamic = () => {
           </div>
         </section>
       )}
+
+      <RelatedBlogPosts serviceIds={[service.id]} />
+
+      <InternalLinkSection title="Continua ad approfondire con Arctic Pulizie" intro={`Esplora le altre pagine principali per servizi aggiuntivi, aree servite, recensioni e preventivi rapidi dedicati a ${location.name}.`} />
 
       <section className="py-20 bg-gradient-to-br from-slate-900 to-slate-800">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

@@ -1,6 +1,8 @@
 import { CheckCircle, ClipboardList, Users, Sparkles, Shield, Phone, Calendar, Award } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import SEO from '../components/SEO';
+import SEO from '@/components/SEO';
+import { buildCanonicalUrl } from '@/data/siteMetadata';
+import InternalLinkSection from '@/components/InternalLinkSection';
 
 const ComeLavoriamo = () => {
   const steps = [
@@ -112,9 +114,10 @@ const ComeLavoriamo = () => {
   return (
     <>
       <SEO
-        title="Come Lavoriamo - Arctic Clean Service"
-        description="Scopri il metodo di lavoro di Arctic Clean Service: 6 step per garantire pulizie professionali di qualità. Sopralluogo gratuito e preventivo personalizzato."
-        keywords="metodo lavoro pulizie, processo pulizie professionali, come funziona servizio pulizie, sopralluogo gratuito"
+        title="Come Lavoriamo | Arctic Pulizie Brescia"
+        description="Scopri il metodo Arctic Pulizie: sopralluogo gratuito, squadra dedicata e controllo qualità continuo per servizi di pulizia professionale a Brescia."
+        keywords="come lavora arctic pulizie, processo pulizie brescia, metodo lavoro impresa pulizie, sopralluogo gratuito arctic pulizie"
+        canonical={buildCanonicalUrl('/come-lavoriamo')}
       />
 
       <main className="flex-grow pt-16">
@@ -250,6 +253,8 @@ const ComeLavoriamo = () => {
             </div>
           </div>
         </section>
+
+        <InternalLinkSection title="Risorse collegate al nostro metodo" intro="Consultare le pagine principali di Arctic Pulizie per scoprire tutti i servizi, le zone servite, le recensioni e inviare una richiesta di preventivo." />
 
         <section className="py-20 bg-gradient-to-r from-sky-500 to-cyan-500">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">

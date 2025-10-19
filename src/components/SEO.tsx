@@ -1,4 +1,5 @@
 import { Helmet } from 'react-helmet-async';
+import { buildCanonicalUrl, siteMetadata } from '@/data/siteMetadata';
 
 interface SEOProps {
   title?: string;
@@ -7,19 +8,57 @@ interface SEOProps {
   canonical?: string;
   ogImage?: string;
   type?: string;
-  structuredData?: object[];
+  structuredData?: Record<string, unknown>[];
 }
 
 const SEO = ({
-  title = 'Arctic Clean Service - Pulizie Professionali per Aziende',
-  description = 'Arctic Clean Service offre servizi di pulizie professionali per aziende, uffici, capannoni industriali e sanificazione ambienti. Preventivo gratuito in 24h. Oltre 15 anni di esperienza.',
-  keywords = 'pulizie professionali, pulizie uffici, pulizie industriali, sanificazione ambienti, pulizie post cantiere, pulizie vetri, servizi di pulizia aziende, impresa di pulizie',
-  canonical = 'https://www.arcticclean.it/',
-  ogImage = 'https://www.arcticclean.it/og-image.jpg',
+  title = 'Impresa di Pulizie a Brescia e Provincia',
+  description = 'Arctic Pulizie è l’impresa di pulizie a Brescia specializzata in uffici, condomini, industrie e sanificazioni. Preventivo gratuito in 24 ore.',
+  keywords = 'impresa di pulizie brescia, pulizie uffici, pulizie industriali, sanificazione ambienti, pulizie condomini',
+  canonical,
+  ogImage = `${siteMetadata.baseUrl}/assets/og-default.png`,
   type = 'website',
   structuredData
 }: SEOProps) => {
-  const fullTitle = title.includes('Arctic Clean') ? title : `${title} | Arctic Clean Service`;
+  const fullTitle = title.includes(siteMetadata.siteName) ? title : `${title} | ${siteMetadata.siteName}`;
+  const canonicalUrl = canonical ? canonical : buildCanonicalUrl(typeof window !== 'undefined' ? window.location.pathname : '/');
+  const baseStructuredData: Record<string, unknown>[] = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'LocalBusiness',
+      name: siteMetadata.siteName,
+      image: siteMetadata.logoUrl,
+      '@id': `${siteMetadata.baseUrl}#localbusiness`,
+      url: siteMetadata.baseUrl,
+      telephone: siteMetadata.phone,
+      priceRange: '€€',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: siteMetadata.streetAddress,
+        addressLocality: siteMetadata.locality,
+        postalCode: siteMetadata.postalCode,
+        addressCountry: siteMetadata.countryCode
+      },
+      sameAs: siteMetadata.socialProfiles,
+      areaServed: siteMetadata.areaServed,
+      aggregateRating: siteMetadata.aggregateRating
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      name: siteMetadata.legalName,
+      url: siteMetadata.baseUrl,
+      logo: siteMetadata.logoUrl,
+      contactPoint: {
+        '@type': 'ContactPoint',
+        telephone: siteMetadata.phone,
+        contactType: 'customer service',
+        availableLanguage: ['Italian']
+      }
+    }
+  ];
+
+  const schemaToRender = structuredData ? [...baseStructuredData, ...structuredData] : baseStructuredData;
 
   return (
     <Helmet>
@@ -27,15 +66,15 @@ const SEO = ({
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <meta name="robots" content="index, follow" />
-      <meta name="author" content="Arctic Clean Service" />
-      <link rel="canonical" href={canonical} />
+      <meta name="author" content={siteMetadata.legalName} />
+      <link rel="canonical" href={canonicalUrl} />
 
       <meta property="og:type" content={type} />
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
-      <meta property="og:url" content={canonical} />
+      <meta property="og:url" content={canonicalUrl} />
       <meta property="og:image" content={ogImage} />
-      <meta property="og:site_name" content="Arctic Clean Service" />
+      <meta property="og:site_name" content={siteMetadata.siteName} />
       <meta property="og:locale" content="it_IT" />
 
       <meta name="twitter:card" content="summary_large_image" />
@@ -43,7 +82,7 @@ const SEO = ({
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={ogImage} />
 
-      {structuredData && structuredData.map((schema, index) => (
+      {schemaToRender.map((schema, index) => (
         <script
           key={`structured-data-${index}`}
           type="application/ld+json"

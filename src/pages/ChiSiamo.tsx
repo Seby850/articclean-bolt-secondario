@@ -1,6 +1,10 @@
 import { Award, Users, MapPin, Calendar, Target, Heart, Shield, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import SEO from '../components/SEO';
+import SEO from '@/components/SEO';
+import { buildCanonicalUrl } from '@/data/siteMetadata';
+import InternalLinkSection from '@/components/InternalLinkSection';
+import LazyImage from '@/components/LazyImage';
+import { cdnImage } from '@/utils/image';
 
 const ChiSiamo = () => {
   const stats = [
@@ -54,9 +58,10 @@ const ChiSiamo = () => {
   return (
     <>
       <SEO
-        title="Chi Siamo - Arctic Clean Service"
-        description="Scopri Arctic Clean Service: 15+ anni di esperienza nelle pulizie professionali. Un team di 28 professionisti al servizio di aziende e privati in Lombardia."
-        keywords="chi siamo arctic clean, impresa pulizie lombardia, azienda pulizie professionali, team pulizie"
+        title="Chi Siamo | Arctic Pulizie Brescia"
+        description="Conosci Arctic Pulizie: impresa di pulizie a Brescia con 15 anni di esperienza, 28 professionisti qualificati e servizi certificati per aziende e condomini."
+        keywords="arctic pulizie chi siamo, impresa pulizie brescia team, azienda pulizie arctic pulizie"
+        canonical={buildCanonicalUrl('/chi-siamo')}
       />
 
       <main className="flex-grow pt-16">
@@ -67,8 +72,7 @@ const ChiSiamo = () => {
                 Chi Siamo
               </h1>
               <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-                Arctic Clean Service è un'azienda leader nel settore delle pulizie professionali,
-                con oltre 15 anni di esperienza al servizio di aziende e privati.
+                Arctic Pulizie è l’impresa di pulizie di Brescia con oltre 15 anni di esperienza al servizio di aziende, condomini e spazi industriali.
               </p>
             </div>
 
@@ -97,7 +101,7 @@ const ChiSiamo = () => {
                 <div className="space-y-6 text-slate-600 leading-relaxed">
                   <p>
                     Fondata con la missione di portare eccellenza e professionalità nel settore
-                    delle pulizie, <strong>Arctic Clean Service</strong> è cresciuta fino a diventare
+                    delle pulizie, <strong>Arctic Pulizie</strong> è cresciuta fino a diventare
                     un punto di riferimento in Lombardia per servizi di pulizia professionali.
                   </p>
                   <p>
@@ -115,33 +119,47 @@ const ChiSiamo = () => {
 
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-4">
-                  <img
-                    src="https://images.pexels.com/photos/4239091/pexels-photo-4239091.jpeg?auto=compress&cs=tinysrgb&w=600"
-                    alt="Team Arctic Clean al lavoro"
+                  <LazyImage
+                    src={cdnImage('https://images.pexels.com/photos/4239091/pexels-photo-4239091.jpeg?auto=compress&cs=tinysrgb&w=1200', { width: 1024, quality: 70, fit: 'cover' })}
+                    fallbackSrc="https://images.pexels.com/photos/4239091/pexels-photo-4239091.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                    alt="Team Arctic Pulizie al lavoro a Brescia"
                     className="rounded-2xl shadow-lg w-full h-64 object-cover"
+                    width={600}
+                    height={512}
                   />
-                  <img
-                    src="https://images.pexels.com/photos/6195129/pexels-photo-6195129.jpeg?auto=compress&cs=tinysrgb&w=600"
-                    alt="Pulizie professionali"
+                  <LazyImage
+                    src={cdnImage('https://images.pexels.com/photos/6195129/pexels-photo-6195129.jpeg?auto=compress&cs=tinysrgb&w=1200', { width: 1024, quality: 70, fit: 'cover' })}
+                    fallbackSrc="https://images.pexels.com/photos/6195129/pexels-photo-6195129.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                    alt="Pulizie professionali per uffici a Brescia"
                     className="rounded-2xl shadow-lg w-full h-48 object-cover"
+                    width={600}
+                    height={420}
                   />
                 </div>
                 <div className="space-y-4 pt-8">
-                  <img
-                    src="https://images.pexels.com/photos/4099467/pexels-photo-4099467.jpeg?auto=compress&cs=tinysrgb&w=600"
-                    alt="Prodotti professionali"
+                  <LazyImage
+                    src={cdnImage('https://images.pexels.com/photos/4099467/pexels-photo-4099467.jpeg?auto=compress&cs=tinysrgb&w=1200', { width: 1024, quality: 70, fit: 'cover' })}
+                    fallbackSrc="https://images.pexels.com/photos/4099467/pexels-photo-4099467.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                    alt="Prodotti professionali per la sanificazione"
                     className="rounded-2xl shadow-lg w-full h-48 object-cover"
+                    width={600}
+                    height={420}
                   />
-                  <img
-                    src="https://images.pexels.com/photos/4239013/pexels-photo-4239013.jpeg?auto=compress&cs=tinysrgb&w=600"
-                    alt="Risultati impeccabili"
+                  <LazyImage
+                    src={cdnImage('https://images.pexels.com/photos/4239013/pexels-photo-4239013.jpeg?auto=compress&cs=tinysrgb&w=1200', { width: 1024, quality: 70, fit: 'cover' })}
+                    fallbackSrc="https://images.pexels.com/photos/4239013/pexels-photo-4239013.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                    alt="Risultati impeccabili dopo l'intervento"
                     className="rounded-2xl shadow-lg w-full h-64 object-cover"
+                    width={600}
+                    height={512}
                   />
                 </div>
               </div>
             </div>
           </div>
         </section>
+
+        <InternalLinkSection title="Continua a conoscere Arctic Pulizie" intro="Esplora i nostri servizi, scopri le zone servite, leggi le recensioni dei clienti e richiedi un preventivo in pochi minuti." />
 
         <section className="py-20 bg-gradient-to-br from-slate-50 to-sky-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -217,7 +235,7 @@ const ChiSiamo = () => {
               </h3>
               <p className="text-lg mb-8 text-sky-50 max-w-2xl mx-auto">
                 Oltre 200 aziende e condomini si affidano a noi per mantenere i loro
-                spazi puliti e accoglienti. Scopri perché Arctic Clean è la scelta giusta.
+                spazi puliti e accoglienti. Scopri perché Arctic Pulizie è la scelta giusta.
               </p>
               <Link
                 to="/richiedi-preventivo"

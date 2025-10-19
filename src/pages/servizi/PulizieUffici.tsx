@@ -2,6 +2,44 @@ import { Building2, CheckCircle, ArrowRight, Users, Clock, Shield, Sparkles, Map
 import { Link } from 'react-router-dom';
 import SEO from '@/components/SEO';
 import LocationsGrid from '@/components/LocationsGrid';
+import InternalLinkSection from '@/components/InternalLinkSection';
+import LazyImage from '@/components/LazyImage';
+import RelatedBlogPosts from '@/components/RelatedBlogPosts';
+import { buildCanonicalUrl } from '@/data/siteMetadata';
+import { cdnImage } from '@/utils/image';
+
+const faqSchema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Come funziona il servizio di pulizie uffici a Brescia?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Effettuiamo un sopralluogo gratuito, definiamo un piano personalizzato e programmiamo gli interventi con personale dedicato Arctic Pulizie."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Utilizzate prodotti certificati per gli uffici?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sì, impieghiamo detergenti professionali certificati e protocolli conformi alle norme igienico-sanitarie."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quali orari sono disponibili per la pulizia degli uffici?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Programmiamo interventi serali, mattutini o nel weekend per non interferire con l’attività lavorativa."
+        }
+      }
+    ]
+  }
+];
 
 const PulizieUffici = () => {
   const features = [
@@ -41,10 +79,11 @@ const PulizieUffici = () => {
   return (
     <div className="pt-24 pb-20">
       <SEO
-        title="Pulizie Uffici a Brescia - Servizi Professionali per Aziende e Studi"
-        description="Servizi di pulizia uffici a Brescia e provincia. Personale qualificato, prodotti professionali e interventi programmati. Preventivo gratuito entro 24 ore."
-        keywords="pulizie uffici brescia, pulizia uffici brescia, impresa pulizie uffici, sanificazione uffici brescia, pulizie aziende brescia"
-        canonical="https://www.impresapulizie.it/servizi/pulizie-uffici"
+        title="Pulizie Uffici a Brescia | Arctic Pulizie"
+        description="Pulizia uffici a Brescia e provincia con team dedicato, prodotti certificati e orari flessibili. Arctic Pulizie offre preventivo gratuito in 24 ore."
+        keywords="pulizie uffici brescia, impresa pulizie uffici brescia, pulizia uffici aziende brescia, sanificazione uffici arctic pulizie"
+        canonical={buildCanonicalUrl('/servizi/pulizie-uffici')}
+        structuredData={faqSchema}
       />
 
       {/* Hero Section */}
@@ -77,10 +116,13 @@ const PulizieUffici = () => {
               </Link>
             </div>
             <div>
-              <img
-                src="https://i.imgur.com/RAZaa1z.jpeg"
-                alt="Pulizie uffici professionali a Brescia"
+              <LazyImage
+                src={cdnImage('https://i.imgur.com/RAZaa1z.jpeg', { width: 1200, quality: 75 })}
+                alt="Pulizie uffici a Brescia con Arctic Pulizie"
                 className="w-full h-96 object-cover rounded-xl shadow-lg"
+                width={640}
+                height={540}
+                fallbackSrc="https://i.imgur.com/RAZaa1z.jpeg"
               />
             </div>
           </div>
@@ -226,6 +268,10 @@ const PulizieUffici = () => {
       </section>
 
       <LocationsGrid serviceSlug="pulizie-uffici" serviceName="Pulizie Uffici" showAll={false} />
+
+      <RelatedBlogPosts serviceIds={['pulizie-uffici']} />
+
+      <InternalLinkSection title="Collegamenti utili per i servizi di pulizia uffici" intro="Accedi rapidamente alle pagine chiave di Arctic Pulizie per approfondire servizi, zone coperte, recensioni e preventivi." />
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-br from-slate-900 to-slate-800">
