@@ -16,9 +16,9 @@ const DoveOperiamo = () => {
   return (
     <div className="pt-24 pb-20">
       <SEO
-        title="Dove Operiamo a Brescia e Provincia | Arctic Pulizie"
-        description="Servizi di pulizia Arctic Pulizie attivi a Brescia, Desenzano, Montichiari, Chiari e in oltre 15 località della provincia. Scopri le zone servite."
-        keywords="dove operiamo arctic pulizie, pulizie provincia brescia, località servite arctic pulizie"
+        title="Dove Operiamo a Brescia e Provincia | Artic Pulizie"
+        description="Servizi di pulizia Artic Pulizie attivi a Brescia, Desenzano, Montichiari, Chiari e in oltre 15 località della provincia. Scopri le zone servite."
+        keywords="dove operiamo artic pulizie, pulizie provincia brescia, località servite artic pulizie"
         canonical={buildCanonicalUrl('/dove-operiamo')}
       />
 
@@ -137,7 +137,7 @@ const DoveOperiamo = () => {
         </div>
       </section>
 
-      <InternalLinkSection title="Approfondisci i servizi Arctic Pulizie" intro="Consulta le pagine chiave per scoprire l'intera offerta, leggere le recensioni e richiedere un preventivo dedicato alle tue esigenze." />
+      <InternalLinkSection title="Approfondisci i servizi Artic Pulizie" intro="Consulta le pagine chiave per scoprire l'intera offerta, leggere le recensioni e richiedere un preventivo dedicato alle tue esigenze." />
     </div>
   );
 };

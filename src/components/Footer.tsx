@@ -11,7 +11,7 @@ const Footer = () => {
               <div className="w-10 h-10 flex items-center justify-center">
                 <img
                   src="https://i.imgur.com/ks6yQn1.png"
-                  alt="Arctic Clean logo"
+                  alt="Artic Clean logo"
                   className="w-full h-full object-contain"
                   width={40}
                   height={40}
@@ -19,7 +19,7 @@ const Footer = () => {
                 />
               </div>
               <div>
-                <h1 className="text-lg font-bold">Arctic Clean</h1>
+                <h1 className="text-lg font-bold">Artic Clean</h1>
               </div>
             </Link>
             <p className="text-slate-300 leading-relaxed">
@@ -57,13 +57,13 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Contatti</h3>
             <div className="space-y-3 text-slate-300">
-              <div className="flex items-center space-x-3">
-                <Phone className="w-4 h-4 text-sky-400" />
-                <a href="tel:+390309876543" className="hover:text-sky-400 transition-colors">+39 030 987 6543</a>
-              </div>
+                  <div className="flex items-center space-x-3">
+                    <Phone className="w-4 h-4 text-sky-400" />
+                    <a href="tel:+390305231285" className="hover:text-sky-400 transition-colors">+39 030 52 31 285</a>
+                  </div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-4 h-4 text-sky-400" />
-                <a href="mailto:info@arcticpulizie.it" className="hover:text-sky-400 transition-colors">info@arcticpulizie.it</a>
+                <a href="mailto:info@articpulizie.it" className="hover:text-sky-400 transition-colors">info@articpulizie.it</a>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="w-4 h-4 text-sky-400" />
@@ -72,8 +72,8 @@ const Footer = () => {
             </div>
             <div className="mt-4 text-sm text-slate-400">
               <p className="font-semibold text-slate-300 mb-1">Orari:</p>
-              <p>Lun-Ven: 7:30 - 18:30</p>
-              <p>Sabato: 7:30 - 13:00</p>
+              <p>Lunedì - Venerdì: 8:00 - 17:00</p>
+              <p>Sabato: 8:00 - 13:00</p>
               <p>Domenica: Chiuso</p>
               <p className="mt-2 text-sky-400">Pronto intervento: tutti i giorni (escluso domenica)</p>
             </div>
@@ -96,7 +96,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-slate-800 mt-12 pt-8 text-center text-slate-400">
-          <p>&copy; 2025 Arctic Pulizie Srl · Via Carpaccio 10, 25100 Brescia · Zona operativa: Brescia e provincia</p>
+          <p>&copy; 2025 Artic Pulizie Srl · Via Carpaccio 10, 25100 Brescia · Zona operativa: Brescia e provincia</p>
         </div>
       </div>
     </footer>

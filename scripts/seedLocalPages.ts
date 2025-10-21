@@ -43,7 +43,7 @@ const contentVariations: Record<string, ContentVariation> = {
       { text: 'Contattaci per un piano di pulizie su misura', subtext: 'Team disponibile anche per urgenze' },
     ],
     h2Variations: {
-      whyChoose: ['Perché sceglierci a {location}', 'I vantaggi di Arctic Clean a {location}', 'Cosa ci rende diversi a {location}'],
+      whyChoose: ['Perché sceglierci a {location}', 'I vantaggi di Artic Clean a {location}', 'Cosa ci rende diversi a {location}'],
       coverage: ['Aree coperte a {location}', 'Zone servite a {location}', 'Dove operiamo a {location}'],
       problems: ['Problemi tipici a {location}', 'Sfide comuni degli uffici a {location}', 'Cosa risolviamo a {location}'],
       detailed: ['Cosa facciamo nel dettaglio', 'I nostri interventi', 'Servizi specifici per uffici'],
@@ -159,7 +159,7 @@ const contentVariations: Record<string, ContentVariation> = {
       { text: 'Sopralluogo gratuito per ambienti sensibili', subtext: 'Protocolli personalizzati certificati' },
     ],
     h2Variations: {
-      whyChoose: ['Perché scegliere Arctic Clean per la sanificazione', 'Affidabilità e certificazioni a {location}', 'I vantaggi della sanificazione professionale'],
+      whyChoose: ['Perché scegliere Artic Clean per la sanificazione', 'Affidabilità e certificazioni a {location}', 'I vantaggi della sanificazione professionale'],
       coverage: ['Dove sanifichiamo a {location}', 'Aree e ambienti serviti', 'Zone coperte'],
       problems: ['Quando serve una sanificazione professionale', 'Problemi comuni a {location}', 'Situazioni che richiedono intervento'],
       detailed: ['Cosa include la sanificazione', 'Protocolli e prodotti utilizzati', 'I nostri interventi'],
@@ -217,7 +217,7 @@ const contentVariations: Record<string, ContentVariation> = {
       { text: 'Sopralluogo condominiale gratuito', subtext: 'Organizziamo il servizio raccolta' },
     ],
     h2Variations: {
-      whyChoose: ['Perché affidare i carrellati ad Arctic Clean', 'Vantaggi per condomini a {location}', 'Gestione professionale'],
+      whyChoose: ['Perché affidare i carrellati ad Artic Clean', 'Vantaggi per condomini a {location}', 'Gestione professionale'],
       coverage: ['Dove gestiamo carrellati', 'Aree servite a {location}', 'Zone coperte'],
       problems: ['Problemi comuni con i bidoni', 'Sfide tipiche a {location}', 'Cosa risolviamo'],
       detailed: ['Servizi inclusi', 'Cosa facciamo per i carrellati', 'Gestione completa'],
@@ -349,7 +349,7 @@ async function seedLocalPages() {
       );
 
       const h1Title = `${service.name} a ${location.name} – Servizio Professionale Certificato`;
-      const metaTitle = `${service.name} ${location.name} | Arctic Clean`;
+      const metaTitle = `${service.name} ${location.name} | Artic Clean`;
       const metaDescription = `${service.name} professionali a ${location.name}. Sopralluogo gratuito entro 24h. Preventivo trasparente e servizio certificato.`;
 
       const detailedServices = getDetailedServicesForService(service.slug);

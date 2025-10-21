@@ -26,7 +26,7 @@ const faqSchema = [
         "name": "Rilasciate certificati dopo la sanificazione?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Sì, Arctic Pulizie rilascia report e certificazioni con i dettagli dell’intervento e dei prodotti utilizzati."
+          "text": "Sì, Artic Pulizie rilascia report e certificazioni con i dettagli dell’intervento e dei prodotti utilizzati."
         }
       },
       {
@@ -135,9 +135,9 @@ const SanificazioneAmbienti = () => {
   return (
     <div className="pt-24 pb-20">
       <SEO
-        title="Sanificazione Ambienti a Brescia | Arctic Pulizie"
-        description="Sanificazione certificata di uffici, cliniche e ambienti industriali a Brescia. Arctic Pulizie utilizza protocolli virucidi e rilascia certificazioni ufficiali."
-        keywords="sanificazione ambienti brescia, sanificazione uffici brescia, sanificazione certificata arctic pulizie"
+        title="Sanificazione Ambienti a Brescia | Artic Pulizie"
+        description="Sanificazione certificata di uffici, cliniche e ambienti industriali a Brescia. Artic Pulizie utilizza protocolli virucidi e rilascia certificazioni ufficiali."
+        keywords="sanificazione ambienti brescia, sanificazione uffici brescia, sanificazione certificata artic pulizie"
         canonical={buildCanonicalUrl('/servizi/sanificazione-ambienti')}
         structuredData={faqSchema}
       />
@@ -170,7 +170,7 @@ const SanificazioneAmbienti = () => {
               <LazyImage 
                 src={cdnImage('https://images.pexels.com/photos/4099471/pexels-photo-4099471.jpeg?auto=compress&cs=tinysrgb&w=1200', { width: 1280, quality: 70, fit: 'cover' })}
                 fallbackSrc="https://images.pexels.com/photos/4099471/pexels-photo-4099471.jpeg?auto=compress&cs=tinysrgb&w=1200"
-                alt="Sanificazione ambienti a Brescia con Arctic Pulizie"
+                alt="Sanificazione ambienti a Brescia con Artic Pulizie"
                 className="w-full h-96 object-cover rounded-xl shadow-lg"
                 width={640}
                 height={540}
@@ -427,7 +427,7 @@ const SanificazioneAmbienti = () => {
 
       <RelatedBlogPosts serviceIds={['sanificazione-ambienti']} />
 
-      <InternalLinkSection title="Approfondimenti sulla sanificazione professionale" intro="Visita le altre pagine Arctic Pulizie per conoscere tutti i servizi disponibili, le aree coperte, le recensioni certificate e richiedere un preventivo." />
+      <InternalLinkSection title="Approfondimenti sulla sanificazione professionale" intro="Visita le altre pagine Artic Pulizie per conoscere tutti i servizi disponibili, le aree coperte, le recensioni certificate e richiedere un preventivo." />
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-br from-slate-900 to-slate-800">

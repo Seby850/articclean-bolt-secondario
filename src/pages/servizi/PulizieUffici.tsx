@@ -18,7 +18,7 @@ const faqSchema = [
         "name": "Come funziona il servizio di pulizie uffici a Brescia?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Effettuiamo un sopralluogo gratuito, definiamo un piano personalizzato e programmiamo gli interventi con personale dedicato Arctic Pulizie."
+          "text": "Effettuiamo un sopralluogo gratuito, definiamo un piano personalizzato e programmiamo gli interventi con personale dedicato Artic Pulizie."
         }
       },
       {
@@ -79,9 +79,9 @@ const PulizieUffici = () => {
   return (
     <div className="pt-24 pb-20">
       <SEO
-        title="Pulizie Uffici a Brescia | Arctic Pulizie"
-        description="Pulizia uffici a Brescia e provincia con team dedicato, prodotti certificati e orari flessibili. Arctic Pulizie offre preventivo gratuito in 24 ore."
-        keywords="pulizie uffici brescia, impresa pulizie uffici brescia, pulizia uffici aziende brescia, sanificazione uffici arctic pulizie"
+        title="Pulizie Uffici a Brescia | Artic Pulizie"
+        description="Pulizia uffici a Brescia e provincia con team dedicato, prodotti certificati e orari flessibili. Artic Pulizie offre preventivo gratuito in 24 ore."
+        keywords="pulizie uffici brescia, impresa pulizie uffici brescia, pulizia uffici aziende brescia, sanificazione uffici artic pulizie"
         canonical={buildCanonicalUrl('/servizi/pulizie-uffici')}
         structuredData={faqSchema}
       />
@@ -118,7 +118,7 @@ const PulizieUffici = () => {
             <div>
               <LazyImage
                 src={cdnImage('https://i.imgur.com/RAZaa1z.jpeg', { width: 1200, quality: 75 })}
-                alt="Pulizie uffici a Brescia con Arctic Pulizie"
+                alt="Pulizie uffici a Brescia con Artic Pulizie"
                 className="w-full h-96 object-cover rounded-xl shadow-lg"
                 width={640}
                 height={540}
@@ -271,7 +271,7 @@ const PulizieUffici = () => {
 
       <RelatedBlogPosts serviceIds={['pulizie-uffici']} />
 
-      <InternalLinkSection title="Collegamenti utili per i servizi di pulizia uffici" intro="Accedi rapidamente alle pagine chiave di Arctic Pulizie per approfondire servizi, zone coperte, recensioni e preventivi." />
+      <InternalLinkSection title="Collegamenti utili per i servizi di pulizia uffici" intro="Accedi rapidamente alle pagine chiave di Artic Pulizie per approfondire servizi, zone coperte, recensioni e preventivi." />
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-br from-slate-900 to-slate-800">

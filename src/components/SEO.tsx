@@ -13,7 +13,7 @@ interface SEOProps {
 
 const SEO = ({
   title = 'Impresa di Pulizie a Brescia e Provincia',
-  description = 'Arctic Pulizie è l’impresa di pulizie a Brescia specializzata in uffici, condomini, industrie e sanificazioni. Preventivo gratuito in 24 ore.',
+  description = 'Artic Pulizie è l’impresa di pulizie a Brescia specializzata in uffici, condomini, industrie e sanificazioni. Preventivo gratuito in 24 ore.',
   keywords = 'impresa di pulizie brescia, pulizie uffici, pulizie industriali, sanificazione ambienti, pulizie condomini',
   canonical,
   ogImage = `${siteMetadata.baseUrl}/assets/og-default.png`,

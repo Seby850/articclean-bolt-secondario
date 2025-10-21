@@ -58,9 +58,9 @@ const ChiSiamo = () => {
   return (
     <>
       <SEO
-        title="Chi Siamo | Arctic Pulizie Brescia"
-        description="Conosci Arctic Pulizie: impresa di pulizie a Brescia con 15 anni di esperienza, 28 professionisti qualificati e servizi certificati per aziende e condomini."
-        keywords="arctic pulizie chi siamo, impresa pulizie brescia team, azienda pulizie arctic pulizie"
+        title="Chi Siamo | Artic Pulizie Brescia"
+        description="Conosci Artic Pulizie: impresa di pulizie a Brescia con 15 anni di esperienza, 28 professionisti qualificati e servizi certificati per aziende e condomini."
+        keywords="artic pulizie chi siamo, impresa pulizie brescia team, azienda pulizie artic pulizie"
         canonical={buildCanonicalUrl('/chi-siamo')}
       />
 
@@ -72,7 +72,7 @@ const ChiSiamo = () => {
                 Chi Siamo
               </h1>
               <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-                Arctic Pulizie è l’impresa di pulizie di Brescia con oltre 15 anni di esperienza al servizio di aziende, condomini e spazi industriali.
+                Artic Pulizie è l’impresa di pulizie di Brescia con oltre 15 anni di esperienza al servizio di aziende, condomini e spazi industriali.
               </p>
             </div>
 
@@ -101,7 +101,7 @@ const ChiSiamo = () => {
                 <div className="space-y-6 text-slate-600 leading-relaxed">
                   <p>
                     Fondata con la missione di portare eccellenza e professionalità nel settore
-                    delle pulizie, <strong>Arctic Pulizie</strong> è cresciuta fino a diventare
+                    delle pulizie, <strong>Artic Pulizie</strong> è cresciuta fino a diventare
                     un punto di riferimento in Lombardia per servizi di pulizia professionali.
                   </p>
                   <p>
@@ -122,7 +122,7 @@ const ChiSiamo = () => {
                   <LazyImage
                     src={cdnImage('https://images.pexels.com/photos/4239091/pexels-photo-4239091.jpeg?auto=compress&cs=tinysrgb&w=1200', { width: 1024, quality: 70, fit: 'cover' })}
                     fallbackSrc="https://images.pexels.com/photos/4239091/pexels-photo-4239091.jpeg?auto=compress&cs=tinysrgb&w=1200"
-                    alt="Team Arctic Pulizie al lavoro a Brescia"
+                    alt="Team Artic Pulizie al lavoro a Brescia"
                     className="rounded-2xl shadow-lg w-full h-64 object-cover"
                     width={600}
                     height={512}
@@ -159,7 +159,7 @@ const ChiSiamo = () => {
           </div>
         </section>
 
-        <InternalLinkSection title="Continua a conoscere Arctic Pulizie" intro="Esplora i nostri servizi, scopri le zone servite, leggi le recensioni dei clienti e richiedi un preventivo in pochi minuti." />
+        <InternalLinkSection title="Continua a conoscere Artic Pulizie" intro="Esplora i nostri servizi, scopri le zone servite, leggi le recensioni dei clienti e richiedi un preventivo in pochi minuti." />
 
         <section className="py-20 bg-gradient-to-br from-slate-50 to-sky-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -235,7 +235,7 @@ const ChiSiamo = () => {
               </h3>
               <p className="text-lg mb-8 text-sky-50 max-w-2xl mx-auto">
                 Oltre 200 aziende e condomini si affidano a noi per mantenere i loro
-                spazi puliti e accoglienti. Scopri perché Arctic Pulizie è la scelta giusta.
+                spazi puliti e accoglienti. Scopri perché Artic Pulizie è la scelta giusta.
               </p>
               <Link
                 to="/richiedi-preventivo"

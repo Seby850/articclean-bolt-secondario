@@ -13,7 +13,7 @@ const Recensioni = () => {
       role: "Responsabile Facilities",
       rating: 5,
       date: "Gennaio 2024",
-      text: "Arctic Pulizie si occupa dei nostri uffici da 3 anni. Professionalità e qualità eccellenti, il nostro team lavora sempre in un ambiente perfetto. Non potremmo essere più soddisfatti del servizio ricevuto.",
+      text: "Artic Pulizie si occupa dei nostri uffici da 3 anni. Professionalità e qualità eccellenti, il nostro team lavora sempre in un ambiente perfetto. Non potremmo essere più soddisfatti del servizio ricevuto.",
       service: "Pulizie Uffici",
       icon: Building2
     },
@@ -24,7 +24,7 @@ const Recensioni = () => {
       role: "Partner",
       rating: 5,
       date: "Dicembre 2023",
-      text: "Servizio impeccabile e puntuale. I clienti apprezzano sempre la pulizia dei nostri locali. Il team è discreto, efficiente e molto professionale. Consiglio vivamente Arctic Pulizie.",
+      text: "Servizio impeccabile e puntuale. I clienti apprezzano sempre la pulizia dei nostri locali. Il team è discreto, efficiente e molto professionale. Consiglio vivamente Artic Pulizie.",
       service: "Pulizie Uffici",
       icon: Building2
     },
@@ -35,7 +35,7 @@ const Recensioni = () => {
       role: "Direttore di Stabilimento",
       rating: 5,
       date: "Novembre 2023",
-      text: "Per i nostri capannoni industriali, Arctic Pulizie garantisce standard elevati di pulizia e sicurezza. Un partner affidabile che comprende le esigenze del settore industriale.",
+      text: "Per i nostri capannoni industriali, Artic Pulizie garantisce standard elevati di pulizia e sicurezza. Un partner affidabile che comprende le esigenze del settore industriale.",
       service: "Pulizie Industriali",
       icon: Factory
     },
@@ -57,7 +57,7 @@ const Recensioni = () => {
       role: "Store Manager",
       rating: 5,
       date: "Settembre 2023",
-      text: "La pulizia dei nostri negozi è fondamentale per l'immagine del brand. Arctic Pulizie lo ha capito perfettamente e ci garantisce standard altissimi ogni giorno.",
+      text: "La pulizia dei nostri negozi è fondamentale per l'immagine del brand. Artic Pulizie lo ha capito perfettamente e ci garantisce standard altissimi ogni giorno.",
       service: "Pulizie Commerciali",
       icon: Building2
     },
@@ -68,7 +68,7 @@ const Recensioni = () => {
       role: "Responsabile Sanitario",
       rating: 5,
       date: "Agosto 2023",
-      text: "In un centro medico, l'igiene è prioritaria. Arctic Pulizie utilizza prodotti certificati e protocolli rigorosi. Ci fidiamo completamente di loro.",
+      text: "In un centro medico, l'igiene è prioritaria. Artic Pulizie utilizza prodotti certificati e protocolli rigorosi. Ci fidiamo completamente di loro.",
       service: "Sanificazione Ambienti",
       icon: Building2
     },
@@ -90,7 +90,7 @@ const Recensioni = () => {
       role: "Direttore",
       rating: 5,
       date: "Giugno 2023",
-      text: "Collaboriamo con Arctic Pulizie per le pulizie post-ristrutturazione delle nostre suite. Risultati impeccabili in tempi record. Altamente raccomandati.",
+      text: "Collaboriamo con Artic Pulizie per le pulizie post-ristrutturazione delle nostre suite. Risultati impeccabili in tempi record. Altamente raccomandati.",
       service: "Pulizie Post-Cantiere",
       icon: Building2
     },
@@ -155,9 +155,9 @@ const Recensioni = () => {
   return (
     <>
       <SEO
-        title="Recensioni Clienti | Arctic Pulizie Brescia"
-        description="Leggi le recensioni reali sui servizi Arctic Pulizie: oltre 200 aziende e condomini di Brescia si affidano al nostro team per pulizie professionali."
-        keywords="recensioni arctic pulizie, testimonianze clienti pulizie brescia, opinioni arctic pulizie"
+        title="Recensioni Clienti | Artic Pulizie Brescia"
+        description="Leggi le recensioni reali sui servizi Artic Pulizie: oltre 200 aziende e condomini di Brescia si affidano al nostro team per pulizie professionali."
+        keywords="recensioni artic pulizie, testimonianze clienti pulizie brescia, opinioni artic pulizie"
         canonical={buildCanonicalUrl('/recensioni')}
         structuredData={reviewStructuredData}
       />
@@ -171,7 +171,7 @@ const Recensioni = () => {
               </h1>
               <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
                 La soddisfazione dei nostri clienti è la nostra migliore referenza.
-                Scopri cosa dicono di noi le aziende e i condomini che si affidano ad Arctic Pulizie.
+                Scopri cosa dicono di noi le aziende e i condomini che si affidano ad Artic Pulizie.
               </p>
             </div>
 
@@ -243,7 +243,7 @@ const Recensioni = () => {
                   <Star className="w-8 h-8 text-white" />
                 </div>
                 <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-                Perché i Clienti Scelgono Arctic Pulizie?
+                Perché i Clienti Scelgono Artic Pulizie?
                 </h2>
               </div>
 
@@ -308,7 +308,7 @@ const Recensioni = () => {
               Vuoi Diventare Anche Tu un Cliente Soddisfatto?
             </h2>
             <p className="text-xl mb-8 text-sky-50">
-              Unisciti alle oltre 200 aziende e condomini che hanno scelto Arctic Pulizie
+              Unisciti alle oltre 200 aziende e condomini che hanno scelto Artic Pulizie
               per la qualità e l'affidabilità del servizio.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

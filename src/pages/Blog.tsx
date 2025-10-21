@@ -16,7 +16,7 @@ const Blog = () => {
     {
       '@context': 'https://schema.org',
       '@type': 'Blog',
-      name: 'Blog Arctic Pulizie Brescia',
+      name: 'Blog Artic Pulizie Brescia',
       description: 'Consigli pratici e strategie SEO per le pulizie professionali a Brescia.',
       url: buildCanonicalUrl('/blog'),
       blogPost: posts.map((post) => ({
@@ -31,8 +31,8 @@ const Blog = () => {
   return (
     <main className="pt-24 pb-20 bg-slate-50 min-h-screen">
       <SEO
-        title="Blog Arctic Pulizie Brescia - Consigli per Pulizie Professionali"
-        description="Guide operative, checklist e consigli SEO per pulizie professionali a Brescia. Scopri gli approfondimenti di Arctic Pulizie su uffici, condomini e sanificazioni."
+        title="Blog Artic Pulizie Brescia - Consigli per Pulizie Professionali"
+        description="Guide operative, checklist e consigli SEO per pulizie professionali a Brescia. Scopri gli approfondimenti di Artic Pulizie su uffici, condomini e sanificazioni."
         canonical={buildCanonicalUrl('/blog')}
         keywords="blog pulizie brescia, consigli pulizie professionali, sanificazione uffici brescia"
         structuredData={structuredData}
@@ -41,14 +41,14 @@ const Blog = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <header className="text-center mb-16">
           <p className="inline-flex items-center px-3 py-1 text-sm font-semibold bg-sky-100 text-sky-600 rounded-full">
-            Blog Arctic Pulizie
+            Blog Artic Pulizie
           </p>
           <h1 className="mt-6 text-4xl lg:text-5xl font-bold text-slate-900">
             Strategie e guide per la pulizia professionale a Brescia
           </h1>
           <p className="mt-4 text-lg text-slate-600 max-w-3xl mx-auto">
             Approfondimenti pratici dedicati a facility manager, amministratori di condominio e
-            responsabili di stabilimento. Suggerimenti basati sull’esperienza di Arctic Pulizie.
+            responsabili di stabilimento. Suggerimenti basati sull’esperienza di Artic Pulizie.
           </p>
         </header>
 
@@ -67,7 +67,7 @@ const Blog = () => {
                   <LazyImage
                     src={cdnImage(post.heroImage, { width: 1200, quality: 70, fit: 'cover' })}
                     fallbackSrc={post.heroImage}
-                    alt={`${post.title} - Arctic Pulizie Brescia`}
+                    alt={`${post.title} - Artic Pulizie Brescia`}
                     className="w-full h-56 object-cover"
                     width={1200}
                     height={560}

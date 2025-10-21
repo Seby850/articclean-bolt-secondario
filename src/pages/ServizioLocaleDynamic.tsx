@@ -389,7 +389,7 @@ const ServizioLocaleDynamic = () => {
 
       <RelatedBlogPosts serviceIds={[service.id]} />
 
-      <InternalLinkSection title="Continua ad approfondire con Arctic Pulizie" intro={`Esplora le altre pagine principali per servizi aggiuntivi, aree servite, recensioni e preventivi rapidi dedicati a ${location.name}.`} />
+      <InternalLinkSection title="Continua ad approfondire con Artic Pulizie" intro={`Esplora le altre pagine principali per servizi aggiuntivi, aree servite, recensioni e preventivi rapidi dedicati a ${location.name}.`} />
 
       <section className="py-20 bg-gradient-to-br from-slate-900 to-slate-800">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -411,7 +411,7 @@ const ServizioLocaleDynamic = () => {
               <ArrowRight className="w-5 h-5" />
             </Link>
             <a
-              href="tel:+393755114"
+              href="tel:+390305231285"
               className="inline-flex items-center justify-center space-x-2 border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300"
             >
               <Phone className="w-5 h-5" />

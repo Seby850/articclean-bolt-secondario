@@ -26,7 +26,7 @@ const faqSchema = [
         "name": "Vi occupate anche della rimozione dei detriti?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Sì, Arctic Pulizie rimuove detriti, adesivi, polveri e coordina la gestione dei materiali di scarto secondo normativa."
+          "text": "Sì, Artic Pulizie rimuove detriti, adesivi, polveri e coordina la gestione dei materiali di scarto secondo normativa."
         }
       },
       {
@@ -126,9 +126,9 @@ const PuliziePostCantiere = () => {
   return (
     <div className="pt-24 pb-20">
       <SEO
-        title="Pulizie Post Cantiere a Brescia | Arctic Pulizie"
-        description="Pulizie post-cantiere a Brescia con rimozione detriti, lucidatura e sanificazione finale. Arctic Pulizie consegna ambienti pronti all'uso."
-        keywords="pulizie post cantiere brescia, pulizia fine lavori brescia, sanificazione post cantiere arctic pulizie"
+        title="Pulizie Post Cantiere a Brescia | Artic Pulizie"
+        description="Pulizie post-cantiere a Brescia con rimozione detriti, lucidatura e sanificazione finale. Artic Pulizie consegna ambienti pronti all'uso."
+        keywords="pulizie post cantiere brescia, pulizia fine lavori brescia, sanificazione post cantiere artic pulizie"
         canonical={buildCanonicalUrl('/servizi/pulizie-post-cantiere')}
         structuredData={faqSchema}
       />
@@ -160,7 +160,7 @@ const PuliziePostCantiere = () => {
             <div>
               <LazyImage 
                 src={cdnImage('https://i.imgur.com/eUBWEu3.jpeg', { width: 1280, quality: 80 })}
-                alt="Pulizie post-cantiere a Brescia con Arctic Pulizie"
+                alt="Pulizie post-cantiere a Brescia con Artic Pulizie"
                 className="w-full h-96 object-cover rounded-xl shadow-lg"
                 width={640}
                 height={540}
@@ -346,7 +346,7 @@ const PuliziePostCantiere = () => {
 
       <RelatedBlogPosts serviceIds={['pulizie-post-cantiere']} />
 
-      <InternalLinkSection title="Risorse utili dopo il cantiere" intro="Consulta tutti i collegamenti fondamentali Arctic Pulizie per programmare servizi aggiuntivi, verificare le aree servite, leggere le recensioni e richiedere un preventivo." />
+      <InternalLinkSection title="Risorse utili dopo il cantiere" intro="Consulta tutti i collegamenti fondamentali Artic Pulizie per programmare servizi aggiuntivi, verificare le aree servite, leggere le recensioni e richiedere un preventivo." />
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-br from-slate-900 to-slate-800">

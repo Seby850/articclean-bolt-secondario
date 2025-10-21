@@ -277,7 +277,7 @@ const ServizioLocale = () => {
 
       <RelatedBlogPosts serviceIds={[service.id]} />
 
-      <InternalLinkSection title="Altri collegamenti utili" intro={`Consulta le pagine chiave di Arctic Pulizie per scoprire tutti i servizi, verificare le zone coperte, leggere le recensioni e richiedere un preventivo per ${location.name}.`} />
+      <InternalLinkSection title="Altri collegamenti utili" intro={`Consulta le pagine chiave di Artic Pulizie per scoprire tutti i servizi, verificare le zone coperte, leggere le recensioni e richiedere un preventivo per ${location.name}.`} />
 
       <section className="py-20 bg-gradient-to-br from-slate-900 to-slate-800">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -299,7 +299,7 @@ const ServizioLocale = () => {
               <ArrowRight className="w-5 h-5" />
             </Link>
             <a
-              href="tel:+390303755114"
+              href="tel:+390305231285"
               className="inline-flex items-center justify-center space-x-2 border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300"
             >
               <Phone className="w-5 h-5" />

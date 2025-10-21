@@ -18,7 +18,7 @@ const faqSchema = [
         "name": "Quali servizi di giardinaggio offrite a Brescia?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Arctic Pulizie cura taglio erba, potature, manutenzione aiuole, irrigazione e trattamenti stagionali per aree verdi aziendali e condominiali."
+          "text": "Artic Pulizie cura taglio erba, potature, manutenzione aiuole, irrigazione e trattamenti stagionali per aree verdi aziendali e condominiali."
         }
       },
       {
@@ -26,7 +26,7 @@ const faqSchema = [
         "name": "Posso abbinare il giardinaggio alle pulizie condominiali?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Sì, offriamo pacchetti combinati pulizie + giardinaggio con condizioni dedicate ai condomini gestiti da Arctic Pulizie."
+          "text": "Sì, offriamo pacchetti combinati pulizie + giardinaggio con condizioni dedicate ai condomini gestiti da Artic Pulizie."
         }
       },
       {
@@ -124,9 +124,9 @@ const Giardinaggio = () => {
   return (
     <div className="pt-24 pb-20">
       <SEO
-        title="Giardinaggio e Manutenzione Verde a Brescia | Arctic Pulizie"
-        description="Cura professionale di giardini condominiali e aree verdi aziendali a Brescia. Arctic Pulizie offre contratti periodici e interventi straordinari su richiesta."
-        keywords="giardinaggio brescia, manutenzione verde brescia, cura giardini arctic pulizie"
+        title="Giardinaggio e Manutenzione Verde a Brescia | Artic Pulizie"
+        description="Cura professionale di giardini condominiali e aree verdi aziendali a Brescia. Artic Pulizie offre contratti periodici e interventi straordinari su richiesta."
+        keywords="giardinaggio brescia, manutenzione verde brescia, cura giardini artic pulizie"
         canonical={buildCanonicalUrl('/servizi/giardinaggio')}
         structuredData={faqSchema}
       />
@@ -159,7 +159,7 @@ const Giardinaggio = () => {
               <LazyImage
                 src={cdnImage('https://images.pexels.com/photos/1301856/pexels-photo-1301856.jpeg?auto=compress&cs=tinysrgb&w=1200', { width: 1280, quality: 70, fit: 'cover' })}
                 fallbackSrc="https://images.pexels.com/photos/1301856/pexels-photo-1301856.jpeg?auto=compress&cs=tinysrgb&w=1200"
-                alt="Giardinaggio professionale a Brescia con Arctic Pulizie"
+                alt="Giardinaggio professionale a Brescia con Artic Pulizie"
                 className="w-full h-96 object-cover rounded-xl shadow-lg"
                 width={640}
                 height={540}
@@ -323,7 +323,7 @@ const Giardinaggio = () => {
 
       <RelatedBlogPosts serviceIds={['giardinaggio']} />
 
-      <InternalLinkSection title="Servizi correlati al verde e alla pulizia" intro="Raggiungi le altre pagine Arctic Pulizie per scoprire tutti i servizi disponibili, le zone operative, le testimonianze e richiedere un preventivo." />
+      <InternalLinkSection title="Servizi correlati al verde e alla pulizia" intro="Raggiungi le altre pagine Artic Pulizie per scoprire tutti i servizi disponibili, le zone operative, le testimonianze e richiedere un preventivo." />
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-br from-slate-900 to-slate-800">

@@ -114,9 +114,9 @@ const ComeLavoriamo = () => {
   return (
     <>
       <SEO
-        title="Come Lavoriamo | Arctic Pulizie Brescia"
-        description="Scopri il metodo Arctic Pulizie: sopralluogo gratuito, squadra dedicata e controllo qualità continuo per servizi di pulizia professionale a Brescia."
-        keywords="come lavora arctic pulizie, processo pulizie brescia, metodo lavoro impresa pulizie, sopralluogo gratuito arctic pulizie"
+        title="Come Lavoriamo | Artic Pulizie Brescia"
+        description="Scopri il metodo Artic Pulizie: sopralluogo gratuito, squadra dedicata e controllo qualità continuo per servizi di pulizia professionale a Brescia."
+        keywords="come lavora artic pulizie, processo pulizie brescia, metodo lavoro impresa pulizie, sopralluogo gratuito artic pulizie"
         canonical={buildCanonicalUrl('/come-lavoriamo')}
       />
 
@@ -254,7 +254,7 @@ const ComeLavoriamo = () => {
           </div>
         </section>
 
-        <InternalLinkSection title="Risorse collegate al nostro metodo" intro="Consultare le pagine principali di Arctic Pulizie per scoprire tutti i servizi, le zone servite, le recensioni e inviare una richiesta di preventivo." />
+        <InternalLinkSection title="Risorse collegate al nostro metodo" intro="Consultare le pagine principali di Artic Pulizie per scoprire tutti i servizi, le zone servite, le recensioni e inviare una richiesta di preventivo." />
 
         <section className="py-20 bg-gradient-to-r from-sky-500 to-cyan-500">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">

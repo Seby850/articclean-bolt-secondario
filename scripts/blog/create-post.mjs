@@ -71,7 +71,7 @@ const main = async () => {
     keywords: (options.keywords ? options.keywords.split(',') : []).map((keyword) => keyword.trim()).filter(Boolean),
     content: [
       "Introduzione: sostituisci questo paragrafo con l'apertura del tuo articolo.",
-      'Sviluppo: approfondisci il tema con esempi legati ai servizi Arctic Pulizie.',
+      'Sviluppo: approfondisci il tema con esempi legati ai servizi Artic Pulizie.',
       'Conclusione: invita il lettore a richiedere un preventivo o a scoprire servizi correlati.'
     ]
   };

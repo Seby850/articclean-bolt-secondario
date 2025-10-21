@@ -1,4 +1,4 @@
-# Report Performance Arctic Pulizie
+# Report Performance Artic Pulizie
 
 Questa cartella raccoglie i risultati delle analisi tecniche e dei test Lighthouse richiesti dal PRD (Parte 2).
 

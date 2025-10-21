@@ -1,10 +1,9 @@
-import { ArrowRight, Sparkles, Shield, Clock, Award, Users, Star, Calendar } from 'lucide-react';
+import { ArrowRight, Sparkles, Shield, Clock, Award, Users, Star } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { CTASection } from '@/components/ui/cta-with-rectangle';
 import SEO from '@/components/SEO';
 import LazyImage from '@/components/LazyImage';
 import { siteMetadata, buildCanonicalUrl } from '@/data/siteMetadata';
-import { getRecentPosts } from '@/data/blogPosts';
 import { cdnImage } from '@/utils/image';
 
 const homepageStructuredData = [
@@ -81,7 +80,7 @@ const homepageStructuredData = [
         "name": "Offrite pulizie uffici a Brescia?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Sì, Arctic Pulizie gestisce pulizie uffici a Brescia e provincia con turni programmati e personale selezionato."
+          "text": "Sì, Artic Pulizie gestisce pulizie uffici a Brescia e provincia con turni programmati e personale selezionato."
         }
       },
       {
@@ -189,33 +188,31 @@ const Homepage = () => {
     {
       name: "Marco Rossi",
       company: "TechCorp Milano",
-      text: "Arctic Pulizie si occupa dei nostri uffici da 3 anni. Professionalità e qualità eccellenti, il nostro team lavora sempre in un ambiente perfetto.",
+      text: "Artic Pulizie si occupa dei nostri uffici da 3 anni. Professionalità e qualità eccellenti, il nostro team lavora sempre in un ambiente perfetto.",
       rating: 5,
       role: "Responsabile Facilities"
     },
     {
       name: "Laura Bianchi", 
       company: "Studio Legale Associato",
-      text: "Servizio impeccabile e puntuale. I clienti apprezzano sempre la pulizia dei nostri locali. Consiglio vivamente Arctic Pulizie.",
+      text: "Servizio impeccabile e puntuale. I clienti apprezzano sempre la pulizia dei nostri locali. Consiglio vivamente Artic Pulizie.",
       rating: 5,
       role: "Partner"
     },
     {
       name: "Giuseppe Verdi",
       company: "Industrie Meccaniche Spa",
-      text: "Per i nostri capannoni industriali, Arctic Pulizie garantisce standard elevati di pulizia e sicurezza. Un partner affidabile.",
+      text: "Per i nostri capannoni industriali, Artic Pulizie garantisce standard elevati di pulizia e sicurezza. Un partner affidabile.",
       rating: 5,
       role: "Direttore Operativo"
     }
   ];
 
-  const recentPosts = getRecentPosts(3);
-
   return (
     <div>
       <SEO
-        title="Impresa di Pulizie a Brescia e Provincia | Arctic Pulizie"
-        description="Impresa di pulizie a Brescia per uffici, condomini e industrie. Squadra Arctic Pulizie attiva in provincia con preventivo gratuito in 24 ore."
+        title="Impresa di Pulizie a Brescia e Provincia | Artic Pulizie"
+        description="Impresa di pulizie a Brescia per uffici, condomini e industrie. Squadra Artic Pulizie attiva in provincia con preventivo gratuito in 24 ore."
         keywords="impresa pulizie brescia, pulizie uffici brescia, pulizie condomini brescia, sanificazione ambienti brescia, pulizie industriali brescia"
         canonical={buildCanonicalUrl('/')}
         structuredData={homepageStructuredData}
@@ -318,83 +315,6 @@ const Homepage = () => {
           </div>
         </div>
       </section>
-
-      {/* Blog Highlights */}
-      {recentPosts.length > 0 && (
-        <section className="py-20 bg-slate-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex items-center justify-between mb-12">
-              <div>
-                <p className="inline-flex items-center px-3 py-1 text-sm font-semibold bg-sky-100 text-sky-600 rounded-full">
-                  Dal nostro blog
-                </p>
-                <h2 className="mt-4 text-3xl lg:text-4xl font-bold text-slate-900">
-                  Guide pratiche per la tua impresa a Brescia
-                </h2>
-                <p className="mt-2 text-slate-600 max-w-2xl">
-                  Checklist, consigli operativi e strategie per ottimizzare pulizie, sanificazioni e gestione condominiale.
-                </p>
-              </div>
-              <Link
-                to="/blog"
-                className="hidden md:inline-flex items-center space-x-2 bg-white border border-slate-200 hover:border-sky-300 text-sky-600 px-5 py-3 rounded-lg font-semibold transition-all duration-300"
-              >
-                <span>Visita il blog</span>
-                <ArrowRight className="w-4 h-4" />
-              </Link>
-            </div>
-
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {recentPosts.map((post) => (
-                <Link
-                  key={post.slug}
-                  to={`/blog/${post.slug}`}
-                  className="group bg-white rounded-3xl border border-slate-200 hover:border-sky-300 shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden"
-                >
-                  <LazyImage
-                    src={cdnImage(post.heroImage, { width: 900, quality: 70, fit: 'cover' })}
-                    fallbackSrc={post.heroImage}
-                    alt={`${post.title} - Arctic Pulizie Brescia`}
-                    className="w-full h-48 object-cover"
-                    width={900}
-                    height={360}
-                  />
-                  <div className="p-6">
-                    <div className="flex items-center text-xs text-slate-500 space-x-2 mb-3">
-                      <Calendar className="w-3 h-3" />
-                      <span>
-                        {new Intl.DateTimeFormat('it-IT', {
-                          day: '2-digit',
-                          month: 'short',
-                          year: 'numeric'
-                        }).format(new Date(post.publishedAt))}
-                      </span>
-                    </div>
-                    <h3 className="text-lg font-semibold text-slate-900 group-hover:text-sky-600 transition-colors">
-                      {post.title}
-                    </h3>
-                    <p className="mt-3 text-sm text-slate-600 leading-relaxed">{post.excerpt}</p>
-                    <div className="mt-5 inline-flex items-center space-x-2 text-sm font-semibold text-sky-600 group-hover:text-sky-700">
-                      <span>Leggi l&apos;articolo</span>
-                      <ArrowRight className="w-4 h-4" />
-                    </div>
-                  </div>
-                </Link>
-              ))}
-            </div>
-
-            <div className="mt-10 text-center md:hidden">
-              <Link
-                to="/blog"
-                className="inline-flex items-center space-x-2 bg-white border border-slate-200 hover:border-sky-300 text-sky-600 px-5 py-3 rounded-lg font-semibold transition-all duration-300"
-              >
-                <span>Visita il blog</span>
-                <ArrowRight className="w-4 h-4" />
-              </Link>
-            </div>
-          </div>
-        </section>
-      )}
 
       {/* Services Overview */}
       <section className="py-20 bg-white">

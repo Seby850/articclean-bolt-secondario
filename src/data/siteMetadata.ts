@@ -1,10 +1,10 @@
 export const siteMetadata = {
-  siteName: 'Arctic Pulizie',
-  legalName: 'Arctic Pulizie Srl',
+  siteName: 'Artic Pulizie',
+  legalName: 'Artic Pulizie Srl',
   baseUrl: 'https://www.articpulizie.it',
   brandTagline: 'Impresa di Pulizie a Brescia e Provincia',
-  phone: '+39 030 987 6543',
-  email: 'info@arcticpulizie.it',
+  phone: '+39 030 52 31 285',
+  email: 'info@articpulizie.it',
   streetAddress: 'Via Carpaccio 10',
   postalCode: '25100',
   locality: 'Brescia',
@@ -13,8 +13,8 @@ export const siteMetadata = {
   areaServed: 'Brescia e provincia',
   logoUrl: 'https://www.articpulizie.it/assets/logo.svg',
   socialProfiles: [
-    'https://www.facebook.com/arcticpulizie',
-    'https://www.instagram.com/arcticpulizie'
+    'https://www.facebook.com/articpulizie',
+    'https://www.instagram.com/articpulizie'
   ],
   aggregateRating: {
     ratingValue: '4.9',

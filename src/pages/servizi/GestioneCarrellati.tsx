@@ -18,7 +18,7 @@ const faqSchema = [
         "name": "Cosa include il servizio di gestione carrellati?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Arctic Pulizie si occupa di posizionamento, ritiro, pulizia e sanificazione dei carrellati seguendo il calendario della raccolta differenziata."
+          "text": "Artic Pulizie si occupa di posizionamento, ritiro, pulizia e sanificazione dei carrellati seguendo il calendario della raccolta differenziata."
         }
       },
       {
@@ -127,7 +127,7 @@ const GestioneCarrellati = () => {
   return (
     <div className="pt-24 pb-20">
       <SEO
-        title="Gestione Carrellati a Brescia | Arctic Pulizie"
+        title="Gestione Carrellati a Brescia | Artic Pulizie"
         description="Gestione professionale dei carrellati per condomini e aziende a Brescia: posizionamento, ritiro, pulizia e sanificazione dei bidoni della raccolta differenziata."
         keywords="gestione carrellati brescia, pulizia bidoni raccolta differenziata, gestione rifiuti condomini brescia"
         canonical={buildCanonicalUrl('/servizi/gestione-carrellati')}
@@ -162,7 +162,7 @@ const GestioneCarrellati = () => {
               <LazyImage
                 src={cdnImage('https://images.pexels.com/photos/3735218/pexels-photo-3735218.jpeg?auto=compress&cs=tinysrgb&w=1200', { width: 1280, quality: 70, fit: 'cover' })}
                 fallbackSrc="https://images.pexels.com/photos/3735218/pexels-photo-3735218.jpeg?auto=compress&cs=tinysrgb&w=1200"
-                alt="Gestione carrellati a Brescia con Arctic Pulizie"
+                alt="Gestione carrellati a Brescia con Artic Pulizie"
                 className="w-full h-96 object-cover rounded-xl shadow-lg"
                 width={640}
                 height={540}
@@ -327,7 +327,7 @@ const GestioneCarrellati = () => {
 
       <RelatedBlogPosts serviceIds={['gestione-carrellati', 'pulizie-condomini']} />
 
-      <InternalLinkSection title="Informazioni utili sulla gestione dei rifiuti" intro="Visita le pagine Arctic Pulizie più richieste per servizi aggiuntivi, territori coperti, recensioni e richiesta preventivo." />
+      <InternalLinkSection title="Informazioni utili sulla gestione dei rifiuti" intro="Visita le pagine Artic Pulizie più richieste per servizi aggiuntivi, territori coperti, recensioni e richiesta preventivo." />
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-br from-slate-900 to-slate-800">

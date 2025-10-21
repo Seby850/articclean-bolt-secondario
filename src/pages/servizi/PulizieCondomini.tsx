@@ -26,7 +26,7 @@ const faqSchema = [
         "name": "Offrite contratti flessibili per i condomini?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Sì, Arctic Pulizie propone interventi singoli o contratti settimanali e mensili su misura per il condominio."
+          "text": "Sì, Artic Pulizie propone interventi singoli o contratti settimanali e mensili su misura per il condominio."
         }
       },
       {
@@ -100,9 +100,9 @@ const PulizieCondomini = () => {
   return (
     <div className="pt-24 pb-20">
       <SEO
-        title="Pulizie Condomini a Brescia | Arctic Pulizie"
-        description="Pulizia scale, ingressi e aree comuni dei condomini a Brescia e provincia. Arctic Pulizie offre gestione carrellati, giardinaggio e contratti flessibili."
-        keywords="pulizie condomini brescia, pulizia scale condominio brescia, gestione carrellati arctic pulizie"
+        title="Pulizie Condomini a Brescia | Artic Pulizie"
+        description="Pulizia scale, ingressi e aree comuni dei condomini a Brescia e provincia. Artic Pulizie offre gestione carrellati, giardinaggio e contratti flessibili."
+        keywords="pulizie condomini brescia, pulizia scale condominio brescia, gestione carrellati artic pulizie"
         canonical={buildCanonicalUrl('/servizi/pulizie-condomini')}
         structuredData={faqSchema}
       />
@@ -135,7 +135,7 @@ const PulizieCondomini = () => {
               <LazyImage
                 src={cdnImage('https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=1200', { width: 1200, quality: 70, fit: 'cover' })}
                 fallbackSrc="https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=1200"
-                alt="Pulizie condomini a Brescia con Arctic Pulizie"
+                alt="Pulizie condomini a Brescia con Artic Pulizie"
                 className="w-full h-96 object-cover rounded-xl shadow-lg"
                 width={640}
                 height={540}
@@ -280,7 +280,7 @@ const PulizieCondomini = () => {
 
       <RelatedBlogPosts serviceIds={['pulizie-condomini', 'gestione-carrellati']} />
 
-      <InternalLinkSection title="Approfondisci i servizi per il condominio" intro="Consulta rapidamente le altre pagine Arctic Pulizie utili per amministratori e proprietari: servizi dedicati, zone servite, recensioni e preventivi." />
+      <InternalLinkSection title="Approfondisci i servizi per il condominio" intro="Consulta rapidamente le altre pagine Artic Pulizie utili per amministratori e proprietari: servizi dedicati, zone servite, recensioni e preventivi." />
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-br from-slate-900 to-slate-800">

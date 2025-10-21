@@ -13,16 +13,16 @@ Ottimizzare ogni pagina del sito *www.articpulizie.it* per massimizzare la visib
 - Keyword principale deve apparire **all’inizio del titolo**.
 
 ### Formato standard:
-<title>Pulizie [Servizio] a [Città] | Arctic Pulizie</title> <meta name="description" content="Impresa di pulizie a [Città]. Servizi professionali di [Servizio]. Preventivo gratuito in 24 ore."> ```
+<title>Pulizie [Servizio] a [Città] | Artic Pulizie</title> <meta name="description" content="Impresa di pulizie a [Città]. Servizi professionali di [Servizio]. Preventivo gratuito in 24 ore."> ```
 Esempi:
 Home:
-Impresa di Pulizie a Brescia e Provincia | Arctic Pulizie
+Impresa di Pulizie a Brescia e Provincia | Artic Pulizie
 
 Servizio:
-Pulizie Uffici a Brescia | Arctic Pulizie Professionali
+Pulizie Uffici a Brescia | Artic Pulizie Professionali
 
 Local page:
-Sanificazione Ambienti a Chiari | Arctic Pulizie Brescia
+Sanificazione Ambienti a Chiari | Artic Pulizie Brescia
 
 🧱 2. Heading Structure (H1-H3)
 Obiettivi:
@@ -33,7 +33,7 @@ Creare una gerarchia logica tra i titoli (un solo <h1> per pagina).
 Regole:
 Livello	Uso	Esempio
 H1	Keyword principale	“Pulizie uffici a Brescia”
-H2	Sottoargomenti o sezioni	“Perché scegliere Arctic Pulizie”
+H2	Sottoargomenti o sezioni	“Perché scegliere Artic Pulizie”
 H3	Dettagli o bullet point espansi	“I nostri prodotti certificati”
 
 🧭 3. Canonical Tag e Robots Meta
@@ -78,7 +78,7 @@ Copy code
 {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "name": "Arctic Pulizie",
+  "name": "Artic Pulizie",
   "image": "https://www.articpulizie.it/assets/logo.webp",
   "address": {
     "@type": "PostalAddress",
@@ -119,7 +119,7 @@ Copy code
 {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "Arctic Pulizie",
+  "name": "Artic Pulizie",
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "4.9",
@@ -138,10 +138,10 @@ Il footer del sito deve sempre contenere il NAP coerente (Name, Address, Phone):
 
 nginx
 Copy code
-Arctic Pulizie Srl  
+Artic Pulizie Srl  
 Via [indirizzo completo], 25100 Brescia  
 Tel: +39 [numero]  
-Email: info@arcticpulizie.it
+Email: info@articpulizie.it
 Stesso formato in Google My Business, schema markup e pagina contatti.
 
 📈 8. Obiettivo Finale

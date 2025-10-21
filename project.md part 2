@@ -34,7 +34,7 @@ Esempi:
 - Ogni immagine deve avere attributo `alt` descrittivo, con parole chiave:
   ```html
   <img src="pulizie-uffici-brescia.webp" 
-       alt="Pulizie uffici a Brescia con personale Arctic Pulizie"
+       alt="Pulizie uffici a Brescia con personale Artic Pulizie"
        width="600" height="400">
 Specificare sempre width e height per evitare layout shift (CLS).
 

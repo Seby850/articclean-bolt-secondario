@@ -24,9 +24,9 @@ const RichidiPreventivo = () => {
 
   const canonicalUrl = buildCanonicalUrl('/richiedi-preventivo');
   const seoConfig = {
-    title: 'Richiedi Preventivo Pulizie a Brescia | Arctic Pulizie',
-    description: 'Richiedi un preventivo gratuito per le pulizie Arctic Pulizie a Brescia. Compila il modulo e ricevi una proposta personalizzata in 24 ore.',
-    keywords: 'preventivo pulizie brescia, richiedi preventivo arctic pulizie, preventivo impresa pulizie, sopralluogo gratuito pulizie',
+    title: 'Richiedi Preventivo Pulizie a Brescia | Artic Pulizie',
+    description: 'Richiedi un preventivo gratuito per le pulizie Artic Pulizie a Brescia. Compila il modulo e ricevi una proposta personalizzata in 24 ore.',
+    keywords: 'preventivo pulizie brescia, richiedi preventivo artic pulizie, preventivo impresa pulizie, sopralluogo gratuito pulizie',
     canonical: canonicalUrl,
     structuredData: [
       {
@@ -34,7 +34,7 @@ const RichidiPreventivo = () => {
         '@type': 'ContactPage',
         name: `${siteMetadata.siteName} - Richiedi Preventivo`,
         url: canonicalUrl,
-        description: 'Modulo per richiedere un preventivo gratuito ai consulenti Arctic Pulizie.'
+        description: 'Modulo per richiedere un preventivo gratuito ai consulenti Artic Pulizie.'
       }
     ] as Record<string, unknown>[]
   };
@@ -62,7 +62,7 @@ const RichidiPreventivo = () => {
         body: JSON.stringify({
           ...formData,
           timestamp: new Date().toISOString(),
-          source: 'Arctic Pulizie Website'
+          source: 'Artic Pulizie Website'
         })
       });
 
@@ -135,10 +135,10 @@ const RichidiPreventivo = () => {
               </p>
               <div className="bg-sky-50 rounded-lg p-4 mb-6">
                 <p className="text-sky-800 font-semibold">
-                  📞 Telefono: +39 030 987 6543
+                  📞 Telefono: +39 030 52 31 285
                 </p>
                 <p className="text-sky-700">
-                  📧 Email: info@arcticpulizie.it
+                  📧 Email: info@articpulizie.it
                 </p>
                 <p className="text-sky-700">
                   📍 Via Carpaccio 10, Brescia
@@ -436,7 +436,7 @@ const RichidiPreventivo = () => {
           </div>
         </div>
 
-        <InternalLinkSection title="Collegamenti utili dopo la richiesta" intro="Approfondisci i servizi Arctic Pulizie, consulta le aree servite, leggi le recensioni e valuta altre soluzioni prima di ricevere il preventivo." />
+        <InternalLinkSection title="Collegamenti utili dopo la richiesta" intro="Approfondisci i servizi Artic Pulizie, consulta le aree servite, leggi le recensioni e valuta altre soluzioni prima di ricevere il preventivo." />
       </div>
     </div>
   </>

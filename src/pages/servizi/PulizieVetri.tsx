@@ -132,9 +132,9 @@ const PulizieVetri = () => {
   return (
     <div className="pt-24 pb-20">
       <SEO
-        title="Pulizia Vetri e Vetrate a Brescia | Arctic Pulizie"
-        description="Pulizia professionale di vetri, vetrate e facciate continue a Brescia. Arctic Pulizie opera in quota con sistemi ad acqua pura e prodotti anti-aloni."
-        keywords="pulizie vetri brescia, pulizia vetrate brescia, lavaggio vetri in quota arctic pulizie"
+        title="Pulizia Vetri e Vetrate a Brescia | Artic Pulizie"
+        description="Pulizia professionale di vetri, vetrate e facciate continue a Brescia. Artic Pulizie opera in quota con sistemi ad acqua pura e prodotti anti-aloni."
+        keywords="pulizie vetri brescia, pulizia vetrate brescia, lavaggio vetri in quota artic pulizie"
         canonical={buildCanonicalUrl('/servizi/pulizie-vetri')}
         structuredData={faqSchema}
       />
@@ -166,7 +166,7 @@ const PulizieVetri = () => {
             <div>
               <LazyImage 
                 src={cdnImage('https://i.imgur.com/mwIw3dd.jpeg', { width: 1280, quality: 80 })}
-                alt="Pulizia vetri a Brescia con Arctic Pulizie"
+                alt="Pulizia vetri a Brescia con Artic Pulizie"
                 className="w-full h-96 object-cover rounded-xl shadow-lg"
                 width={640}
                 height={540}
@@ -379,7 +379,7 @@ const PulizieVetri = () => {
 
       <RelatedBlogPosts serviceIds={['pulizia-vetri']} />
 
-      <InternalLinkSection title="Altri link sulla cura delle superfici vetrate" intro="Approfondisci servizi correlati, zone operative, testimonianze e preventivo rapido offerti da Arctic Pulizie." />
+      <InternalLinkSection title="Altri link sulla cura delle superfici vetrate" intro="Approfondisci servizi correlati, zone operative, testimonianze e preventivo rapido offerti da Artic Pulizie." />
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-br from-slate-900 to-slate-800">

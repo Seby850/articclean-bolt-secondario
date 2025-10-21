@@ -40,11 +40,11 @@ const BlogPost = () => {
       dateModified: post.publishedAt,
       author: {
         '@type': 'Organization',
-        name: 'Arctic Pulizie'
+        name: 'Artic Pulizie'
       },
       publisher: {
         '@type': 'Organization',
-        name: 'Arctic Pulizie',
+        name: 'Artic Pulizie',
         logo: {
           '@type': 'ImageObject',
           url: buildCanonicalUrl('/assets/logo.svg')
@@ -57,7 +57,7 @@ const BlogPost = () => {
   return (
     <main className="pt-24 pb-20 bg-white">
       <SEO
-        title={`${post.title} | Arctic Pulizie Blog`}
+        title={`${post.title} | Artic Pulizie Blog`}
         description={post.metaDescription}
         canonical={buildCanonicalUrl(`/blog/${post.slug}`)}
         keywords={post.keywords.join(', ')}
@@ -75,7 +75,7 @@ const BlogPost = () => {
 
         <header className="mb-10">
           <p className="inline-flex items-center px-3 py-1 text-sm font-semibold bg-sky-100 text-sky-600 rounded-full">
-            Arctic Pulizie Brescia
+            Artic Pulizie Brescia
           </p>
           <h1 className="mt-6 text-4xl font-bold text-slate-900 leading-tight">
             {post.title}
@@ -102,7 +102,7 @@ const BlogPost = () => {
           <LazyImage
             src={cdnImage(post.heroImage, { width: 1280, quality: 70, fit: 'cover' })}
             fallbackSrc={post.heroImage}
-            alt={`${post.title} - Arctic Pulizie Brescia`}
+            alt={`${post.title} - Artic Pulizie Brescia`}
             className="w-full h-80 object-cover rounded-3xl shadow-lg"
             width={1280}
             height={640}
@@ -168,7 +168,7 @@ const BlogPost = () => {
 
         <InternalLinkSection
           title="Approfondisci con i nostri servizi e risorse"
-          intro="Consulta le pagine principali di Arctic Pulizie per scoprire i servizi dedicati a uffici, condomini e industrie, le zone servite, le recensioni dei clienti e come richiedere un preventivo."
+          intro="Consulta le pagine principali di Artic Pulizie per scoprire i servizi dedicati a uffici, condomini e industrie, le zone servite, le recensioni dei clienti e come richiedere un preventivo."
           className="mt-16"
         />
       </article>

@@ -51,7 +51,7 @@ const RelatedBlogPosts = ({
               <LazyImage
                 src={cdnImage(post.heroImage, { width: 900, quality: 70, fit: 'cover' })}
                 fallbackSrc={post.heroImage}
-                alt={`${post.title} - Arctic Pulizie Brescia`}
+                alt={`${post.title} - Artic Pulizie Brescia`}
                 className="w-full h-40 object-cover"
                 width={900}
                 height={360}

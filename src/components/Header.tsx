@@ -42,7 +42,7 @@ const Header = () => {
             <div className="w-12 h-12 md:w-14 md:h-14 flex items-center justify-center">
               <img 
                 src="https://i.imgur.com/ks6yQn1.png" 
-                alt="Arctic Clean logo" 
+                alt="Artic Clean logo" 
                 className="w-full h-full object-contain"
                 width={56}
                 height={56}
@@ -50,7 +50,7 @@ const Header = () => {
               />
             </div>
             <div>
-              <h1 className="text-lg md:text-xl font-bold text-slate-900">Arctic Clean</h1>
+              <h1 className="text-lg md:text-xl font-bold text-slate-900">Artic Clean</h1>
             </div>
           </Link>
 

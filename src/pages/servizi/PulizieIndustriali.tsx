@@ -15,7 +15,7 @@ const faqSchema = [
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "Quali ambienti industriali pulisce Arctic Pulizie?",
+        "name": "Quali ambienti industriali pulisce Artic Pulizie?",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "Puliamo capannoni, magazzini, stabilimenti produttivi, linee di produzione e impianti industriali in tutta la provincia di Brescia."
@@ -109,9 +109,9 @@ const PulizieIndustriali = () => {
   return (
     <div className="pt-24 pb-20">
       <SEO
-        title="Pulizie Industriali a Brescia | Arctic Pulizie"
-        description="Pulizie industriali e manutenzione capannoni a Brescia con macchinari professionali e protocolli certificati. Arctic Pulizie garantisce sicurezza e continuità produttiva."
-        keywords="pulizie industriali brescia, pulizia capannoni brescia, pulizie fabbriche arctic pulizie, manutenzione industriale brescia"
+        title="Pulizie Industriali a Brescia | Artic Pulizie"
+        description="Pulizie industriali e manutenzione capannoni a Brescia con macchinari professionali e protocolli certificati. Artic Pulizie garantisce sicurezza e continuità produttiva."
+        keywords="pulizie industriali brescia, pulizia capannoni brescia, pulizie fabbriche artic pulizie, manutenzione industriale brescia"
         canonical={buildCanonicalUrl('/servizi/pulizie-industriali')}
         structuredData={faqSchema}
       />
@@ -143,7 +143,7 @@ const PulizieIndustriali = () => {
             <div>
               <LazyImage
                 src={cdnImage('https://i.imgur.com/ja4pwgZ.png', { width: 1280, quality: 80 })}
-                alt="Pulizie industriali a Brescia con Arctic Pulizie"
+                alt="Pulizie industriali a Brescia con Artic Pulizie"
                 className="w-full h-96 object-cover rounded-xl shadow-lg"
                 width={640}
                 height={540}
@@ -321,7 +321,7 @@ const PulizieIndustriali = () => {
 
       <RelatedBlogPosts serviceIds={['pulizie-industriali']} />
 
-      <InternalLinkSection title="Collegamenti per responsabili di stabilimento" intro="Approfondisci rapidamente gli altri contenuti Arctic Pulizie: elenco servizi, zone operative, recensioni clienti industriali e richiesta preventivo." />
+      <InternalLinkSection title="Collegamenti per responsabili di stabilimento" intro="Approfondisci rapidamente gli altri contenuti Artic Pulizie: elenco servizi, zone operative, recensioni clienti industriali e richiesta preventivo." />
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-br from-slate-900 to-slate-800">

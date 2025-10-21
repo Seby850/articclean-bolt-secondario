@@ -5,7 +5,7 @@ const coreLinks = [
   {
     to: '/servizi',
     title: 'Servizi di Pulizia',
-    description: 'Scopri l\'intera offerta Arctic Pulizie per imprese, condomini e ambienti speciali.'
+    description: 'Scopri l\'intera offerta Artic Pulizie per imprese, condomini e ambienti speciali.'
   },
   {
     to: '/dove-operiamo',
@@ -15,7 +15,7 @@ const coreLinks = [
   {
     to: '/recensioni',
     title: 'Recensioni Clienti',
-    description: 'Leggi le testimonianze di aziende e condomini che hanno scelto Arctic Pulizie.'
+    description: 'Leggi le testimonianze di aziende e condomini che hanno scelto Artic Pulizie.'
   },
   {
     to: '/richiedi-preventivo',

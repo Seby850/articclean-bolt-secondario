@@ -21,7 +21,7 @@ Garantiamo ambienti di lavoro impeccabili per Brescia, con interventi programmat
 
 **Intro:**
 ```
-Nel cuore della provincia di Brescia, Arctic Clean Service offre servizi di pulizia professionale
+Nel cuore della provincia di Brescia, Artic Clean Service offre servizi di pulizia professionale
 per uffici, studi professionali e spazi direzionali, con particolare attenzione alle esigenze
 delle aziende situate in centro città, nella zona Lamarmora, a Urago Mella e nei pressi della
 Poliambulanza.
@@ -149,7 +149,7 @@ digitali per ogni intervento.
 Standard operativi e garanzie di qualità
 
 Ogni intervento di pulizia viene eseguito seguendo protocolli operativi standardizzati
-e certificati, garantendo risultati costanti e misurabili nel tempo. Il personale Arctic
+e certificati, garantendo risultati costanti e misurabili nel tempo. Il personale Artic
 Clean è regolarmente formato su tecniche di pulizia professionale, utilizzo corretto
 di macchinari e prodotti, e normative di sicurezza sul lavoro.
 

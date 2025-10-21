@@ -17,7 +17,7 @@ const servicesPageStructuredData = [
         "name": "Quali servizi di pulizia offrite a Brescia?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Arctic Pulizie offre servizi di pulizia professionale per uffici, condomini, industrie, vetrate, post-cantiere, giardinaggio e gestione carrellati in tutta la provincia di Brescia."
+          "text": "Artic Pulizie offre servizi di pulizia professionale per uffici, condomini, industrie, vetrate, post-cantiere, giardinaggio e gestione carrellati in tutta la provincia di Brescia."
         }
       },
       {
@@ -241,9 +241,9 @@ const Servizi = () => {
   return (
     <div className="pt-24 pb-20">
       <SEO
-        title="Servizi di Pulizia Professionali a Brescia | Arctic Pulizie"
-        description="Pulizie uffici, condomini, industrie, vetrate, post-cantiere e giardinaggio a Brescia. Arctic Pulizie prepara preventivi in 24 ore con squadre dedicate."
-        keywords="servizi pulizie brescia, pulizie professionali brescia, pulizie uffici arctic pulizie, pulizie condomini brescia"
+        title="Servizi di Pulizia Professionali a Brescia | Artic Pulizie"
+        description="Pulizie uffici, condomini, industrie, vetrate, post-cantiere e giardinaggio a Brescia. Artic Pulizie prepara preventivi in 24 ore con squadre dedicate."
+        keywords="servizi pulizie brescia, pulizie professionali brescia, pulizie uffici artic pulizie, pulizie condomini brescia"
         canonical={buildCanonicalUrl('/servizi')}
         structuredData={servicesPageStructuredData}
       />
@@ -399,7 +399,7 @@ const Servizi = () => {
 
       <RelatedBlogPosts serviceIds={services.map((service) => service.id)} title="Dal nostro blog: consigli per ogni servizio" />
 
-      <InternalLinkSection title="Pagine principali di Arctic Pulizie" intro="Accedi velocemente ai contenuti chiave per conoscere l'azienda, le zone servite, le recensioni e richiedere un preventivo personalizzato." />
+      <InternalLinkSection title="Pagine principali di Artic Pulizie" intro="Accedi velocemente ai contenuti chiave per conoscere l'azienda, le zone servite, le recensioni e richiedere un preventivo personalizzato." />
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-br from-slate-900 to-slate-800">
