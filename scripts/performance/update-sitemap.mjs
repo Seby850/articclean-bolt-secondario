@@ -11,7 +11,7 @@ import path from 'node:path';
 const APP_FILE = path.resolve('src/App.tsx');
 const OUTPUT_FILE = path.resolve('public/sitemap.xml');
 const BLOG_POSTS_FILE = path.resolve('content/blog/posts.json');
-const BASE_URL = 'https://www.arcticpulizie.it';
+const BASE_URL = 'https://www.articpulizie.it';
 
 const buildUrl = (route) => {
   if (route === '/') return BASE_URL;

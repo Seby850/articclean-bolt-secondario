@@ -1,7 +1,7 @@
-# 🧩 PRD – Parte 1: Ottimizzazione SEO On-Page per www.arcticpulizie.it
+# 🧩 PRD – Parte 1: Ottimizzazione SEO On-Page per www.articpulizie.it
 
 ## 🎯 Obiettivo
-Ottimizzare ogni pagina del sito *www.arcticpulizie.it* per massimizzare la visibilità organica locale e settoriale (“impresa di pulizie Brescia”, “pulizie uffici Brescia”, “sanificazione ambienti”, ecc.), migliorando struttura, tag, e contenuti in ottica SEO.
+Ottimizzare ogni pagina del sito *www.articpulizie.it* per massimizzare la visibilità organica locale e settoriale (“impresa di pulizie Brescia”, “pulizie uffici Brescia”, “sanificazione ambienti”, ecc.), migliorando struttura, tag, e contenuti in ottica SEO.
 
 ---
 
@@ -42,7 +42,7 @@ Aggiungere un tag canonical univoco per ogni pagina:
 
 bash
 Copy code
-<link rel="canonical" href="https://www.arcticpulizie.it/[slug]" />
+<link rel="canonical" href="https://www.articpulizie.it/[slug]" />
 Robots:
 php-template
 Copy code
@@ -79,7 +79,7 @@ Copy code
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "Arctic Pulizie",
-  "image": "https://www.arcticpulizie.it/assets/logo.webp",
+  "image": "https://www.articpulizie.it/assets/logo.webp",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Via [INDIRIZZO]",
@@ -88,7 +88,7 @@ Copy code
     "addressCountry": "IT"
   },
   "telephone": "+39 [NUMERO]",
-  "url": "https://www.arcticpulizie.it",
+  "url": "https://www.articpulizie.it",
   "priceRange": "€€",
   "areaServed": "Brescia e provincia"
 }

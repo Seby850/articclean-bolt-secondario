@@ -1,7 +1,7 @@
 export const siteMetadata = {
   siteName: 'Arctic Pulizie',
   legalName: 'Arctic Pulizie Srl',
-  baseUrl: 'https://www.arcticpulizie.it',
+  baseUrl: 'https://www.articpulizie.it',
   brandTagline: 'Impresa di Pulizie a Brescia e Provincia',
   phone: '+39 030 987 6543',
   email: 'info@arcticpulizie.it',
@@ -11,7 +11,7 @@ export const siteMetadata = {
   province: 'BS',
   countryCode: 'IT',
   areaServed: 'Brescia e provincia',
-  logoUrl: 'https://www.arcticpulizie.it/assets/logo.svg',
+  logoUrl: 'https://www.articpulizie.it/assets/logo.svg',
   socialProfiles: [
     'https://www.facebook.com/arcticpulizie',
     'https://www.instagram.com/arcticpulizie'
