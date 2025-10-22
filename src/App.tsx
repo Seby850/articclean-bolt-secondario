@@ -22,6 +22,8 @@ const RichidiPreventivo = lazy(() => import('./pages/RichidiPreventivo'));
 const ServizioLocaleDynamic = lazy(() => import('./pages/ServizioLocaleDynamic'));
 const Blog = lazy(() => import('./pages/Blog'));
 const BlogPost = lazy(() => import('./pages/blog/BlogPost'));
+const FAQ = lazy(() => import('./pages/FAQ'));
+const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'));
 
 const LoadingSpinner = () => (
   <div className="min-h-screen flex items-center justify-center">
@@ -54,6 +56,8 @@ function App() {
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/richiedi-preventivo" element={<RichidiPreventivo />} />
+          <Route path="/faq" element={<FAQ />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         </Routes>
       </Suspense>
       <Footer />
