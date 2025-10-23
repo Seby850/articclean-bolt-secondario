@@ -11,9 +11,14 @@ interface NearbyLocation {
 }
 
 const nearbyLocationsMap: Record<string, string[]> = {
-  'brescia': ['rezzato', 'concesio', 'castenedolo', 'travagliato'],
+  'brescia': ['brescia-centro', 'brescia-sud', 'san-polo', 'borgo-trento'],
+  'brescia-centro': ['brescia', 'borgo-trento', 'san-polo', 'fornaci'],
+  'borgo-trento': ['brescia', 'brescia-centro', 'sarezzo', 'concesio'],
+  'brescia-sud': ['brescia', 'san-polo', 'fornaci', 'montichiari'],
+  'san-polo': ['brescia', 'brescia-sud', 'fornaci', 'castenedolo'],
+  'fornaci': ['brescia-sud', 'san-polo', 'brescia', 'montichiari'],
   'desenzano-del-garda': ['lonato-del-garda', 'salo', 'montichiari', 'brescia'],
-  'montichiari': ['ghedi', 'castenedolo', 'lonato-del-garda', 'rezzato'],
+  'montichiari': ['ghedi', 'castenedolo', 'lonato-del-garda', 'brescia-sud'],
   'ghedi': ['montichiari', 'castenedolo', 'rezzato', 'brescia'],
   'chiari': ['rovato', 'palazzolo-oglio', 'orzinuovi', 'travagliato'],
   'rovato': ['chiari', 'palazzolo-oglio', 'travagliato', 'orzinuovi'],
@@ -21,11 +26,15 @@ const nearbyLocationsMap: Record<string, string[]> = {
   'lonato-del-garda': ['desenzano-del-garda', 'montichiari', 'salo', 'brescia'],
   'palazzolo-oglio': ['chiari', 'rovato', 'travagliato', 'orzinuovi'],
   'salo': ['desenzano-del-garda', 'lonato-del-garda', 'rezzato', 'brescia'],
-  'castenedolo': ['rezzato', 'brescia', 'montichiari', 'ghedi'],
-  'sarezzo': ['concesio', 'brescia', 'rezzato', 'travagliato'],
+  'castenedolo': ['rezzato', 'brescia-sud', 'montichiari', 'ghedi'],
+  'sarezzo': ['concesio', 'brescia', 'borgo-trento', 'travagliato'],
   'orzinuovi': ['chiari', 'rovato', 'palazzolo-oglio', 'travagliato'],
-  'concesio': ['brescia', 'sarezzo', 'rezzato', 'travagliato'],
-  'travagliato': ['rovato', 'chiari', 'palazzolo-oglio', 'brescia']
+  'concesio': ['brescia', 'sarezzo', 'borgo-trento', 'rezzato'],
+  'travagliato': ['rovato', 'chiari', 'palazzolo-oglio', 'brescia'],
+  'bergamo': ['brescia', 'milano-est', 'mantova', 'cremona'],
+  'cremona': ['brescia', 'mantova', 'bergamo', 'milano-est'],
+  'mantova': ['brescia', 'cremona', 'montichiari', 'bergamo'],
+  'milano-est': ['brescia', 'bergamo', 'cremona', 'mantova']
 };
 
 export const getRelatedServices = (currentServiceId: string, locationId: string): RelatedService[] => {

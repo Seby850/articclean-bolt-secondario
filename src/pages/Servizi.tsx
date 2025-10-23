@@ -47,8 +47,8 @@ const Servizi = () => {
         "Riduzione assenze per malattia",
         "Immagine aziendale impeccabile"
       ],
-      image: cdnImage('https://i.imgur.com/RAZaa1z.jpeg', { width: 1200, quality: 75 }),
-      fallbackImage: 'https://i.imgur.com/RAZaa1z.jpeg'
+      image: cdnImage('https://images.pexels.com/photos/6195129/pexels-photo-6195129.jpeg?auto=compress&cs=tinysrgb&w=1200', { width: 1200, quality: 75, fit: 'cover' }),
+      fallbackImage: 'https://images.pexels.com/photos/6195129/pexels-photo-6195129.jpeg?auto=compress&cs=tinysrgb&w=1200'
     },
     {
       id: 'industriale',
@@ -69,8 +69,8 @@ const Servizi = () => {
         "Prevenzione incidenti",
         "Mantenimento efficienza impianti"
       ],
-      image: cdnImage('https://i.imgur.com/ja4pwgZ.png', { width: 1200, quality: 80 }),
-      fallbackImage: 'https://i.imgur.com/ja4pwgZ.png'
+      image: cdnImage('https://images.pexels.com/photos/4484078/pexels-photo-4484078.jpeg?auto=compress&cs=tinysrgb&w=1200', { width: 1200, quality: 80, fit: 'cover' }),
+      fallbackImage: 'https://images.pexels.com/photos/4484078/pexels-photo-4484078.jpeg?auto=compress&cs=tinysrgb&w=1200'
     },
     {
       id: 'post-cantiere',
@@ -91,8 +91,8 @@ const Servizi = () => {
         "Rimozione completa detriti",
         "Risparmio di tempo e costi"
       ],
-      image: cdnImage('https://i.imgur.com/eUBWEu3.jpeg', { width: 1200, quality: 80 }),
-      fallbackImage: 'https://i.imgur.com/eUBWEu3.jpeg'
+      image: cdnImage('https://images.pexels.com/photos/8467975/pexels-photo-8467975.jpeg?auto=compress&cs=tinysrgb&w=1200', { width: 1200, quality: 80, fit: 'cover' }),
+      fallbackImage: 'https://images.pexels.com/photos/8467975/pexels-photo-8467975.jpeg?auto=compress&cs=tinysrgb&w=1200'
     },
     {
       id: 'vetri',
@@ -113,8 +113,8 @@ const Servizi = () => {
         "Maggiore durata delle superfici",
         "Risparmio energetico illuminazione"
       ],
-      image: cdnImage('https://i.imgur.com/mwIw3dd.jpeg', { width: 1200, quality: 80 }),
-      fallbackImage: 'https://i.imgur.com/mwIw3dd.jpeg'
+      image: cdnImage('https://images.pexels.com/photos/7735355/pexels-photo-7735355.jpeg?auto=compress&cs=tinysrgb&w=1200', { width: 1200, quality: 80, fit: 'cover' }),
+      fallbackImage: 'https://images.pexels.com/photos/7735355/pexels-photo-7735355.jpeg?auto=compress&cs=tinysrgb&w=1200'
     },
     {
       id: 'sanificazione',

@@ -167,13 +167,13 @@ const PulizieVetri = () => {
               </Link>
             </div>
             <div>
-              <LazyImage 
-                src={cdnImage('https://i.imgur.com/mwIw3dd.jpeg', { width: 1280, quality: 80 })}
+              <LazyImage
+                src={cdnImage('https://images.pexels.com/photos/7735355/pexels-photo-7735355.jpeg?auto=compress&cs=tinysrgb&w=1280', { width: 1280, quality: 80 })}
                 alt="Pulizia vetri a Brescia con Artic Pulizie"
                 className="w-full h-96 object-cover rounded-xl shadow-lg"
                 width={640}
                 height={540}
-                fallbackSrc="https://i.imgur.com/mwIw3dd.jpeg"
+                fallbackSrc="https://images.pexels.com/photos/7735355/pexels-photo-7735355.jpeg?auto=compress&cs=tinysrgb&w=1280"
               />
             </div>
           </div>

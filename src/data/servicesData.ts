@@ -144,7 +144,42 @@ export const locations: Location[] = [
     name: 'Brescia',
     slug: 'brescia',
     province: 'Brescia',
-    area: 'centro città'
+    area: 'Comune capoluogo'
+  },
+  {
+    id: 'brescia-centro',
+    name: 'Brescia Centro',
+    slug: 'brescia-centro',
+    province: 'Brescia',
+    area: 'Centro storico e affari'
+  },
+  {
+    id: 'borgo-trento',
+    name: 'Borgo Trento',
+    slug: 'borgo-trento',
+    province: 'Brescia',
+    area: 'Quartiere nord cittadino'
+  },
+  {
+    id: 'brescia-sud',
+    name: 'Brescia Sud',
+    slug: 'brescia-sud',
+    province: 'Brescia',
+    area: 'Zona industriale'
+  },
+  {
+    id: 'san-polo',
+    name: 'San Polo',
+    slug: 'san-polo',
+    province: 'Brescia',
+    area: 'Quartiere sud-est'
+  },
+  {
+    id: 'fornaci',
+    name: 'Fornaci',
+    slug: 'fornaci',
+    province: 'Brescia',
+    area: 'Area artigianale e logistica'
   },
   {
     id: 'desenzano-del-garda',
@@ -243,5 +278,33 @@ export const locations: Location[] = [
     slug: 'travagliato',
     province: 'Brescia',
     area: 'bassa bresciana ovest'
+  },
+  {
+    id: 'bergamo',
+    name: 'Bergamo',
+    slug: 'bergamo',
+    province: 'Bergamo',
+    area: 'Provincia di Bergamo'
+  },
+  {
+    id: 'cremona',
+    name: 'Cremona',
+    slug: 'cremona',
+    province: 'Cremona',
+    area: 'Provincia di Cremona'
+  },
+  {
+    id: 'mantova',
+    name: 'Mantova',
+    slug: 'mantova',
+    province: 'Mantova',
+    area: 'Provincia di Mantova'
+  },
+  {
+    id: 'milano-est',
+    name: 'Milano Est',
+    slug: 'milano-est',
+    province: 'Milano',
+    area: 'Area metropolitana Est'
   }
 ];

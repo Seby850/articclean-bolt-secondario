@@ -25,6 +25,87 @@ const contentDatabase: Record<string, Record<string, any>> = {
       area: 'Operiamo in tutto il comune di Brescia, con particolare focus su Brescia Centro, Lamarmora, zona Poliambulanza, San Polo e Mompiano. I nostri servizi raggiungono anche Rezzato, Castenedolo, Concesio e tutti i comuni della prima cintura bresciana. La posizione strategica della nostra sede ci permette di intervenire rapidamente ovunque nella città e provincia.',
       cta: 'Cercate un\'impresa di pulizie affidabile per il vostro ufficio a Brescia? Chiamateci per un sopralluogo gratuito nel vostro quartiere, che sia il centro storico o le zone più moderne. Rispondiamo entro 24 ore con un preventivo personalizzato e trasparente.'
     },
+    'brescia-centro': {
+      h1: 'Pulizie Uffici Brescia Centro – Squadre Rapide nel Cuore della Città',
+      metaTitle: 'Pulizie Uffici Brescia Centro',
+      metaDescription: 'Pulizie uffici Brescia Centro per studi professionali e sedi aziendali tra Piazza Vittoria e via San Faustino. Team Artic Clean Service attivo con interventi serali o mattutini.',
+      intro: 'Nel centro storico di Brescia, tra Piazza della Loggia, Corso Zanardelli e il distretto finanziario, manteniamo uffici, studi legali e sedi direzionali sempre pronti ad accogliere clienti e partner. Pianifichiamo gli interventi negli orari con meno traffico, gestendo accessi in ZTL e garantendo massima discrezione.',
+      whyChoose: 'Conosciamo permessi, zone carico-scarico e limiti dei palazzi storici del centro città. Utilizziamo macchinari compatti, prodotti anti-aloni e protocolli studiati per ambienti di rappresentanza, sale riunioni e reception con pavimenti pregiati.',
+      area: 'Serviamo ogni giorno Piazza Vittoria, via San Faustino, il Quartiere Carmine, Corso Palestro e gli edifici direzionali di via Gramsci e via San Rocchino. Gestiamo anche uffici situati all’interno della ZTL con accessi programmati.',
+      cta: 'Richiedi un sopralluogo nel tuo ufficio a Brescia Centro: organizziamo interventi veloci e coordinati con i tuoi orari di apertura riducendo al minimo ogni intralcio.'
+    },
+    'borgo-trento': {
+      h1: 'Pulizie Uffici Borgo Trento Brescia – Soluzioni per Studi e Cliniche',
+      metaTitle: 'Pulizie Uffici Borgo Trento Brescia',
+      metaDescription: 'Pulizie uffici Borgo Trento Brescia: Artic Clean Service supporta cliniche, studi medici e imprese tra via Veneto e l’Ospedale Civile con protocolli certificati.',
+      intro: 'Nel quartiere Borgo Trento lavoriamo a fianco di studi medici, cliniche private, poliambulatori e uffici di servizi situati tra via Veneto, via Bianchi e l’Ospedale Civile. Garantiamo ambienti sanificati e ordinati, rispettando i momenti di massima affluenza di pazienti e dipendenti.',
+      whyChoose: 'Le nostre squadre adottano protocolli igienico-sanitari specifici per ambienti clinici e uffici amministrativi collegati alle strutture ospedaliere. Programmiamo turni serali o nelle fasce di minor afflusso per non interferire con visite, analisi e attività di back office.',
+      area: 'Copriamo Borgo Trento, Mompiano, via Oberdan, via Bonomelli e il corridoio che conduce alla metropolitana Europa. Estendiamo i servizi anche ai poli universitari e alle RSA del quartiere.',
+      cta: 'Contattaci per un piano pulizie su misura a Borgo Trento: assegnamo un referente dedicato e garantiamo report di qualità condivisi con la tua struttura.'
+    },
+    'brescia-sud': {
+      h1: 'Pulizie Uffici Brescia Sud – Supporto alle Aree Industriali',
+      metaTitle: 'Pulizie Uffici Brescia Sud',
+      metaDescription: 'Pulizie uffici e reparti direzionali Brescia Sud: squadre Artic Clean Service per aziende logistiche e manifatturiere di via Orzinuovi, Lamarmora e Chiesanuova.',
+      intro: 'Nella zona sud di Brescia gestiamo gli uffici amministrativi e le sale meeting di aziende produttive e logistiche presenti a Lamarmora, via Orzinuovi e Chiesanuova. Coordiniamo interventi rapidi tra un turno e l’altro, mantenendo in ordine reception, uffici tecnici e aree break.',
+      whyChoose: 'Siamo abituati a muoverci in stabilimenti con traffico di mezzi pesanti e orari produttivi estesi. Predisponiamo squadre dedicate con badge personalizzati, utilizzando macchinari industriali ma compatti per non interferire con le linee operative.',
+      area: 'Serviamo l’intero quadrante di Brescia Sud: dalla zona industriale di Lamarmora a Buffalora, includendo Fornaci, San Zeno e l’asse di via del Mella. Possiamo integrare anche la pulizia di sale controllo e spogliatoi.',
+      cta: 'Richiedi un preventivo per il tuo ufficio a Brescia Sud: definiremo insieme un programma che rispetta i turni produttivi e gli accessi di visitatori e fornitori.'
+    },
+    'san-polo': {
+      h1: 'Pulizie Uffici San Polo Brescia – Interventi Programmati per PMI e Coworking',
+      metaTitle: 'Pulizie Uffici San Polo Brescia',
+      metaDescription: 'Pulizie uffici San Polo Brescia: Artic Clean Service mantiene uffici, coworking e sedi associative nel grande quartiere sud-est con calendari flessibili.',
+      intro: 'San Polo e Sanpolino ospitano PMI, cooperative e spazi condivisi. Organizziamo pulizie ordinarie e straordinarie per uffici open space, studi tecnici e sedi associative, mantenendo ambienti accoglienti per dipendenti e cittadini.',
+      whyChoose: 'Abbiamo squadre dedicate che conoscono il quartiere e intervengono anche nelle ore serali o nei weekend per non disturbare le attività. Utilizziamo prodotti a bassa emissione e attrezzature silenziose ideali per ambienti condivisi e spazi formativi.',
+      area: 'Copriamo l’intero quartiere San Polo, Sanpolino e la connessione rapida alla tangenziale sud, servendo anche scuole, sportelli pubblici e poli tecnologici come il Musil.',
+      cta: 'Prenota una consulenza gratuita per il tuo ufficio a San Polo: creeremo un piano di pulizie flessibile con monitoraggio digitale della qualità.'
+    },
+    'fornaci': {
+      h1: 'Pulizie Uffici Fornaci Brescia – Servizio Dedicato alla Zona Artigianale',
+      metaTitle: 'Pulizie Uffici Fornaci Brescia',
+      metaDescription: 'Pulizie uffici Fornaci Brescia: team Artic Clean Service per showroom, magazzini e reparti amministrativi lungo via del Mella e via Orzinuovi.',
+      intro: 'Nel quartiere Fornaci affianchiamo laboratori artigianali, negozi showroom e sedi amministrative collegate a reparti produttivi. Manteniamo ingressi clienti, uffici commerciali e sale riunioni sempre pronti anche quando adiacenti a linee di produzione.',
+      whyChoose: 'Sappiamo gestire polveri di lavorazione e flussi continui di merci, organizzando pulizie coordinate con scarichi e carichi. I nostri operatori usano macchinari compatti e prodotti professionali che preservano pavimenti industriali e superfici di rappresentanza.',
+      area: 'Serviamo Fornaci, Volta, la fascia di via del Mella e l’area commerciale di via Orzinuovi fino al confine con Roncadelle. Possiamo integrare anche pulizie di magazzini e show-room aperti al pubblico.',
+      cta: 'Parliamo del tuo ufficio a Fornaci: proponiamo piani integrati con i reparti produttivi per garantirti un solo referente operativo e risultati costanti.'
+    },
+    'bergamo': {
+      h1: 'Pulizie Uffici a Bergamo – Squadre Certificate per Aziende e Studi',
+      metaTitle: 'Pulizie Uffici Bergamo',
+      metaDescription: 'Pulizie uffici Bergamo e hinterland: Artic Clean Service garantisce ambienti impeccabili per sedi direzionali, PMI e poli logistici con controllo qualità continuo.',
+      intro: 'Estendiamo i servizi di pulizia uffici alla città di Bergamo e al territorio limitrofo, collaborando con aziende manifatturiere, studi professionali e poli logistici. Coordiniamo squadre locali che operano in Città Bassa, nei business park di Stezzano e nelle zone industriali di Dalmine e Grassobbio.',
+      whyChoose: 'Grazie a referenti di zona garantiamo tempi di intervento rapidi e livelli qualitativi monitorati digitalmente. Utilizziamo protocolli già sperimentati su realtà multi-sede lombarde, mantenendo uniformità di materiali e check list.',
+      area: 'Copriamo Bergamo, Dalmine, Stezzano, Seriate, Orio al Serio e i distretti logistici lungo l’autostrada A4, integrando anche sanificazioni programmate per sale meeting e open space.',
+      cta: 'Richiedi un preventivo per la tua sede di Bergamo: organizziamo sopralluogo e calendario interventi coordinati con eventuali altre filiali in Lombardia.'
+    },
+    'cremona': {
+      h1: 'Pulizie Uffici a Cremona – Interventi per Studi e Cooperative',
+      metaTitle: 'Pulizie Uffici Cremona',
+      metaDescription: 'Pulizie uffici Cremona: squadre Artic Clean Service per studi professionali, cooperative e aziende agroalimentari con ambienti direzionali a contatto con la produzione.',
+      intro: 'A Cremona supportiamo studi professionali, cooperative e realtà agroalimentari che necessitano uffici sempre in ordine accanto ai reparti produttivi. Operiamo in città e nell’area industriale di Porto Canale con protocolli controllati e prodotti certificati.',
+      whyChoose: 'Offriamo referenti dedicati e team formati sulle normative igieniche del settore food, curando archivi, sale riunioni e reception collegate agli stabilimenti produttivi. Forniamo reportistica puntuale a supporto delle verifiche interne.',
+      area: 'Copriamo Cremona, Castelverde, Persichello e il corridoio verso Piacenza, intervenendo anche nei poli logistici e nei consorzi cooperativi del territorio.',
+      cta: 'Contattaci per organizzare un sopralluogo nei tuoi uffici a Cremona: elaboriamo un piano personalizzato coordinato con le esigenze produttive della tua azienda.'
+    },
+    'mantova': {
+      h1: 'Pulizie Uffici a Mantova – Partner per Aziende Manifatturiere',
+      metaTitle: 'Pulizie Uffici Mantova',
+      metaDescription: 'Pulizie uffici Mantova: Artic Clean Service cura sedi amministrative, show-room e centri assistenza nelle aree industriali di Valdaro e Bagnolo San Vito.',
+      intro: 'A Mantova seguiamo gli uffici delle realtà manifatturiere e logistiche che operano tra Valdaro, Curtatone e Bagnolo San Vito. Manteniamo in perfetto ordine sale accoglienza clienti, direzioni commerciali e spazi amministrativi collegati agli stabilimenti.',
+      whyChoose: 'Coordiniamo squadre formate per ambienti industriali, rispettando badge di accesso e procedure sicurezza. Interveniamo in orari serali o nel fine settimana per adattarci alle linee produttive.',
+      area: 'Serviamo Mantova, il porto intermodale di Valdaro, Bagnolo San Vito, Curtatone e Goito, con possibilità di estendere gli interventi agli showroom di provincia.',
+      cta: 'Scrivici per ricevere un piano pulizie dedicato alla tua sede mantovana: un unico referente gestirà uffici, sale formazione e front office garantendo costanza nel tempo.'
+    },
+    'milano-est': {
+      h1: 'Pulizie Uffici Milano Est – Supporto a Filiali e Business Park',
+      metaTitle: 'Pulizie Uffici Milano Est',
+      metaDescription: 'Pulizie uffici Milano Est: Artic Clean Service copre Segrate, Cernusco, Lambrate e l’area Idroscalo con squadre dedicate a filiali commerciali e business park.',
+      intro: 'Nel quadrante est di Milano assistiamo aziende con sedi direzionali, data center e filiali commerciali a Lambrate, Segrate, Cernusco sul Naviglio e Pioltello. Pianifichiamo pulizie in linea con le esigenze delle strutture aperte al pubblico e dei team che operano su turni internazionali.',
+      whyChoose: 'Mettiamo a disposizione coordinatori che seguono più sedi lombarde, assicurando standard omogenei di materiali, macchinari e controlli qualità. Possiamo intervenire nelle ore serali o nel weekend per non interferire con eventi o attività commerciali.',
+      area: 'Copriamo Milano Est, il centro direzionale Milano Oltre, l’Idroscalo, i poli produttivi di Vimodrone e Rodano e l’asse della Cassanese, integrando servizi di sanificazione certificata.',
+      cta: 'Chiedi un confronto con i nostri consulenti per Milano Est: elaboreremo un piano coordinato con le sedi di Brescia e delle altre province servite, mantenendo un solo referente operativo.'
+    },
     'desenzano-del-garda': {
       h1: 'Pulizie Uffici Desenzano del Garda – Servizi Professionali sul Lago',
       metaTitle: 'Pulizie Uffici Desenzano | Servizi Lago di Garda',
@@ -150,6 +231,59 @@ const contentDatabase: Record<string, Record<string, any>> = {
       whyChoose: 'Optare per noi a Travagliato vuol dire scegliere efficienza e competenza. Molte aziende della zona industriale ovest necessitano di interventi rapidi e programmati per non interferire con i turni logistici. Offriamo questa flessibilità con operatori formati per lavorare anche in ambienti complessi. Utilizziamo macchinari professionali per coprire grandi superfici e garantiamo sempre risultati impeccabili.',
       area: 'Operiamo su tutto il comune di Travagliato, con particolare attenzione alla zona industriale ovest e all\'area del centro fiera. I nostri servizi raggiungono Torbole Casaglia, Roncadelle, Ospitaletto e tutta la bassa ovest. La conoscenza della viabilità ci permette di ottimizzare i percorsi e garantire puntualità.',
       cta: 'La vostra azienda opera a Travagliato o nella zona industriale? Scriveteci per un preventivo dettagliato. Interveniamo nell\'area fiera, zona logistica e in tutto il territorio comunale con soluzioni su misura.'
+    }
+  },
+  'pulizie-industriali': {
+    'brescia': {
+      h1: 'Pulizie Industriali Brescia – Manutenzione Capannoni e Stabilimenti',
+      metaTitle: 'Pulizie Industriali Brescia',
+      metaDescription: 'Pulizie industriali a Brescia per capannoni, logistica e aree produttive con macchinari professionali e protocolli certificati.',
+      intro: 'A Brescia supportiamo stabilimenti metalmeccanici, automotive e logistici situati tra via Orzinuovi, Castenedolo e la Val Trompia. Interveniamo con lavasciuga industriali, aspiratori ad alta potenza e prodotti sgrassanti certificati per mantenere reparti e magazzini sempre operativi.',
+      whyChoose: 'Disponiamo di squadre formate su sicurezza, DPI e protocolli HACCP quando richiesto. Coordiniamo interventi serali o notturni per non fermare la produzione, gestendo pulizie in quota, trattamenti antipolvere e lavaggi straordinari delle pavimentazioni.',
+      area: 'Copriamo Brescia, Rezzato, Montichiari, Ghedi, Concesio e i principali distretti industriali della provincia, con piani programmati e interventi straordinari su chiamata.',
+      cta: 'Richiedi un piano di pulizie industriali per il tuo stabilimento bresciano: definiamo check-list dedicate a reparti produttivi, aree logistiche e uffici tecnici.'
+    },
+    'bergamo': {
+      h1: 'Pulizie Industriali Bergamo – Squadre Specializzate per Reparti Produttivi',
+      metaTitle: 'Pulizie Industriali Bergamo',
+      metaDescription: 'Pulizie industriali Bergamo: Artic Clean Service serve capannoni e poli logistici di Dalmine, Stezzano e Seriate con squadre certificate.',
+      intro: 'Nel territorio bergamasco interveniamo su aziende meccaniche, gomma-plastica e logistiche utilizzando macchinari industriali di ultima generazione. Ci coordiniamo con i responsabili produzione per programmare pulizie durante i fermi linea o nei festivi.',
+      whyChoose: 'Garantiamo operatori con patentino per piattaforme elevabili, formazione sicurezza e procedure specifiche per impianti alimentari o farmaceutici. Gestiamo rimozione oli, polveri sottili e residui di lavorazione in modo controllato.',
+      area: 'Serviamo Bergamo, Stezzano, Seriate, Dalmine, Treviglio e il corridoio dell’A4 fino a Capriate, includendo pulizie di spogliatoi, mense e sale quadri elettrici.',
+      cta: 'Contattaci per una proposta di pulizie industriali a Bergamo: pianificheremo interventi coordinati con i turni logistici e le esigenze dei tuoi reparti produttivi.'
+    }
+  },
+  'pulizie-condomini': {
+    'brescia': {
+      h1: 'Pulizie Condomini Brescia – Gestione Completa di Scale e Aree Comune',
+      metaTitle: 'Pulizie Condomini Brescia',
+      metaDescription: 'Pulizie condomini a Brescia: Artic Clean Service cura scale, ascensori, cortili e carrellati con registri digitali delle attività.',
+      intro: 'Collaboriamo con amministratori e condomìni di Brescia per mantenere scale, ingressi, ascensori e aree verdi sempre curate. Utilizziamo prodotti specifici per marmi, inox e vetri garantendo spazi accoglienti per residenti e visitatori.',
+      whyChoose: 'Programmiamo interventi settimanali o bisettimanali, gestiamo emergenze post lavori edili e offriamo il servizio di movimentazione e lavaggio carrellati. Ogni squadra compila check-list digitali condivise con l’amministratore.',
+      area: 'Operiamo in tutto il comune di Brescia, dal centro storico a San Polo, Mompiano, Lamarmora e nella prima cintura di Rezzato e Concesio, con possibilità di interventi festivi.',
+      cta: 'Richiedi un preventivo per il tuo condominio a Brescia: offriamo contratti trasparenti, report fotografici e supervisione periodica.'
+    }
+  },
+  'sanificazione-ambienti': {
+    'brescia': {
+      h1: 'Sanificazione Ambienti Brescia – Trattamenti Certificati per Aziende e Studi',
+      metaTitle: 'Sanificazione Ambienti Brescia',
+      metaDescription: 'Sanificazione ambienti Brescia: nebulizzazione, ozono e prodotti PMC per uffici, scuole e cliniche con attestazione di intervento.',
+      intro: 'A Brescia offriamo sanificazioni programmate per uffici, studi medici, scuole e ambienti industriali ad alta affluenza. Impieghiamo nebulizzatori elettrostatici, generatori di ozono e prodotti PMC autorizzati dal Ministero della Salute.',
+      whyChoose: 'Stiliamo protocolli personalizzati, rilasciamo attestazioni utili ad audit e ispezioni e registriamo ogni trattamento su report digitali. Le squadre sono formate su dispositivi di protezione e procedure HACCP.',
+      area: 'Interveniamo in città e provincia: Brescia Centro, Poliambulanza, zona industriale, Val Trompia e Lago di Garda, con disponibilità h24 per sanificazioni straordinarie.',
+      cta: 'Prenota una sanificazione certificata a Brescia: programmiamo calendario, prodotti e controlli qualità più adatti ai tuoi ambienti.'
+    }
+  },
+  'pulizie-post-cantiere': {
+    'brescia': {
+      h1: 'Pulizie Post Cantiere Brescia – Consegna Chiavi in Mano',
+      metaTitle: 'Pulizie Post Cantiere Brescia',
+      metaDescription: 'Pulizie post cantiere a Brescia: Artic Clean Service rimuove polveri, residui e adesivi da cantieri civili e industriali con squadre rapide.',
+      intro: 'A Brescia ci occupiamo delle pulizie finali dopo ristrutturazioni e nuove costruzioni di negozi, uffici e appartamenti. Utilizziamo aspiratori industriali, monospazzole e detergenti specifici per vetri, infissi e pavimenti delicati.',
+      whyChoose: 'Coordiniamo interventi anche con tempistiche strette, rimuovendo silicone, stucco e vernici senza intaccare le superfici. Le nostre squadre operano con scale, trabattelli e DPI per raggiungere vetrate e controsoffitti.',
+      area: 'Serviamo il centro storico di Brescia, Sanpolino, Castenedolo, il Lago di Garda e le principali aree produttive della provincia garantendo consegna pronta all’uso.',
+      cta: 'Contattaci per chiudere il cantiere con ambienti pronti alla consegna: organizziamo sopralluogo e preventivo in 24 ore.'
     }
   }
 };

@@ -63,8 +63,8 @@ const Homepage = () => {
       icon: "🏢",
       features: ["Pulizia quotidiana", "Sanificazione postazioni", "Gestione rifiuti"],
       link: "/servizi/pulizie-uffici",
-      image: cdnImage('https://i.imgur.com/RAZaa1z.jpeg', { width: 960, quality: 75 }),
-      fallbackImage: 'https://i.imgur.com/RAZaa1z.jpeg'
+      image: cdnImage('https://images.pexels.com/photos/6195129/pexels-photo-6195129.jpeg?auto=compress&cs=tinysrgb&w=1200', { width: 960, quality: 75 }),
+      fallbackImage: 'https://images.pexels.com/photos/6195129/pexels-photo-6195129.jpeg?auto=compress&cs=tinysrgb&w=1200'
     },
     {
       title: "Pulizie Condomini",
@@ -81,8 +81,8 @@ const Homepage = () => {
       icon: "🏭",
       features: ["Pulizia capannoni", "Aspirazione industriale", "Trattamento pavimenti"],
       link: "/servizi/pulizie-industriali",
-      image: cdnImage('https://i.imgur.com/ja4pwgZ.png', { width: 960, quality: 75 }),
-      fallbackImage: 'https://i.imgur.com/ja4pwgZ.png'
+      image: cdnImage('https://images.pexels.com/photos/4484078/pexels-photo-4484078.jpeg?auto=compress&cs=tinysrgb&w=1200', { width: 960, quality: 75 }),
+      fallbackImage: 'https://images.pexels.com/photos/4484078/pexels-photo-4484078.jpeg?auto=compress&cs=tinysrgb&w=1200'
     },
     {
       title: "Pulizie Vetri e Vetrate",
@@ -90,8 +90,8 @@ const Homepage = () => {
       icon: "✨",
       features: ["Vetri senza aloni", "Interventi in altezza", "Grandi superfici"],
       link: "/servizi/pulizie-vetri",
-      image: cdnImage('https://i.imgur.com/mwIw3dd.jpeg', { width: 960, quality: 75 }),
-      fallbackImage: 'https://i.imgur.com/mwIw3dd.jpeg'
+      image: cdnImage('https://images.pexels.com/photos/7735355/pexels-photo-7735355.jpeg?auto=compress&cs=tinysrgb&w=1200', { width: 960, quality: 75 }),
+      fallbackImage: 'https://images.pexels.com/photos/7735355/pexels-photo-7735355.jpeg?auto=compress&cs=tinysrgb&w=1200'
     },
     {
       title: "Giardinaggio",

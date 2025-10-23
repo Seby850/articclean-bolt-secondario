@@ -161,13 +161,13 @@ const PuliziePostCantiere = () => {
               </Link>
             </div>
             <div>
-              <LazyImage 
-                src={cdnImage('https://i.imgur.com/eUBWEu3.jpeg', { width: 1280, quality: 80 })}
+              <LazyImage
+                src={cdnImage('https://images.pexels.com/photos/8467975/pexels-photo-8467975.jpeg?auto=compress&cs=tinysrgb&w=1280', { width: 1280, quality: 80 })}
                 alt="Pulizie post-cantiere a Brescia con Artic Pulizie"
                 className="w-full h-96 object-cover rounded-xl shadow-lg"
                 width={640}
                 height={540}
-                fallbackSrc="https://i.imgur.com/eUBWEu3.jpeg"
+                fallbackSrc="https://images.pexels.com/photos/8467975/pexels-photo-8467975.jpeg?auto=compress&cs=tinysrgb&w=1280"
               />
             </div>
           </div>

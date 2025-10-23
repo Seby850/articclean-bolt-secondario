@@ -145,12 +145,12 @@ const PulizieIndustriali = () => {
             </div>
             <div>
               <LazyImage
-                src={cdnImage('https://i.imgur.com/ja4pwgZ.png', { width: 1280, quality: 80 })}
+                src={cdnImage('https://images.pexels.com/photos/4484078/pexels-photo-4484078.jpeg?auto=compress&cs=tinysrgb&w=1280', { width: 1280, quality: 80 })}
                 alt="Pulizie industriali a Brescia con Artic Pulizie"
                 className="w-full h-96 object-cover rounded-xl shadow-lg"
                 width={640}
                 height={540}
-                fallbackSrc="https://i.imgur.com/ja4pwgZ.png"
+                fallbackSrc="https://images.pexels.com/photos/4484078/pexels-photo-4484078.jpeg?auto=compress&cs=tinysrgb&w=1280"
               />
             </div>
           </div>

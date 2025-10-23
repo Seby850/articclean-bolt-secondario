@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Send, CheckCircle, AlertCircle, FileText, Building2, Mail, Phone, User } from 'lucide-react';
+import { Send, CheckCircle, AlertCircle, FileText, Phone, User } from 'lucide-react';
 import SEO from '@/components/SEO';
 import InternalLinkSection from '@/components/InternalLinkSection';
 import { buildCanonicalUrl, siteMetadata } from '@/data/siteMetadata';
@@ -10,13 +10,7 @@ const RichidiPreventivo = () => {
     nome: '',
     cognome: '',
     email: '',
-    telefono: '',
-    azienda: '',
-    tipoServizio: '',
-    superficie: '',
-    frequenza: '',
-    indirizzo: '',
-    messaggio: ''
+    telefono: ''
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -75,13 +69,7 @@ const RichidiPreventivo = () => {
           nome: '',
           cognome: '',
           email: '',
-          telefono: '',
-          azienda: '',
-          tipoServizio: '',
-          superficie: '',
-          frequenza: '',
-          indirizzo: '',
-          messaggio: ''
+          telefono: ''
         });
       } else {
         throw new Error('Errore durante l\'invio del modulo');
@@ -94,29 +82,6 @@ const RichidiPreventivo = () => {
       setIsSubmitting(false);
     }
   };
-
-  const tipiServizio = [
-    'Pulizie Uffici',
-    'Pulizie Condomini',
-    'Pulizie Industriali',
-    'Pulizie Post-Cantiere',
-    'Pulizie Vetri e Vetrate',
-    'Sanificazione Ambienti',
-    'Giardinaggio e Manutenzione Verde',
-    'Gestione Carrellati',
-    'Servizi Multipli',
-    'Altro (specificare nel messaggio)'
-  ];
-
-  const opzioniFrequenza = [
-    'Intervento Singolo',
-    'Giornaliera',
-    'Settimanale',
-    'Bisettimanale',
-    'Mensile',
-    'Contratto Periodico Programmato',
-    'Da valutare'
-  ];
 
   if (submitStatus === 'success') {
     return (
@@ -260,118 +225,6 @@ const RichidiPreventivo = () => {
                   />
                 </div>
               </div>
-            </div>
-
-            {/* Azienda */}
-            <div>
-              <h3 className="text-xl font-bold text-slate-900 mb-6 flex items-center">
-                <Building2 className="w-5 h-5 mr-2 text-sky-500" />
-                Dati Aziendali
-              </h3>
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <label className="block text-sm font-semibold text-slate-700 mb-2">
-                    Nome Azienda *
-                  </label>
-                  <input
-                    type="text"
-                    name="azienda"
-                    value={formData.azienda}
-                    onChange={handleInputChange}
-                    required
-                    className="w-full px-4 py-3 border border-slate-200 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent transition-all duration-200"
-                    placeholder="Nome della tua azienda"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-semibold text-slate-700 mb-2">
-                    Indirizzo
-                  </label>
-                  <input
-                    type="text"
-                    name="indirizzo"
-                    value={formData.indirizzo}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-slate-200 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent transition-all duration-200"
-                    placeholder="Via, Città, Provincia"
-                  />
-                </div>
-              </div>
-            </div>
-
-            {/* Servizi */}
-            <div>
-              <h3 className="text-xl font-bold text-slate-900 mb-6 flex items-center">
-                <Mail className="w-5 h-5 mr-2 text-sky-500" />
-                Dettagli del Servizio
-              </h3>
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <label className="block text-sm font-semibold text-slate-700 mb-2">
-                    Tipo di Servizio *
-                  </label>
-                  <select
-                    name="tipoServizio"
-                    value={formData.tipoServizio}
-                    onChange={handleInputChange}
-                    required
-                    className="w-full px-4 py-3 border border-slate-200 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent transition-all duration-200"
-                  >
-                    <option value="">Seleziona un servizio</option>
-                    {tipiServizio.map((servizio) => (
-                      <option key={servizio} value={servizio}>
-                        {servizio}
-                      </option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <label className="block text-sm font-semibold text-slate-700 mb-2">
-                    Superficie (mq)
-                  </label>
-                  <input
-                    type="text"
-                    name="superficie"
-                    value={formData.superficie}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-slate-200 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent transition-all duration-200"
-                    placeholder="es. 200 mq"
-                  />
-                </div>
-              </div>
-              <div className="mt-6">
-                <label className="block text-sm font-semibold text-slate-700 mb-2">
-                  Frequenza Desiderata
-                </label>
-                <select
-                  name="frequenza"
-                  value={formData.frequenza}
-                  onChange={handleInputChange}
-                  className="w-full px-4 py-3 border border-slate-200 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent transition-all duration-200"
-                >
-                  <option value="">Seleziona frequenza</option>
-                  {opzioniFrequenza.map((freq) => (
-                    <option key={freq} value={freq}>
-                      {freq}
-                    </option>
-                  ))}
-                </select>
-              </div>
-            </div>
-
-            {/* Messaggio */}
-            <div>
-              <label className="block text-sm font-semibold text-slate-700 mb-2">
-                Messaggio Aggiuntivo
-              </label>
-              <textarea
-                name="messaggio"
-                value={formData.messaggio}
-                onChange={handleInputChange}
-                rows={5}
-                className="w-full px-4 py-3 border border-slate-200 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent transition-all duration-200"
-                placeholder="Descrivi eventuali esigenze specifiche, orari preferiti, note particolari..."
-              />
             </div>
 
             {/* Error Message */}
