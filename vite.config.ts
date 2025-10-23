@@ -3,6 +3,23 @@ import react from '@vitejs/plugin-react';
 import path from 'path';
 import viteCompression from 'vite-plugin-compression';
 
+const resolveSupabaseStorageAnalytics = () => ({
+  name: 'resolve-supabase-storage-analytics',
+  resolveId(source, importer) {
+    if (
+      source === './packages/StorageAnalyticsApi' &&
+      importer?.includes('@supabase/storage-js/dist/module')
+    ) {
+      return path.resolve(
+        path.dirname(importer),
+        'packages/StorageAnalyticsApi.js'
+      );
+    }
+
+    return null;
+  }
+});
+
 export default defineConfig({
   plugins: [
     react(),
@@ -17,7 +34,8 @@ export default defineConfig({
       ext: '.br',
       threshold: 10240,
       deleteOriginFile: false
-    })
+    }),
+    resolveSupabaseStorageAnalytics()
   ],
   resolve: {
     alias: {
