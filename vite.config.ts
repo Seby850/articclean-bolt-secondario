@@ -11,11 +11,10 @@ const resolveSupabaseStorageAnalytics = () => ({
       importer?.includes('@supabase/storage-js/dist/module')
     ) {
       return path.resolve(
-        path.dirname(importer),
+        path.dirname(importer as string),
         'packages/StorageAnalyticsApi.js'
       );
     }
-
     return null;
   }
 });
@@ -38,25 +37,32 @@ export default defineConfig({
     resolveSupabaseStorageAnalytics()
   ],
   resolve: {
+    // ⚠️ chiave: evita copie multiple
+    dedupe: ['react', 'react-dom', 'react-router-dom'],
     alias: {
-      '@': path.resolve(__dirname, './src')
-    },
-    dedupe: ['react', 'react-dom', 'react-router-dom']
+      '@': path.resolve(__dirname, './src'),
+      // ⚠️ forziamo tutti gli import a puntare alla stessa istanza
+      react: path.resolve(__dirname, 'node_modules/react'),
+      'react/jsx-runtime': path.resolve(__dirname, 'node_modules/react/jsx-runtime.js'),
+      'react-dom': path.resolve(__dirname, 'node_modules/react-dom'),
+      'react-dom/client': path.resolve(__dirname, 'node_modules/react-dom/client')
+    }
+  },
+  optimizeDeps: {
+    // ⚠️ pre-bundle coerente (evita snapshot divergenti)
+    include: ['react', 'react-dom', 'react-router-dom']
   },
   build: {
     target: 'es2015',
     minify: 'terser',
     terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true
-      }
+      compress: { drop_console: true, drop_debugger: true }
     },
     rollupOptions: {
       output: {
         manualChunks: {
           'react-vendor': ['react', 'react-dom', 'react-router-dom'],
-          'icons': ['lucide-react']
+          icons: ['lucide-react']
         },
         chunkFileNames: 'assets/[name]-[hash].js',
         entryFileNames: 'assets/[name]-[hash].js',
@@ -71,13 +77,8 @@ export default defineConfig({
     host: '0.0.0.0',
     port: 5173,
     strictPort: false,
-    headers: {
-      'Cache-Control': 'public, max-age=31536000'
-    },
-    hmr: {
-      protocol: 'ws',
-      host: '127.0.0.1'
-    }
+    headers: { 'Cache-Control': 'public, max-age=31536000' },
+    hmr: { protocol: 'ws', host: '127.0.0.1' }
   },
   preview: {
     host: '0.0.0.0',
@@ -85,3 +86,4 @@ export default defineConfig({
     strictPort: true
   }
 });
+
