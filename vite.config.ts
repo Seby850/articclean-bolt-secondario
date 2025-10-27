@@ -38,11 +38,10 @@ export default defineConfig(({ mode }) => ({
   plugins: [
     react(),
     resolveSupabaseStorageAnalytics(),
-    compression({ algorithm: 'brotliCompress', apply: 'build' }),
-    compression({ algorithm: 'gzip', apply: 'build' }),
-    webfontDownload({
+    compression({ algorithm: 'brotliCompress' }),
+    compression({ algorithm: 'gzip' }),
+    webfontDownload(undefined, {
       injectAsStyleTag: true,
-      flattenDuplicateFonts: true,
       minifyCss: mode === 'production',
     }),
   ],
