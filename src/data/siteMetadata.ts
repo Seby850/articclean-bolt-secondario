@@ -34,7 +34,7 @@ export const siteMetadata = {
   priceRange: '€€',
   paymentAccepted: ['Contanti', 'Bonifico', 'Carta di credito'],
   currenciesAccepted: ['EUR'],
-  logoUrl: 'https://www.articpulizie.it/assets/images/Logo-artic-clean-service-real copy.webp',
+  logoUrl: 'https://www.articpulizie.it/assets/images/logo-artic-clean-service.webp',
   socialProfiles: [
     'https://www.facebook.com/articpulizie',
     'https://www.instagram.com/articpulizie',

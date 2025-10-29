@@ -39,14 +39,14 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center py-2">
-            <div className="w-48 h-auto md:w-64 flex items-center justify-start">
+            <div className="w-56 h-auto md:w-72 flex items-center justify-start">
               <img
-                src="/assets/images/Logo-artic-clean-service-real copy.webp"
+                src="/assets/images/logo-artic-clean-service.webp"
                 alt="Artic Clean Service - Impresa di Pulizie Civili e Industriali dal 2005"
                 className="w-full h-auto object-contain"
-                width={256}
-                height={90}
-                loading="lazy"
+                width={288}
+                height={80}
+                loading="eager"
               />
             </div>
           </Link>
