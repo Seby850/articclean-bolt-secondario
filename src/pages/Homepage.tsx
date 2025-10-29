@@ -81,8 +81,8 @@ const Homepage = () => {
       icon: "🏭",
       features: ["Pulizia capannoni", "Aspirazione industriale", "Trattamento pavimenti"],
       link: "/servizi/pulizie-industriali",
-      image: cdnImage('https://images.pexels.com/photos/4484078/pexels-photo-4484078.jpeg?auto=compress&cs=tinysrgb&w=1200', { width: 960, quality: 75 }),
-      fallbackImage: 'https://images.pexels.com/photos/4484078/pexels-photo-4484078.jpeg?auto=compress&cs=tinysrgb&w=1200'
+      image: '/assets/images/Condor-with-EcoFlex-In-use-Lt.jpg',
+      fallbackImage: '/assets/images/Condor-with-EcoFlex-In-use-Lt.jpg'
     },
     {
       title: "Pulizie Vetri e Vetrate",
