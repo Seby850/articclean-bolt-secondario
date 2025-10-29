@@ -62,7 +62,7 @@ const Homepage = () => {
       description: "Servizi completi per uffici e spazi lavorativi con prodotti professionali e personale qualificato.",
       icon: "🏢",
       features: ["Pulizia quotidiana", "Sanificazione postazioni", "Gestione rifiuti"],
-      link: "/servizi/pulizie-uffici",
+      link: "/servizi/pulizie-uffici/brescia",
       image: '/assets/images/pulizia-ufficio_pavimento-500x380.jpg',
       fallbackImage: '/assets/images/pulizia-ufficio_pavimento-500x380.jpg'
     },
@@ -71,7 +71,7 @@ const Homepage = () => {
       description: "Pulizie professionali per aree comuni condominiali con contratti singoli o periodici programmati.",
       icon: "🏘️",
       features: ["Aree comuni", "Scale e ascensori", "Gestione carrellati"],
-      link: "/servizi/pulizie-condomini",
+      link: "/servizi/pulizie-condomini/brescia",
       image: cdnImage('https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=1200', { width: 960, quality: 70, fit: 'cover' }),
       fallbackImage: 'https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=1200'
     },
@@ -80,7 +80,7 @@ const Homepage = () => {
       description: "Interventi specializzati per capannoni, magazzini e ambienti industriali di ogni dimensione.",
       icon: "🏭",
       features: ["Pulizia capannoni", "Aspirazione industriale", "Trattamento pavimenti"],
-      link: "/servizi/pulizie-industriali",
+      link: "/servizi/pulizie-industriali/brescia",
       image: '/assets/images/Condor-with-EcoFlex-In-use-Lt.jpg',
       fallbackImage: '/assets/images/Condor-with-EcoFlex-In-use-Lt.jpg'
     },
@@ -89,7 +89,7 @@ const Homepage = () => {
       description: "Servizio specializzato per vetri, vetrate e superfici trasparenti di ogni tipo e dimensione.",
       icon: "✨",
       features: ["Vetri senza aloni", "Interventi in altezza", "Grandi superfici"],
-      link: "/servizi/pulizie-vetri",
+      link: "/servizi/pulizia-vetri/brescia",
       image: '/assets/images/window-cleaning-tips.jpg',
       fallbackImage: '/assets/images/window-cleaning-tips.jpg'
     },
@@ -98,7 +98,7 @@ const Homepage = () => {
       description: "Cura e manutenzione di parchi, giardini e aiuole. Promozione speciale per condomini.",
       icon: "🌳",
       features: ["Manutenzione verde", "Potature", "Cura aiuole"],
-      link: "/servizi/giardinaggio",
+      link: "/servizi/giardinaggio/brescia",
       image: cdnImage('https://images.pexels.com/photos/1301856/pexels-photo-1301856.jpeg?auto=compress&cs=tinysrgb&w=1200', { width: 960, quality: 70, fit: 'cover' }),
       fallbackImage: 'https://images.pexels.com/photos/1301856/pexels-photo-1301856.jpeg?auto=compress&cs=tinysrgb&w=1200'
     },
@@ -107,7 +107,7 @@ const Homepage = () => {
       description: "Gestione professionale dei bidoni per la raccolta differenziata in condomini e aziende.",
       icon: "♻️",
       features: ["Raccolta differenziata", "Pulizia carrellati", "Gestione periodica"],
-      link: "/servizi/gestione-carrellati",
+      link: "/servizi/gestione-carrellati/brescia",
       image: cdnImage('https://images.pexels.com/photos/3735218/pexels-photo-3735218.jpeg?auto=compress&cs=tinysrgb&w=1200', { width: 960, quality: 70, fit: 'cover' }),
       fallbackImage: 'https://images.pexels.com/photos/3735218/pexels-photo-3735218.jpeg?auto=compress&cs=tinysrgb&w=1200'
     }

@@ -26,14 +26,14 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Servizi</h3>
             <ul className="space-y-2 text-slate-300">
-              <li><Link to="/servizi/pulizie-uffici" className="hover:text-sky-400 transition-colors">Pulizie Uffici</Link></li>
-              <li><Link to="/servizi/pulizie-condomini" className="hover:text-sky-400 transition-colors">Pulizie Condomini</Link></li>
-              <li><Link to="/servizi/pulizie-industriali" className="hover:text-sky-400 transition-colors">Pulizie Industriali</Link></li>
-              <li><Link to="/servizi/pulizie-post-cantiere" className="hover:text-sky-400 transition-colors">Pulizie Post-Cantiere</Link></li>
-              <li><Link to="/servizi/pulizie-vetri" className="hover:text-sky-400 transition-colors">Pulizie Vetri</Link></li>
-              <li><Link to="/servizi/sanificazione-ambienti" className="hover:text-sky-400 transition-colors">Sanificazione Ambienti</Link></li>
-              <li><Link to="/servizi/giardinaggio" className="hover:text-sky-400 transition-colors">Giardinaggio</Link></li>
-              <li><Link to="/servizi/gestione-carrellati" className="hover:text-sky-400 transition-colors">Gestione Carrellati</Link></li>
+              <li><Link to="/servizi/pulizie-uffici/brescia" className="hover:text-sky-400 transition-colors">Pulizie Uffici</Link></li>
+              <li><Link to="/servizi/pulizie-condomini/brescia" className="hover:text-sky-400 transition-colors">Pulizie Condomini</Link></li>
+              <li><Link to="/servizi/pulizie-industriali/brescia" className="hover:text-sky-400 transition-colors">Pulizie Industriali</Link></li>
+              <li><Link to="/servizi/pulizie-post-cantiere/brescia" className="hover:text-sky-400 transition-colors">Pulizie Post-Cantiere</Link></li>
+              <li><Link to="/servizi/pulizia-vetri/brescia" className="hover:text-sky-400 transition-colors">Pulizie Vetri</Link></li>
+              <li><Link to="/servizi/sanificazione-ambienti/brescia" className="hover:text-sky-400 transition-colors">Sanificazione Ambienti</Link></li>
+              <li><Link to="/servizi/giardinaggio/brescia" className="hover:text-sky-400 transition-colors">Giardinaggio</Link></li>
+              <li><Link to="/servizi/gestione-carrellati/brescia" className="hover:text-sky-400 transition-colors">Gestione Carrellati</Link></li>
             </ul>
           </div>
 

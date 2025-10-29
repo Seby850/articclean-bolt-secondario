@@ -12,19 +12,19 @@ const Header = () => {
   const navigationItems = [
     { name: 'Home', path: '/' },
     { name: 'Chi Siamo', path: '/chi-siamo' },
-    { 
-      name: 'Servizi', 
+    {
+      name: 'Servizi',
       path: '/servizi',
       hasDropdown: true,
       dropdownItems: [
-        { name: 'Pulizie Uffici', path: '/servizi/pulizie-uffici' },
-        { name: 'Pulizie Condomini', path: '/servizi/pulizie-condomini' },
-        { name: 'Pulizie Industriali', path: '/servizi/pulizie-industriali' },
-        { name: 'Pulizie Post-Cantiere', path: '/servizi/pulizie-post-cantiere' },
-        { name: 'Pulizie Vetri e Vetrate', path: '/servizi/pulizie-vetri' },
-        { name: 'Sanificazione Ambienti', path: '/servizi/sanificazione-ambienti' },
-        { name: 'Giardinaggio', path: '/servizi/giardinaggio' },
-        { name: 'Gestione Carrellati', path: '/servizi/gestione-carrellati' },
+        { name: 'Pulizie Uffici', path: '/servizi/pulizie-uffici/brescia' },
+        { name: 'Pulizie Condomini', path: '/servizi/pulizie-condomini/brescia' },
+        { name: 'Pulizie Industriali', path: '/servizi/pulizie-industriali/brescia' },
+        { name: 'Pulizie Post-Cantiere', path: '/servizi/pulizie-post-cantiere/brescia' },
+        { name: 'Pulizie Vetri e Vetrate', path: '/servizi/pulizia-vetri/brescia' },
+        { name: 'Sanificazione Ambienti', path: '/servizi/sanificazione-ambienti/brescia' },
+        { name: 'Giardinaggio', path: '/servizi/giardinaggio/brescia' },
+        { name: 'Gestione Carrellati', path: '/servizi/gestione-carrellati/brescia' },
         { name: 'Vedi Tutti i Servizi', path: '/servizi', isHighlighted: true }
       ]
     },
