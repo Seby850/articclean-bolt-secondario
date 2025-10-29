@@ -38,14 +38,14 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20 sm:h-24 md:h-28">
           {/* Logo */}
-          <Link to="/" className="flex items-center">
+          <Link to="/" className="flex items-center -ml-4 sm:-ml-6 md:-ml-8">
             <div className="h-16 sm:h-20 md:h-24 w-64 sm:w-80 md:w-96 flex items-center justify-start">
               <img
-                src="/assets/images/logo-arctic.svg"
+                src="/assets/images/logo-artic-final.png"
                 alt="Artic Clean Service - Impresa di Pulizie Civili e Industriali dal 2005"
                 className="h-full w-full object-contain"
-                width={720}
-                height={180}
+                width={528}
+                height={216}
                 loading="eager"
               />
             </div>
