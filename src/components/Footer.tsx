@@ -7,19 +7,16 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid md:grid-cols-4 gap-8">
           <div className="space-y-4">
-            <Link to="/" className="flex items-center space-x-3">
-              <div className="w-10 h-10 flex items-center justify-center">
+            <Link to="/" className="flex items-center">
+              <div className="w-28 h-10 md:w-32 md:h-12 flex items-center justify-center">
                 <img
-                  src="/assets/logo.svg"
-                  alt="Artic Clean logo"
-                  className="w-full h-full object-contain"
-                  width={40}
-                  height={40}
+                  src="/assets/images/Logo-artic-clean-service-real copy.webp"
+                  alt="Artic Clean Service logo"
+                  className="w-full h-full object-contain brightness-0 invert"
+                  width={128}
+                  height={48}
                   loading="lazy"
                 />
-              </div>
-              <div>
-                <h1 className="text-lg font-bold">Artic Clean</h1>
               </div>
             </Link>
             <p className="text-slate-300 leading-relaxed">

@@ -38,19 +38,16 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3">
-            <div className="w-12 h-12 md:w-14 md:h-14 flex items-center justify-center">
+          <Link to="/" className="flex items-center">
+            <div className="w-32 h-12 md:w-40 md:h-14 flex items-center justify-center">
               <img
-                src="/assets/logo.svg"
-                alt="Artic Clean logo"
+                src="/assets/images/Logo-artic-clean-service-real copy.webp"
+                alt="Artic Clean Service logo"
                 className="w-full h-full object-contain"
-                width={56}
+                width={160}
                 height={56}
                 loading="lazy"
               />
-            </div>
-            <div>
-              <h1 className="text-lg md:text-xl font-bold text-slate-900">Artic Clean</h1>
             </div>
           </Link>
 
