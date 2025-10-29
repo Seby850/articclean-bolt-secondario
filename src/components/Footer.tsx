@@ -10,11 +10,11 @@ const Footer = () => {
             <Link to="/" className="flex items-center">
               <div className="h-11 sm:h-14 w-52 sm:w-72 md:w-80 flex items-center justify-start">
                 <img
-                  src="/assets/images/logo-artic-clean-service.webp"
+                  src="/assets/images/logo-artic-final.png"
                   alt="Artic Clean Service - Impresa di Pulizie Civili e Industriali dal 2005"
                   className="h-full w-full object-contain brightness-0 invert"
-                  width={390}
-                  height={56}
+                  width={528}
+                  height={216}
                   loading="lazy"
                 />
               </div>
