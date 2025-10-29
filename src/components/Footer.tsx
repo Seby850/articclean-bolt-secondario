@@ -7,17 +7,15 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid md:grid-cols-4 gap-8">
           <div className="space-y-4 flex flex-col items-center md:items-start">
-            <Link to="/" className="flex items-center justify-center md:justify-start w-full">
-              <div className="h-11 sm:h-14 w-52 sm:w-72 md:w-80 flex items-center justify-center md:justify-start">
-                <img
-                  src="/assets/images/logo-artic-final.png"
-                  alt="Artic Clean Service - Impresa di Pulizie Civili e Industriali dal 2005"
-                  className="h-full w-full object-contain brightness-0 invert"
-                  width={528}
-                  height={216}
-                  loading="lazy"
-                />
-              </div>
+            <Link to="/" className="flex justify-center md:justify-start w-full">
+              <img
+                src="/assets/images/logo-artic-final.png"
+                alt="Artic Clean Service - Impresa di Pulizie Civili e Industriali dal 2005"
+                className="h-11 sm:h-14 w-auto object-contain brightness-0 invert"
+                width={528}
+                height={216}
+                loading="lazy"
+              />
             </Link>
             <p className="text-slate-300 leading-relaxed text-center md:text-left">
               Impresa di pulizie a Brescia specializzata in uffici, condomini, industrie e sanificazioni.
