@@ -90,8 +90,8 @@ const Homepage = () => {
       icon: "✨",
       features: ["Vetri senza aloni", "Interventi in altezza", "Grandi superfici"],
       link: "/servizi/pulizie-vetri",
-      image: cdnImage('https://images.pexels.com/photos/7735355/pexels-photo-7735355.jpeg?auto=compress&cs=tinysrgb&w=1200', { width: 960, quality: 75 }),
-      fallbackImage: 'https://images.pexels.com/photos/7735355/pexels-photo-7735355.jpeg?auto=compress&cs=tinysrgb&w=1200'
+      image: '/assets/images/window-cleaning-tips.jpg',
+      fallbackImage: '/assets/images/window-cleaning-tips.jpg'
     },
     {
       title: "Giardinaggio",
