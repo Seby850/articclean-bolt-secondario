@@ -5,7 +5,6 @@ import { buildCanonicalUrl } from '@/data/siteMetadata';
 import { buildBreadcrumbSchema, buildServiceSchema } from '@/utils/structuredData';
 import InternalLinkSection from '@/components/InternalLinkSection';
 import LazyImage from '@/components/LazyImage';
-import { cdnImage } from '@/utils/image';
 
 const ChiSiamo = () => {
   const stats = [
@@ -132,16 +131,16 @@ const ChiSiamo = () => {
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-4">
                   <LazyImage
-                    src={cdnImage('https://images.pexels.com/photos/4239091/pexels-photo-4239091.jpeg?auto=compress&cs=tinysrgb&w=1200', { width: 1024, quality: 70, fit: 'cover' })}
-                    fallbackSrc="https://images.pexels.com/photos/4239091/pexels-photo-4239091.jpeg?auto=compress&cs=tinysrgb&w=1200"
-                    alt="Team Artic Pulizie al lavoro a Brescia"
+                    src="/assets/images/window-cleaning-tips.jpg"
+                    fallbackSrc="/assets/images/window-cleaning-tips.jpg"
+                    alt="Team Artic Pulizie - pulizia vetri professionale"
                     className="rounded-2xl shadow-lg w-full h-64 object-cover"
                     width={600}
                     height={512}
                   />
                   <LazyImage
-                    src={cdnImage('https://images.pexels.com/photos/6195129/pexels-photo-6195129.jpeg?auto=compress&cs=tinysrgb&w=1200', { width: 1024, quality: 70, fit: 'cover' })}
-                    fallbackSrc="https://images.pexels.com/photos/6195129/pexels-photo-6195129.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                    src="/assets/images/pulizia-ufficio_pavimento-500x380.jpg"
+                    fallbackSrc="/assets/images/pulizia-ufficio_pavimento-500x380.jpg"
                     alt="Pulizie professionali per uffici a Brescia"
                     className="rounded-2xl shadow-lg w-full h-48 object-cover"
                     width={600}
@@ -150,17 +149,17 @@ const ChiSiamo = () => {
                 </div>
                 <div className="space-y-4 pt-8">
                   <LazyImage
-                    src={cdnImage('https://images.pexels.com/photos/4099467/pexels-photo-4099467.jpeg?auto=compress&cs=tinysrgb&w=1200', { width: 1024, quality: 70, fit: 'cover' })}
-                    fallbackSrc="https://images.pexels.com/photos/4099467/pexels-photo-4099467.jpeg?auto=compress&cs=tinysrgb&w=1200"
-                    alt="Prodotti professionali per la sanificazione"
+                    src="/assets/images/pulizie-condominiali.jpg"
+                    fallbackSrc="/assets/images/pulizie-condominiali.jpg"
+                    alt="Pulizie condomini - aree comuni pulite"
                     className="rounded-2xl shadow-lg w-full h-48 object-cover"
                     width={600}
                     height={420}
                   />
                   <LazyImage
-                    src={cdnImage('https://images.pexels.com/photos/4239013/pexels-photo-4239013.jpeg?auto=compress&cs=tinysrgb&w=1200', { width: 1024, quality: 70, fit: 'cover' })}
-                    fallbackSrc="https://images.pexels.com/photos/4239013/pexels-photo-4239013.jpeg?auto=compress&cs=tinysrgb&w=1200"
-                    alt="Risultati impeccabili dopo l'intervento"
+                    src="/assets/images/Condor-with-EcoFlex-In-use-Lt.jpg"
+                    fallbackSrc="/assets/images/Condor-with-EcoFlex-In-use-Lt.jpg"
+                    alt="Attrezzature professionali per pulizie industriali"
                     className="rounded-2xl shadow-lg w-full h-64 object-cover"
                     width={600}
                     height={512}
