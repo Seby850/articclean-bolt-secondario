@@ -38,14 +38,14 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center">
-            <div className="w-32 h-12 md:w-40 md:h-14 flex items-center justify-center">
+          <Link to="/" className="flex items-center py-2">
+            <div className="w-48 h-auto md:w-64 flex items-center justify-start">
               <img
                 src="/assets/images/Logo-artic-clean-service-real copy.webp"
-                alt="Artic Clean Service logo"
-                className="w-full h-full object-contain"
-                width={160}
-                height={56}
+                alt="Artic Clean Service - Impresa di Pulizie Civili e Industriali dal 2005"
+                className="w-full h-auto object-contain"
+                width={256}
+                height={90}
                 loading="lazy"
               />
             </div>
