@@ -72,8 +72,8 @@ const Homepage = () => {
       icon: "🏘️",
       features: ["Aree comuni", "Scale e ascensori", "Gestione carrellati"],
       link: "/servizi/pulizie-condomini/brescia",
-      image: cdnImage('https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=1200', { width: 960, quality: 70, fit: 'cover' }),
-      fallbackImage: 'https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=1200'
+      image: '/assets/images/pulizie-condominiali.jpg',
+      fallbackImage: '/assets/images/pulizie-condominiali.jpg'
     },
     {
       title: "Pulizie Industriali",
@@ -293,7 +293,7 @@ const Homepage = () => {
                   src={service.image}
                   fallbackSrc={service.fallbackImage}
                   alt={`${service.title} a Brescia e provincia`}
-                  className={`w-full h-44 object-cover rounded-xl mb-4 ${
+                  className={`w-full h-52 object-cover rounded-xl mb-4 ${
                     service.title === "Pulizie Industriali" ? "object-[center_30%]" : ""
                   }`}
                   width={600}
