@@ -31,7 +31,7 @@ const Blog = () => {
   ].filter(Boolean) as Record<string, unknown>[];
 
   return (
-    <main className="pt-24 pb-20 bg-slate-50 min-h-screen">
+    <main className="pt-28 sm:pt-32 md:pt-36 pb-20 bg-slate-50 min-h-screen">
       <SEO
         title="Blog Artic Pulizie Brescia - Consigli per Pulizie Professionali"
         description="Guide operative, checklist e consigli SEO per pulizie professionali a Brescia. Scopri gli approfondimenti di Artic Pulizie su uffici, condomini e sanificazioni."

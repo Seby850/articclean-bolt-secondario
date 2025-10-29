@@ -87,7 +87,7 @@ const RichidiPreventivo = () => {
     return (
       <>
         <SEO {...seoConfig} />
-        <div className="pt-24 pb-20 min-h-screen bg-gradient-to-br from-white via-sky-50/30 to-cyan-50/20">
+        <div className="pt-28 sm:pt-32 md:pt-36 pb-20 min-h-screen bg-gradient-to-br from-white via-sky-50/30 to-cyan-50/20">
           <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="bg-white rounded-xl shadow-lg p-8 text-center">
               <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -127,7 +127,7 @@ const RichidiPreventivo = () => {
   return (
     <>
       <SEO {...seoConfig} />
-      <div className="pt-24 pb-20 min-h-screen bg-gradient-to-br from-white via-sky-50/30 to-cyan-50/20">
+      <div className="pt-28 sm:pt-32 md:pt-36 pb-20 min-h-screen bg-gradient-to-br from-white via-sky-50/30 to-cyan-50/20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}
           <div className="text-center mb-12">

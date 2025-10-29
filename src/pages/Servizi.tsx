@@ -238,7 +238,7 @@ const Servizi = () => {
   ].filter(Boolean) as Record<string, unknown>[];
 
   return (
-    <div className="pt-24 pb-20">
+    <div className="pt-28 sm:pt-32 md:pt-36 pb-20">
       <SEO
         title="Servizi di Pulizia Professionali a Brescia | Artic Pulizie"
         description="Pulizie uffici, condomini, industrie, vetrate, post-cantiere e giardinaggio a Brescia. Artic Pulizie prepara preventivi in 24 ore con squadre dedicate."

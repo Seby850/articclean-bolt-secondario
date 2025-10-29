@@ -170,7 +170,7 @@ const Homepage = () => {
         structuredData={homepageStructuredData}
       />
       {/* Hero Section */}
-      <section className="pt-24 pb-20 relative overflow-hidden min-h-screen bg-gradient-to-br from-white via-sky-50/30 to-cyan-50/20">
+      <section className="pt-28 sm:pt-32 md:pt-36 pb-20 relative overflow-hidden min-h-screen bg-gradient-to-br from-white via-sky-50/30 to-cyan-50/20">
         {/* Animated Background */}
         <div className="absolute inset-0 pointer-events-none">
           <div className="wave-container">

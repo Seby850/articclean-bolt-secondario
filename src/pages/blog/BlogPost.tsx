@@ -60,7 +60,7 @@ const BlogPost = () => {
   ].filter(Boolean) as Record<string, unknown>[];
 
   return (
-    <main className="pt-24 pb-20 bg-white">
+    <main className="pt-28 sm:pt-32 md:pt-36 pb-20 bg-white">
       <SEO
         title={`${post.title} | Artic Pulizie Blog`}
         description={post.metaDescription}

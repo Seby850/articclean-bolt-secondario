@@ -253,7 +253,7 @@ const ServizioLocaleDynamic = () => {
   };
 
   return (
-    <div className="pt-24 pb-20">
+    <div className="pt-28 sm:pt-32 md:pt-36 pb-20">
       <SEO
         title={pageData.meta_title}
         description={pageData.meta_description}

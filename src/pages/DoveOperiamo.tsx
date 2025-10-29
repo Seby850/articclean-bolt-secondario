@@ -26,7 +26,7 @@ const DoveOperiamo = () => {
   ];
 
   return (
-    <div className="pt-24 pb-20">
+    <div className="pt-28 sm:pt-32 md:pt-36 pb-20">
       <SEO
         title="Dove Operiamo a Brescia e Provincia | Artic Pulizie"
         description="Servizi di pulizia Artic Pulizie attivi a Brescia, Desenzano, Montichiari, Chiari e in oltre 15 località della provincia. Scopri le zone servite."

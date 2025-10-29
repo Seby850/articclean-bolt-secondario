@@ -36,16 +36,16 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-slate-100 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-18">
+        <div className="flex items-center justify-between h-20 sm:h-24 md:h-28">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <div className="h-11 sm:h-14 w-52 sm:w-72 md:w-80 flex items-center justify-start">
+            <div className="h-16 sm:h-20 md:h-24 w-64 sm:w-80 md:w-96 flex items-center justify-start">
               <img
-                src="/assets/images/logo-artic-clean-service.webp"
+                src="/assets/images/logo-arctic.svg"
                 alt="Artic Clean Service - Impresa di Pulizie Civili e Industriali dal 2005"
                 className="h-full w-full object-contain"
-                width={390}
-                height={56}
+                width={720}
+                height={180}
                 loading="eager"
               />
             </div>
