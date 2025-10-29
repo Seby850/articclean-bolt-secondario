@@ -8,13 +8,13 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-8">
           <div className="space-y-4">
             <Link to="/" className="flex items-center">
-              <div className="h-12 w-auto flex items-center justify-start">
+              <div className="h-11 sm:h-14 w-40 sm:w-52 flex items-center justify-start">
                 <img
                   src="/assets/images/logo-artic-clean-service.webp"
                   alt="Artic Clean Service - Impresa di Pulizie Civili e Industriali dal 2005"
-                  className="h-full w-auto object-contain brightness-0 invert"
-                  width={200}
-                  height={48}
+                  className="h-full w-full object-contain brightness-0 invert"
+                  width={260}
+                  height={56}
                   loading="lazy"
                 />
               </div>
