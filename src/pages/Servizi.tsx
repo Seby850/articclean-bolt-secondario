@@ -47,8 +47,8 @@ const Servizi = () => {
         "Riduzione assenze per malattia",
         "Immagine aziendale impeccabile"
       ],
-      image: cdnImage('https://images.pexels.com/photos/6195129/pexels-photo-6195129.jpeg?auto=compress&cs=tinysrgb&w=1200', { width: 1200, quality: 75, fit: 'cover' }),
-      fallbackImage: 'https://images.pexels.com/photos/6195129/pexels-photo-6195129.jpeg?auto=compress&cs=tinysrgb&w=1200'
+      image: '/assets/images/pulizia-ufficio_pavimento-500x380.jpg',
+      fallbackImage: '/assets/images/pulizia-ufficio_pavimento-500x380.jpg'
     },
     {
       id: 'industriale',
@@ -69,8 +69,8 @@ const Servizi = () => {
         "Prevenzione incidenti",
         "Mantenimento efficienza impianti"
       ],
-      image: cdnImage('https://images.pexels.com/photos/4484078/pexels-photo-4484078.jpeg?auto=compress&cs=tinysrgb&w=1200', { width: 1200, quality: 80, fit: 'cover' }),
-      fallbackImage: 'https://images.pexels.com/photos/4484078/pexels-photo-4484078.jpeg?auto=compress&cs=tinysrgb&w=1200'
+      image: '/assets/images/Condor-with-EcoFlex-In-use-Lt.jpg',
+      fallbackImage: '/assets/images/Condor-with-EcoFlex-In-use-Lt.jpg'
     },
     {
       id: 'post-cantiere',
@@ -113,8 +113,8 @@ const Servizi = () => {
         "Maggiore durata delle superfici",
         "Risparmio energetico illuminazione"
       ],
-      image: cdnImage('https://images.pexels.com/photos/7735355/pexels-photo-7735355.jpeg?auto=compress&cs=tinysrgb&w=1200', { width: 1200, quality: 80, fit: 'cover' }),
-      fallbackImage: 'https://images.pexels.com/photos/7735355/pexels-photo-7735355.jpeg?auto=compress&cs=tinysrgb&w=1200'
+      image: '/assets/images/window-cleaning-tips.jpg',
+      fallbackImage: '/assets/images/window-cleaning-tips.jpg'
     },
     {
       id: 'sanificazione',
@@ -157,8 +157,8 @@ const Servizi = () => {
         "Servizio affidabile e puntuale",
         "Promozione per servizi integrati"
       ],
-      image: cdnImage('https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=1200', { width: 1200, quality: 70, fit: 'cover' }),
-      fallbackImage: 'https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=1200'
+      image: '/assets/images/pulizie-condominiali.jpg',
+      fallbackImage: '/assets/images/pulizie-condominiali.jpg'
     },
     {
       id: 'giardinaggio',
@@ -179,8 +179,8 @@ const Servizi = () => {
         "Ambiente più salubre e piacevole",
         "Servizio programmato e affidabile"
       ],
-      image: cdnImage('https://images.pexels.com/photos/2132227/pexels-photo-2132227.jpeg?auto=compress&cs=tinysrgb&w=1200', { width: 1200, quality: 70, fit: 'cover' }),
-      fallbackImage: 'https://images.pexels.com/photos/2132227/pexels-photo-2132227.jpeg?auto=compress&cs=tinysrgb&w=1200'
+      image: cdnImage('https://images.pexels.com/photos/1301856/pexels-photo-1301856.jpeg?auto=compress&cs=tinysrgb&w=1200', { width: 960, quality: 70, fit: 'cover' }),
+      fallbackImage: 'https://images.pexels.com/photos/1301856/pexels-photo-1301856.jpeg?auto=compress&cs=tinysrgb&w=1200'
     },
     {
       id: 'carrellati',
@@ -201,8 +201,8 @@ const Servizi = () => {
         "Conformità normative sanitarie",
         "Risparmio tempo per il personale"
       ],
-      image: cdnImage('https://images.pexels.com/photos/3186574/pexels-photo-3186574.jpeg?auto=compress&cs=tinysrgb&w=1200', { width: 1200, quality: 70, fit: 'cover' }),
-      fallbackImage: 'https://images.pexels.com/photos/3186574/pexels-photo-3186574.jpeg?auto=compress&cs=tinysrgb&w=1200'
+      image: cdnImage('https://images.pexels.com/photos/3735218/pexels-photo-3735218.jpeg?auto=compress&cs=tinysrgb&w=1200', { width: 960, quality: 70, fit: 'cover' }),
+      fallbackImage: 'https://images.pexels.com/photos/3735218/pexels-photo-3735218.jpeg?auto=compress&cs=tinysrgb&w=1200'
     }
   ];
 
