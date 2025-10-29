@@ -283,7 +283,7 @@ const Homepage = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <Link 
+              <Link
                 key={index}
                 to={service.link}
                 className="group bg-slate-50 rounded-xl p-6 hover:bg-white hover:shadow-lg transition-all duration-300 border border-transparent hover:border-sky-100 cursor-pointer transform hover:scale-105"
@@ -293,7 +293,9 @@ const Homepage = () => {
                   src={service.image}
                   fallbackSrc={service.fallbackImage}
                   alt={`${service.title} a Brescia e provincia`}
-                  className="w-full h-44 object-cover rounded-xl mb-4"
+                  className={`w-full h-44 object-cover rounded-xl mb-4 ${
+                    service.title === "Pulizie Industriali" ? "object-[center_30%]" : ""
+                  }`}
                   width={600}
                   height={320}
                 />
