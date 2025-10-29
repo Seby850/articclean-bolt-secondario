@@ -63,8 +63,8 @@ const Homepage = () => {
       icon: "🏢",
       features: ["Pulizia quotidiana", "Sanificazione postazioni", "Gestione rifiuti"],
       link: "/servizi/pulizie-uffici",
-      image: cdnImage('https://images.pexels.com/photos/6195129/pexels-photo-6195129.jpeg?auto=compress&cs=tinysrgb&w=1200', { width: 960, quality: 75 }),
-      fallbackImage: 'https://images.pexels.com/photos/6195129/pexels-photo-6195129.jpeg?auto=compress&cs=tinysrgb&w=1200'
+      image: '/assets/images/pulizia-ufficio_pavimento-500x380.jpg',
+      fallbackImage: '/assets/images/pulizia-ufficio_pavimento-500x380.jpg'
     },
     {
       title: "Pulizie Condomini",
